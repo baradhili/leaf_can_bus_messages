@@ -1,0 +1,337 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+
+
+BO_ 1468 x5BC: 8 Vector__XXX
+ SG_ GIDs : 0|10@1+ (1,0) [0|500] "gids" Vector__XXX
+ SG_ Mux M : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryTemperature : 24|8@1+ (1,0) [0|0] "dC" Vector__XXX
+ SG_ BatteryFuelGaugeOffset : 36|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ FuelBars m0 : 20|4@1+ (1,0) [0|12] "-" Vector__XXX
+ SG_ CapacityBars m3 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 475 x1DB: 8 Vector__XXX
+ SG_ BatteryVoltageSignal : 16|10@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ BatteryCurrentSignal : 0|11@1+ (1,0) [0|2000] "A" Vector__XXX
+ SG_ CRC_1DB : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+
+BO_ 1371 x55B: 8 Vector__XXX
+ SG_ LBCStateOfCharge : 0|10@1+ (1,0) [0|0] "%+1" Vector__XXX
+ SG_ HeartbeatLBC : 16|8@1+ (1,0) [85|170] "" Vector__XXX
+
+BO_ 1370 x55A: 8 Vector__XXX
+ SG_ MotorTemperature : 40|8@1+ (1,0) [0|255] "c" Vector__XXX
+ SG_ InverterComBoardTemp : 8|8@1+ (1,0) [0|255] "c" Vector__XXX
+ SG_ IGBTTemperature : 16|8@1+ (1,0) [0|255] "c" Vector__XXX
+ SG_ IGBTDriverBoardTemperature : 24|8@1+ (1,0) [0|255] "c" Vector__XXX
+
+BO_ 476 x1DC: 8 Vector__XXX
+ SG_ AvailableBatteryPower : 0|8@1+ (1,0) [0|110] "kW" Vector__XXX
+ SG_ MaximumCurrentDuringCharge : 8|12@1+ (1,0) [0|250] "A" Vector__XXX
+ SG_ QuickchargeUnknownValue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryPairing1 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryPairing2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryPairing3 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_1DC : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 474 x1DA: 8 Vector__XXX
+ SG_ InverterVoltage : 0|8@1+ (1,0) [0|810] "V/2" Vector__XXX
+ SG_ MotorAmps : 20|12@1+ (1,0) [0|250] "A" Vector__XXX
+ SG_ MotorSpeed : 32|16@1+ (1,0) [0|12000] "rpm" Vector__XXX
+ SG_ Counter : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_1DA : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+
+BO_ 1465 x5B9: 8 Vector__XXX
+ SG_ ActiveFuelBars : 0|5@1+ (1,0) [0|12] "-" Vector__XXX
+ SG_ ChargeMinutesRemaining : 5|11@1+ (1,0) [0|2047] "minutes" Vector__XXX
+
+BO_ 1359 x54F: 8 Vector__XXX
+ SG_ InteriorIntakeTemp : 0|8@1+ (1,0) [0|0] "F or 0.5C" Vector__XXX
+ SG_ ACPowerConsumption : 8|8@1+ (1,0) [0|0] "50W/bit?" Vector__XXX
+ SG_ ACAutoAmpStatus : 46|2@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ HeaterPowerConsumption : 40|6@1+ (1,0) [0|0] "300W/bit?" Vector__XXX
+
+BO_ 1356 x54C: 8 Vector__XXX
+ SG_ ACEvaporatorTemperature : 0|8@1+ (1,0) [0|0] "0.25C/bit?" Vector__XXX
+ SG_ ClimateControlStatus2 : 8|8@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ FanVoltage : 40|8@1+ (1,0) [0|0] "0.05 V/bit" Vector__XXX
+ SG_ OutsideAmbientTemperature : 48|8@1+ (1,0) [0|0] "F/C" Vector__XXX
+
+BO_ 282 x11A: 8 Vector__XXX
+ SG_ JoystickGearPosition : 4|4@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ CarOnOffStatus : 8|8@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ Mulitplexor M : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ StartupDataUnknown0 m0 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ StartupDataUnknown1 m1 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ StartupDataUnknown2 m2 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ StartupDataUnknown3 m3 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ UnknownByte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HeartbeatVCM : 24|8@1+ (1,0) [85|170] "" Vector__XXX
+
+BO_ 468 x1D4: 8 Vector__XXX
+ SG_ MotorAmpTorqueRequest : 16|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_1D4 : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+
+BO_ 498 x1F2: 8 Vector__XXX
+ SG_ CommandedChargePower : 6|10@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 644 x284: 8 Vector__XXX
+ SG_ LeftWheelSpeedSensor : 0|16@1+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ RightWheelSpeedSensor : 16|16@1+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ AverageRearSpeedSensor : 32|16@1+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ DistanceTraveled1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DistanceTraveled2 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1355 x54B: 8 Vector__XXX
+ SG_ ClimateControlStatus1 : 0|8@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ClimateVentModeTarget : 16|8@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ClimateVentModeIntake : 24|8@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ FanSpeed : 36|4@1+ (1,0) [1|7] "speed" Vector__XXX
+ SG_ CCButtonPress : 56|8@1+ (1,0) [0|0] "0/1" Vector__XXX
+
+BO_ 1449 x5A9: 8 Vector__XXX
+ SG_ DiagSomething0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiagSomething1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiagSomething2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiagSomething3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1472 x5C0: 8 Vector__XXX
+ SG_ Mux5C0 M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClusterTemperature2 m64 : 16|8@1+ (1,0) [0|0] "dC" Vector__XXX
+ SG_ DisOrChargeTimeCounter : 24|8@1- (1,0) [0|0] "counter?" Vector__XXX
+ SG_ Unknown5C0_byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown5C0_byte5_mux40 m64 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown5C0_byte5_mux80 m128 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown5C0_byte5_muxC0 m192 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1290 x50A: 8 Vector__XXX
+ SG_ Unknown_50A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1291 x50B: 7 Vector__XXX
+ SG_ Unknown_50B_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_3 M : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1292 x50C: 6 Vector__XXX
+ SG_ Unknown_50C_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_3 M : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1354 x54A: 8 Vector__XXX
+ SG_ CCStatusPlusUnknown : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClimateControlSetpoint : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ BO_ 1468 "Lithium Battery Controller";
+CM_ SG_ 1468 GIDs "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
+1 LSB = 65-85WH";
+CM_ SG_ 1468 Mux "Mux 00,00,01,01,02,02,03 (only repeats 03 once, the rest twice 2015)";
+CM_ SG_ 1468 BatteryTemperature "Should be average of the 3/4 sensors inside the battery pack (0x50 = 80DEC = 8.0*C)";
+CM_ SG_ 1468 BatteryFuelGaugeOffset "Somehow effects the Fuel Gauge, lower numbers mean more bars";
+CM_ SG_ 1468 FuelBars "???Seems to be affected by heartbeat in 55B (Muxed field in other message == AA, then this is fuelgauge)";
+CM_ SG_ 1468 CapacityBars "???Seems to be affected by heartbeat in 55B";
+CM_ BO_ 475 "Lithium Battery Controller";
+CM_ SG_ 475 BatteryVoltageSignal "0.5v/bit";
+CM_ SG_ 475 BatteryCurrentSignal "2s comp, 1lSB = 0.5A";
+CM_ SG_ 475 CRC_1DB "CRC";
+CM_ BO_ 1371 "Lithium Battery Controller";
+CM_ SG_ 1371 LBCStateOfCharge "Does not affect cluster or VCM at all";
+CM_ SG_ 1371 HeartbeatLBC "55,AA (alternates every 500ms)";
+CM_ BO_ 1370 "Inverter";
+CM_ SG_ 1370 MotorTemperature "0.5C/bit";
+CM_ SG_ 1370 InverterComBoardTemp "0.5C/bit
+ Inverter communications board temp. 0.5c per bit";
+CM_ SG_ 1370 IGBTTemperature "0.5C/bit
+ ?Not fully defined";
+CM_ SG_ 1370 IGBTDriverBoardTemperature "0.5C/bit
+ Temperature only active during drive (IGBT driver board?)";
+CM_ BO_ 476 "Lithium Battery Controller";
+CM_ SG_ 476 AvailableBatteryPower "Max available power that can be pulled from battery. 6e=110kW, less is seen below LBW, 31=51kW observed near turtle";
+CM_ SG_ 476 MaximumCurrentDuringCharge "Looks like this is maximum current during charge?";
+CM_ SG_ 476 QuickchargeUnknownValue "This value changes during QC. Unknown function";
+CM_ SG_ 476 BatteryPairing1 "
+
+Just a hint on those pursuing 40/30/24kWh translations: We are suspecting the 'pairing' tool just changes 0x1DC bytes 5 and 6 (as in: third and second to last bytes). Beyond that, there are some very minor differences between the LBCs, but the most important bits are in the same place and work the same way. You get a P3183 DTC when swapping batteries.";
+CM_ SG_ 476 BatteryPairing2 "
+
+Just a hint on those pursuing 40/30/24kWh translations: We are suspecting the 'pairing' tool just changes 0x1DC bytes 5 and 6 (as in: third and second to last bytes). Beyond that, there are some very minor differences between the LBCs, but the most important bits are in the same place and work the same way. You get a P3183 DTC when swapping batteries.";
+CM_ SG_ 476 BatteryPairing3 "
+
+Just a hint on those pursuing 40/30/24kWh translations: We are suspecting the 'pairing' tool just changes 0x1DC bytes 5 and 6 (as in: third and second to last bytes). Beyond that, there are some very minor differences between the LBCs, but the most important bits are in the same place and work the same way. You get a P3183 DTC when swapping batteries.";
+CM_ SG_ 476 CRC_1DC "CRC byte for msg. Poly is 0x85; left shift; D0 first; 64 shifts padding with 0's on last 8";
+CM_ BO_ 474 "Inverter";
+CM_ SG_ 474 InverterVoltage "2V/bit
+ 01..b9 follows BVS until near end of six2dead drive (turtle?) or end of charging --> perhaps Battery Available Power Signal or inverter voltage?";
+CM_ SG_ 474 MotorAmps "Motor Amps * Motor Volts is really close to pack watts*40 Maybe 1lsb=0.5A";
+CM_ SG_ 474 MotorSpeed "16 bits; 1 LSB = 0.5rpm? Stays at zero when applying torque with brake on so not likely volts.";
+CM_ SG_ 474 Counter "Safety counter";
+CM_ SG_ 474 CRC_1DA "CRC";
+CM_ BO_ 1465 "Vehicle Control Module";
+CM_ SG_ 1465 ActiveFuelBars "From VCM->Cluster";
+CM_ SG_ 1465 ChargeMinutesRemaining "Minutes from 3kW charging estimate on dash.
+
+Example:
+0x09 FE
+0000 1001 1111 1110
+001 1111 1110 = 510min";
+CM_ BO_ 1359 "AC Auto Amp";
+CM_ SG_ 1359 InteriorIntakeTemp "Appears to be interior intake temp
+(2013: sometimes is <0x20 when the temp is definitely higher)
+
+My testing during 8*C according to dash, warm interior
+0x34 = 52 DEC
+52F = 11C?
+52/2= 26C?";
+CM_ SG_ 1359 ACPowerConsumption "Rises to a steady value with ac on.  Off immediately with ac off.  No change with heater on";
+CM_ SG_ 1359 ACAutoAmpStatus "location?";
+CM_ SG_ 1359 HeaterPowerConsumption "Goes up slowly with heater on; no change with ac on";
+CM_ BO_ 1356 "AC Auto Amp";
+CM_ SG_ 1356 ACEvaporatorTemperature "drops with ac on (after short lag).  No change with heater on";
+CM_ SG_ 1356 ClimateControlStatus2 "66 CC on, ff CC off";
+CM_ SG_ 1356 FanVoltage "Commanded fan speed is proportional to Voltage";
+CM_ SG_ 1356 OutsideAmbientTemperature "0x92=90F;0x86=79F (90F & 79F read from dash)";
+CM_ BO_ 282 "Vehicle Control Module 2013+ (Shift controller module for 2011-2012)";
+CM_ SG_ 282 JoystickGearPosition "(MSBits probably selected gear: 4 for D/B, 3 for N, 2 for R,0 for Parked)";
+CM_ SG_ 282 Mulitplexor "0, 1, 2, 3";
+CM_ SG_ 282 StartupDataUnknown0 "Activity only during startup, then holds a constant value for each channel";
+CM_ SG_ 282 StartupDataUnknown1 "Activity only during startup, then holds a constant value for each channel";
+CM_ SG_ 282 StartupDataUnknown2 "Activity only during startup, then holds a constant value for each channel";
+CM_ SG_ 282 StartupDataUnknown3 "Activity only during startup, then holds a constant value for each channel";
+CM_ SG_ 282 UnknownByte2 "00,04,80 observed here";
+CM_ SG_ 282 HeartbeatVCM "55,AA (alternating between these two values, heartbeat?)
+01010101
+10101010";
+CM_ BO_ 468 "Vehicle Control Module?";
+CM_ SG_ 468 MotorAmpTorqueRequest "Motor Amps?  Requested Torque?
+Less noisy than the 1da signal";
+CM_ SG_ 468 CRC_1D4 "CRC";
+CM_ BO_ 498 "Vehicle Control Module";
+CM_ SG_ 498 CommandedChargePower "? 64 drive, 84-64 charge (tapers at end)";
+CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN";
+CM_ SG_ 644 LeftWheelSpeedSensor "2's comp";
+CM_ SG_ 644 RightWheelSpeedSensor "2's comp";
+CM_ SG_ 644 AverageRearSpeedSensor "??? speed sensor.  Maybe average of both rear?";
+CM_ SG_ 644 DistanceTraveled1 "00..ff (wraps ~360 times in a 25 mile drive)";
+CM_ SG_ 644 DistanceTraveled2 "00..ff (wraps ~360 times in a 25 mile drive)";
+CM_ BO_ 1355 "AC Auto Amp";
+CM_ SG_ 1355 ClimateControlStatus1 "00 CC on, 01 CC off (2013: 0x10 or 0x11)";
+CM_ SG_ 1355 ClimateVentModeTarget "(face/feet/defrost)";
+CM_ SG_ 1355 ClimateVentModeIntake "(recirculating/fresh air/defrost)";
+CM_ SG_ 1355 FanSpeed "1<->7 ???Lenght 3-7 or 4-7?";
+CM_ SG_ 1355 CCButtonPress "Alternates after every CC button press, probably to alert A/V to display CC info";
+CM_ BO_ 1449 "Vehicle Control Module
+
+This message appeared after recall/update in March 2012. Probably VCM to TCU for carwings (engineering data)";
+CM_ SG_ 1449 DiagSomething0 "Active during drive, FF charge";
+CM_ SG_ 1449 DiagSomething1 "Active during drive, FF charge";
+CM_ SG_ 1449 DiagSomething3 "Seems to be related to SOC but not LTI";
+CM_ BO_ 1472 "Lithium Battery Controller";
+CM_ SG_ 1472 Mux5C0 "40,80,c0";
+CM_ SG_ 1472 ClusterTemperature2 "Position in the frame? The indicated temperature on the instrument cluster is controlled by another muxed field, when 0x5C0 is 0x40, the indicated temperature is controlled by the 3rd byte of 0x5C0
+
+Dala: Doesn't seem to line up, third byte 0x60 = 6 when on the cluster 4 temp bars are active.";
+CM_ SG_ 1472 DisOrChargeTimeCounter "Linear positive ramp up during charge and negative ramp down during discharge.  Starts from 00 regardless of initial charge level. Charging time?";
+CM_ SG_ 1472 Unknown5C0_byte4 "a4 for TT, I have 7C here (2015 S C5/C9 depending on mux)";
+CM_ SG_ 1472 Unknown5C0_byte5_mux40 "UnknownValue lies here. Multiplexed field";
+CM_ SG_ 1472 Unknown5C0_byte5_mux80 "UnknownValue lies here. Multiplexed field";
+CM_ SG_ 1472 Unknown5C0_byte5_muxC0 "UnknownValue lies here. Multiplexed field";
+CM_ BO_ 1290 "??? Unknown sender module";
+CM_ SG_ 1290 Unknown_50A_0 "04,84,85";
+CM_ SG_ 1290 Unknown_50A_1 "02,13,33,40,42,53,72,73";
+CM_ SG_ 1290 Unknown_50A_2 "00,a0";
+CM_ SG_ 1290 Unknown_50A_3 "Some sort of temperature?? 2c-44;";
+CM_ SG_ 1290 Unknown_50A_4 "00,80";
+CM_ SG_ 1290 Unknown_50A_5 "a0";
+CM_ SG_ 1290 Unknown_50A_6 "04 , Only present in 2013+ (otherwise frame stops at 6bytes)";
+CM_ SG_ 1290 Unknown_50A_7 "00 , Only present in 2013+ (otherwise frame stops at 6bytes)";
+CM_ BO_ 1291 "??? Unknown sender module";
+CM_ SG_ 1291 Unknown_50B_0 "00";
+CM_ SG_ 1291 Unknown_50B_1 "00";
+CM_ SG_ 1291 Unknown_50B_2 "00,02,06 (for 2013+: also 0x04)";
+CM_ SG_ 1291 Unknown_50B_3 "00..03 uniform";
+CM_ SG_ 1291 Unknown_50B_4 "00";
+CM_ SG_ 1291 Unknown_50B_5 "00,60 (for 2013: 0x00 only)";
+CM_ SG_ 1291 Unknown_50B_6 "00, Only present in 2013+ (otherwise frame stops at 6bytes)";
+CM_ BO_ 1292 "??? Unknown sender module";
+CM_ SG_ 1292 Unknown_50C_0 "00";
+CM_ SG_ 1292 Unknown_50C_1 "00";
+CM_ SG_ 1292 Unknown_50C_2 "00 (for 2013+ also 06)";
+CM_ SG_ 1292 Unknown_50C_3 "0,1,2,3";
+CM_ SG_ 1292 Unknown_50C_4 "5d,b2";
+CM_ SG_ 1292 Unknown_50C_5 "0d,31,5f,63,9a,a6,c8,f4";
+CM_ BO_ 1354 "AC Auto Amp";
+CM_ SG_ 1354 CCStatusPlusUnknown "12,3c- CC Off; a0,da- CC On";
+CM_ SG_ 1354 Unknown_54A_1 "00 (80 in 2013+)";
+CM_ SG_ 1354 Unknown_54A_2 "70";
+CM_ SG_ 1354 Unknown_54A_3 "06,0a,0b,0f";
+CM_ SG_ 1354 ClimateControlSetpoint "00,39,52,53,54 (MY2011,2012)";
+CM_ SG_ 1354 Unknown_54A_5 "00";
+CM_ SG_ 1354 Unknown_54A_6 "00";
+CM_ SG_ 1354 Unknown_54A_7 "4f,8c-90";
+VAL_ 1356 ClimateControlStatus2 102 "CC ON" 255 "CC OFF" ;
+VAL_ 282 JoystickGearPosition 2 "Reverse" 3 "Neutral" 4 "Drive/B" 0 "Parked" ;
+VAL_ 282 CarOnOffStatus 64 "CarOff" 128 "CarOn" ;
+VAL_ 282 Mulitplexor 0 "Mux_0" 1 "Mux_1" 2 "Mux_2" 3 "Mux_3" ;
+VAL_ 498 CommandedChargePower 64 "Drive" ;
+VAL_ 1355 ClimateControlStatus1 16 "CC On" 17 "CC Off" 0 "CC On" 1 "CC Off" ;
+VAL_ 1355 ClimateVentModeTarget 128 "CC OFF" 136 "Face only" 144 "Face/Feet" 152 "Feet only" 160 "Feet/Defrost" 168 "Defrost only" ;
+VAL_ 1355 ClimateVentModeIntake 9 "Recirculate" 18 "Fresh air" 146 "Defrost" ;
+VAL_ 1449 DiagSomething0 255 "Charging" ;
+VAL_ 1449 DiagSomething1 255 "Charging" ;
+VAL_ 1472 Mux5C0 64 "TemperatureActive" 128 "UnknownMux" 192 "UnknownMux2" ;
+
