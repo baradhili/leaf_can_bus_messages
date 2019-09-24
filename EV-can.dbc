@@ -36,32 +36,39 @@ BS_:
 BU_:
 
 
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Unknown_55B_5 m3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
 BO_ 1468 x5BC: 8 Vector__XXX
- SG_ GIDs : 0|10@1+ (1,0) [0|500] "gids" Vector__XXX
- SG_ Mux M : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GIDs : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
+ SG_ Mux M : 32|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BatteryTemperature : 24|8@1+ (1,0) [0|0] "dC" Vector__XXX
- SG_ BatteryFuelGaugeOffset : 36|4@1+ (1,0) [0|15] "" Vector__XXX
- SG_ FuelBars m0 : 20|4@1+ (1,0) [0|12] "-" Vector__XXX
- SG_ CapacityBars m3 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BatteryChargeGaugeOffset : 36|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ ChargeBars m8 : 20|4@1+ (1,0) [0|12] "-" Vector__XXX
+ SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 475 x1DB: 8 Vector__XXX
- SG_ BatteryVoltageSignal : 16|10@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ BatteryCurrentSignal : 0|11@1+ (1,0) [0|2000] "A" Vector__XXX
+ SG_ BatteryVoltageSignal : 23|10@0+ (1,0) [0|0] "V/2" Vector__XXX
+ SG_ BatteryCurrentSignal : 7|11@0+ (1,0) [0|5000] "centiA/2?" Vector__XXX
  SG_ CRC_1DB : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+ SG_ Mux_1DB : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1371 x55B: 8 Vector__XXX
- SG_ LBCStateOfCharge : 0|10@1+ (1,0) [0|0] "%+1" Vector__XXX
+ SG_ LBCStateOfCharge : 7|10@0+ (1,0) [0|0] "%+1" Vector__XXX
  SG_ HeartbeatLBC : 16|8@1+ (1,0) [85|170] "" Vector__XXX
+ SG_ Unknown_55B_4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Mux_55B M : 48|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_55B : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1370 x55A: 8 Vector__XXX
- SG_ MotorTemperature : 40|8@1+ (1,0) [0|255] "c" Vector__XXX
- SG_ InverterComBoardTemp : 8|8@1+ (1,0) [0|255] "c" Vector__XXX
- SG_ IGBTTemperature : 16|8@1+ (1,0) [0|255] "c" Vector__XXX
- SG_ IGBTDriverBoardTemperature : 24|8@1+ (1,0) [0|255] "c" Vector__XXX
+ SG_ MotorTemperature : 40|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ InverterComBoardTemp : 8|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ IGBTTemperature : 16|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ IGBTDriverBoardTemperature : 24|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
 
 BO_ 476 x1DC: 8 Vector__XXX
  SG_ AvailableBatteryPower : 0|8@1+ (1,0) [0|110] "kW" Vector__XXX
- SG_ MaximumCurrentDuringCharge : 8|12@1+ (1,0) [0|250] "A" Vector__XXX
+ SG_ MaximumCurrentDuringCharge : 15|12@0+ (1,0) [0|250] "A" Vector__XXX
  SG_ QuickchargeUnknownValue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BatteryPairing1 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BatteryPairing2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -69,15 +76,15 @@ BO_ 476 x1DC: 8 Vector__XXX
  SG_ CRC_1DC : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 474 x1DA: 8 Vector__XXX
- SG_ InverterVoltage : 0|8@1+ (1,0) [0|810] "V/2" Vector__XXX
- SG_ MotorAmps : 20|12@1+ (1,0) [0|250] "A" Vector__XXX
- SG_ MotorSpeed : 32|16@1+ (1,0) [0|12000] "rpm" Vector__XXX
+ SG_ InverterVoltage : 0|8@1+ (1,0) [0|200] "V*2" Vector__XXX
+ SG_ MotorAmps : 19|12@0+ (1,0) [0|250] "A" Vector__XXX
+ SG_ MotorSpeed : 39|16@0+ (1,0) [0|24000] "rpm/2" Vector__XXX
  SG_ Counter : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_1DA : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 1465 x5B9: 8 Vector__XXX
- SG_ ActiveFuelBars : 0|5@1+ (1,0) [0|12] "-" Vector__XXX
- SG_ ChargeMinutesRemaining : 5|11@1+ (1,0) [0|2047] "minutes" Vector__XXX
+ SG_ ActiveFuelBars : 3|5@1+ (1,0) [0|12] "-" Vector__XXX
+ SG_ ChargeMinutesRemaining : 2|11@0+ (1,0) [0|2047] "minutes" Vector__XXX
 
 BO_ 1359 x54F: 8 Vector__XXX
  SG_ InteriorIntakeTemp : 0|8@1+ (1,0) [0|0] "F or 0.5C" Vector__XXX
@@ -103,16 +110,16 @@ BO_ 282 x11A: 8 Vector__XXX
  SG_ HeartbeatVCM : 24|8@1+ (1,0) [85|170] "" Vector__XXX
 
 BO_ 468 x1D4: 8 Vector__XXX
- SG_ MotorAmpTorqueRequest : 16|12@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorAmpTorqueRequest : 23|12@0+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_1D4 : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 498 x1F2: 8 Vector__XXX
- SG_ CommandedChargePower : 6|10@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CommandedChargePower : 1|10@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 644 x284: 8 Vector__XXX
- SG_ LeftWheelSpeedSensor : 0|16@1+ (1,0) [0|65535] "pulses" Vector__XXX
- SG_ RightWheelSpeedSensor : 16|16@1+ (1,0) [0|65535] "pulses" Vector__XXX
- SG_ AverageRearSpeedSensor : 32|16@1+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ LeftWheelSpeedSensor : 7|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ RightWheelSpeedSensor : 23|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ AverageRearSpeedSensor : 39|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
  SG_ DistanceTraveled1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ DistanceTraveled2 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
@@ -132,7 +139,7 @@ BO_ 1449 x5A9: 8 Vector__XXX
 BO_ 1472 x5C0: 8 Vector__XXX
  SG_ Mux5C0 M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ClusterTemperature2 m64 : 16|8@1+ (1,0) [0|0] "dC" Vector__XXX
- SG_ DisOrChargeTimeCounter : 24|8@1- (1,0) [0|0] "counter?" Vector__XXX
+ SG_ DisOrChargeTimeCounter : 24|8@1- (1,0) [0|255] "Counter" Vector__XXX
  SG_ Unknown5C0_byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown5C0_byte5_mux40 m64 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown5C0_byte5_mux80 m128 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -175,31 +182,47 @@ BO_ 1354 x54A: 8 Vector__XXX
  SG_ Unknown_54A_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_54A_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 1118 x45E: 1 Vector__XXX
+
+BO_ 1438 x59E: 8 Vector__XXX
+ SG_ Unknown_59E_1 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_59E_2 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_59E_3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1153 x481: 2 Vector__XXX
+ SG_ Unknown_481_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_481_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 912 x390: 8 Vector__XXX
+ SG_ Unknown_390_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 915 x393: 8 Vector__XXX
+ SG_ Unknown_393_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ BO_ 1468 "Lithium Battery Controller";
 CM_ SG_ 1468 GIDs "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
 1 LSB = 65-85WH";
-CM_ SG_ 1468 Mux "Mux 00,00,01,01,02,02,03 (only repeats 03 once, the rest twice 2015)";
+CM_ SG_ 1468 Mux "Mux field for capacity bars and charge bars";
 CM_ SG_ 1468 BatteryTemperature "Should be average of the 3/4 sensors inside the battery pack (0x50 = 80DEC = 8.0*C)";
-CM_ SG_ 1468 BatteryFuelGaugeOffset "Somehow effects the Fuel Gauge, lower numbers mean more bars";
-CM_ SG_ 1468 FuelBars "???Seems to be affected by heartbeat in 55B (Muxed field in other message == AA, then this is fuelgauge)";
-CM_ SG_ 1468 CapacityBars "???Seems to be affected by heartbeat in 55B";
+CM_ SG_ 1468 BatteryChargeGaugeOffset "Somehow effects the charge gauge, lower numbers mean more bars";
+CM_ SG_ 1468 ChargeBars "Range 0-12";
+CM_ SG_ 1468 CapacityBars "15 = 12 bars";
 CM_ BO_ 475 "Lithium Battery Controller";
 CM_ SG_ 475 BatteryVoltageSignal "0.5v/bit";
-CM_ SG_ 475 BatteryCurrentSignal "2s comp, 1lSB = 0.5A";
+CM_ SG_ 475 BatteryCurrentSignal "2s comp, 1lSB = 0.5A (motorola?)";
 CM_ SG_ 475 CRC_1DB "CRC";
 CM_ BO_ 1371 "Lithium Battery Controller";
 CM_ SG_ 1371 LBCStateOfCharge "Does not affect cluster or VCM at all";
 CM_ SG_ 1371 HeartbeatLBC "55,AA (alternates every 500ms)";
+CM_ SG_ 1371 Unknown_55B_4 "Stable, doesn't seem to be muxed";
+CM_ SG_ 1371 Mux_55B "00,01,02,03";
 CM_ BO_ 1370 "Inverter";
-CM_ SG_ 1370 MotorTemperature "0.5C/bit";
-CM_ SG_ 1370 InverterComBoardTemp "0.5C/bit
- Inverter communications board temp. 0.5c per bit";
-CM_ SG_ 1370 IGBTTemperature "0.5C/bit
- ?Not fully defined";
-CM_ SG_ 1370 IGBTDriverBoardTemperature "0.5C/bit
- Temperature only active during drive (IGBT driver board?)";
+CM_ SG_ 1370 MotorTemperature "Stays at 0 on 2015 Leaf?";
+CM_ SG_ 1370 InverterComBoardTemp "Inverter communications board temp";
+CM_ SG_ 1370 IGBTTemperature "";
+CM_ SG_ 1370 IGBTDriverBoardTemperature "Temperature only active during drive (IGBT driver board?)";
 CM_ BO_ 476 "Lithium Battery Controller";
 CM_ SG_ 476 AvailableBatteryPower "Max available power that can be pulled from battery. 6e=110kW, less is seen below LBW, 31=51kW observed near turtle";
 CM_ SG_ 476 MaximumCurrentDuringCharge "Looks like this is maximum current during charge?";
@@ -216,8 +239,10 @@ Just a hint on those pursuing 40/30/24kWh translations: We are suspecting the 'p
 CM_ SG_ 476 CRC_1DC "CRC byte for msg. Poly is 0x85; left shift; D0 first; 64 shifts padding with 0's on last 8";
 CM_ BO_ 474 "Inverter";
 CM_ SG_ 474 InverterVoltage "2V/bit
- 01..b9 follows BVS until near end of six2dead drive (turtle?) or end of charging --> perhaps Battery Available Power Signal or inverter voltage?";
-CM_ SG_ 474 MotorAmps "Motor Amps * Motor Volts is really close to pack watts*40 Maybe 1lsb=0.5A";
+01..b9 Follows BVS until near end of drive (turtle?) or end of charging ";
+CM_ SG_ 474 MotorAmps "Something not right here.
+
+Motor Amps * Motor Volts is really close to pack watts*40 Maybe 1lsb=0.5A";
 CM_ SG_ 474 MotorSpeed "16 bits; 1 LSB = 0.5rpm? Stays at zero when applying torque with brake on so not likely volts.";
 CM_ SG_ 474 Counter "Safety counter";
 CM_ SG_ 474 CRC_1DA "CRC";
@@ -323,6 +348,17 @@ CM_ SG_ 1354 ClimateControlSetpoint "00,39,52,53,54 (MY2011,2012)";
 CM_ SG_ 1354 Unknown_54A_5 "00";
 CM_ SG_ 1354 Unknown_54A_6 "00";
 CM_ SG_ 1354 Unknown_54A_7 "4f,8c-90";
+CM_ BO_ 1118 "??? Unknown sender module(Also empty)";
+CM_ BO_ 1438 "??? Unknown sender module";
+CM_ SG_ 1438 Unknown_59E_1 "0e always?";
+CM_ SG_ 1438 Unknown_59E_2 "60 always?";
+CM_ SG_ 1438 Unknown_59E_3 "90 always?";
+CM_ BO_ 1153 "??? Unknown sender module";
+CM_ BO_ 912 "??? Unknown sender module";
+CM_ SG_ 912 Unknown_390_7 "Sawtooth, from 200-250";
+CM_ BO_ 915 "??? Unknown sender module";
+CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
+VAL_ 1468 Mux 8 "Fuel bars" 9 "Capacity bars" ;
 VAL_ 1356 ClimateControlStatus2 102 "CC ON" 255 "CC OFF" ;
 VAL_ 282 JoystickGearPosition 2 "Reverse" 3 "Neutral" 4 "Drive/B" 0 "Parked" ;
 VAL_ 282 CarOnOffStatus 64 "CarOff" 128 "CarOn" ;
