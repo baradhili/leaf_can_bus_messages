@@ -44,7 +44,7 @@ BO_ 1468 x5BC: 8 Vector__XXX
  SG_ Mux M : 32|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BatteryTemperature : 24|8@1+ (1,0) [0|0] "dC" Vector__XXX
  SG_ BatteryChargeGaugeOffset : 36|4@1+ (1,0) [0|15] "" Vector__XXX
- SG_ ChargeBars m8 : 20|4@1+ (1,0) [0|12] "-" Vector__XXX
+ SG_ ChargeBars m8 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
  SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 475 x1DB: 8 Vector__XXX
@@ -207,8 +207,41 @@ CM_ SG_ 1468 GIDs "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
 CM_ SG_ 1468 Mux "Mux field for capacity bars and charge bars";
 CM_ SG_ 1468 BatteryTemperature "Should be average of the 3/4 sensors inside the battery pack (0x50 = 80DEC = 8.0*C)";
 CM_ SG_ 1468 BatteryChargeGaugeOffset "Somehow effects the charge gauge, lower numbers mean more bars";
-CM_ SG_ 1468 ChargeBars "Range 0-12";
-CM_ SG_ 1468 CapacityBars "15 = 12 bars";
+CM_ SG_ 1468 ChargeBars "Range 0-15 (Below data from test at 0%SOC, writing values to bus)
+15 = 12 chargebars
+14 = 12 chargebars
+13 = 11 chargebars
+12 = 10 chargebars
+11 = 9 chargebars
+10 = 8 chargebars !
+9 = 8 chargebars !
+8 = 7 chargebars
+7 = 6 chargebars
+6 = 5 chargebars
+5 = 4 chargebars !
+4 = 4 chargebars !
+3 = 3 chargebars
+2 = 2 chargebars
+1 = 1 chargebars
+0 = 0 chargebars";
+CM_ SG_ 1468 CapacityBars "0-15 
+15 = 12 capacitybars
+14 = 12 capacitybars
+13 = 11 capacitybars
+12 = 10 capacitybars
+11 = 9 capacitybars
+10 = 8 capacitybars !
+9 = 8 capacitybars !
+8 = 7 capacitybars
+7 = 6 capacitybars
+6 = 5 capacitybars
+5 = 4 capacitybars !
+4 = 4 capacitybars !
+3 = 3 capacitybars
+2 = 2 capacitybars
+1 = 1 capacitybars
+0 = 0 capacitybars
+";
 CM_ BO_ 475 "Lithium Battery Controller";
 CM_ SG_ 475 BatteryVoltageSignal "0.5v/bit";
 CM_ SG_ 475 BatteryCurrentSignal "2s comp, 1lSB = 0.5A (motorola?)";
