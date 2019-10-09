@@ -106,7 +106,7 @@ BO_ 282 x11A: 8 Vector__XXX
  SG_ StartupDataUnknown1 m1 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ StartupDataUnknown2 m2 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ StartupDataUnknown3 m3 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ UnknownByte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SteeringWheelButton : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ HeartbeatVCM : 24|8@1+ (1,0) [85|170] "" Vector__XXX
 
 BO_ 468 x1D4: 8 Vector__XXX
@@ -310,7 +310,7 @@ CM_ SG_ 282 StartupDataUnknown0 "Activity only during startup, then holds a cons
 CM_ SG_ 282 StartupDataUnknown1 "Activity only during startup, then holds a constant value for each channel";
 CM_ SG_ 282 StartupDataUnknown2 "Activity only during startup, then holds a constant value for each channel";
 CM_ SG_ 282 StartupDataUnknown3 "Activity only during startup, then holds a constant value for each channel";
-CM_ SG_ 282 UnknownByte2 "00,04,80 observed here";
+CM_ SG_ 282 SteeringWheelButton "00,04,80 observed here (ECO button logic here?)";
 CM_ SG_ 282 HeartbeatVCM "55,AA (alternating between these two values, heartbeat?)
 01010101
 10101010";
