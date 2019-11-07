@@ -149,8 +149,8 @@ BO_ 1290 x50A: 8 Vector__XXX
  SG_ Unknown_50A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50A_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50A_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50A_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ACCompressorPressure : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ACStatusBits_RestUnknown : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50A_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50A_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50A_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -180,7 +180,7 @@ BO_ 1354 x54A: 8 Vector__XXX
  SG_ ClimateControlSetpoint : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_54A_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_54A_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_54A_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AmbientTempAC : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1118 x45E: 1 Vector__XXX
 
@@ -348,12 +348,14 @@ CM_ SG_ 1472 Unknown5C0_byte4 "a4 for TT, I have 7C here (2015 S C5/C9 depending
 CM_ SG_ 1472 Unknown5C0_byte5_mux40 "UnknownValue lies here. Multiplexed field";
 CM_ SG_ 1472 Unknown5C0_byte5_mux80 "UnknownValue lies here. Multiplexed field";
 CM_ SG_ 1472 Unknown5C0_byte5_muxC0 "UnknownValue lies here. Multiplexed field";
-CM_ BO_ 1290 "??? Unknown sender module";
+CM_ BO_ 1290 "VCM relay from A/C Auto Amp and AC Pressor Sensor (which is measured directly from VCM) Message is identical on EV CAN and CAR CAN";
 CM_ SG_ 1290 Unknown_50A_0 "04,84,85";
 CM_ SG_ 1290 Unknown_50A_1 "02,13,33,40,42,53,72,73";
 CM_ SG_ 1290 Unknown_50A_2 "00,a0";
-CM_ SG_ 1290 Unknown_50A_3 "Some sort of temperature?? 2c-44;";
-CM_ SG_ 1290 Unknown_50A_4 "00,80";
+CM_ SG_ 1290 ACCompressorPressure "Some sort of pressure/temperature?? 2c-44;
+
+rises with AC on; slow decay when off";
+CM_ SG_ 1290 ACStatusBits_RestUnknown "00,80  BIT1 = Rear defrost on/off";
 CM_ SG_ 1290 Unknown_50A_5 "a0";
 CM_ SG_ 1290 Unknown_50A_6 "04 , Only present in 2013+ (otherwise frame stops at 6bytes)";
 CM_ SG_ 1290 Unknown_50A_7 "00 , Only present in 2013+ (otherwise frame stops at 6bytes)";
@@ -380,7 +382,8 @@ CM_ SG_ 1354 Unknown_54A_3 "06,0a,0b,0f";
 CM_ SG_ 1354 ClimateControlSetpoint "00,39,52,53,54 (MY2011,2012)";
 CM_ SG_ 1354 Unknown_54A_5 "00";
 CM_ SG_ 1354 Unknown_54A_6 "00";
-CM_ SG_ 1354 Unknown_54A_7 "4f,8c-90";
+CM_ SG_ 1354 AmbientTempAC "Appears to track ambient (+41)
+4f,8c-90";
 CM_ BO_ 1118 "??? Unknown sender module(Also empty)";
 CM_ BO_ 1438 "??? Unknown sender module";
 CM_ SG_ 1438 Unknown_59E_1 "0e always?";
