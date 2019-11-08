@@ -33,15 +33,18 @@ NS_ :
 
 BS_:
 
-BU_:
+BU_: BCM VSP STRG MA EPS AV AVM AIRBAG IPDMer BRAKE ABS VCM
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Unknown_176_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0024 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_215_6 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0047 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_RearRightDoorOpene111d : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0089 : 9|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 2 x002: 5 Vector__XXX
+BO_ 2 x002: 5 STRG
  SG_ SteeringAngle : 7|16@0+ (1,0) [0|0] "ddeg" Vector__XXX
  SG_ SteeringAngleChangeRate : 23|8@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_2_3 : 31|8@0+ (1,0) [0|0] "" Vector__XXX
@@ -52,12 +55,12 @@ BO_ 42 x02A: 3 Vector__XXX
  SG_ Unknown_2A_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_2A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 304 x130: 3 Vector__XXX
+BO_ 304 x130: 3 ABS
  SG_ Unknown_130_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BitmaskABS : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_130_1 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 372 x174: 8 Vector__XXX
+BO_ 372 x174: 8 VCM
  SG_ Unknown_174_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_174_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_174_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -76,7 +79,7 @@ BO_ 374 x176: 7 Vector__XXX
  SG_ Unknown_176_6 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_176 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 384 x180: 8 Vector__XXX
+BO_ 384 x180: 8 VCM
  SG_ Unknown_180_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_180_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ MotorAmp : 23|16@0+ (1,0) [0|0] "" Vector__XXX
@@ -86,7 +89,7 @@ BO_ 384 x180: 8 Vector__XXX
  SG_ Unknown_180_6 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_180_7 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 458 x1CA: 8 Vector__XXX
+BO_ 458 x1CA: 8 BRAKE
  SG_ BrakePressure1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BrakePressure2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BrakePressure3 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -143,12 +146,12 @@ BO_ 581 x245: 8 Vector__XXX
  SG_ Unknown_245_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_245_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 608 x260: 4 Vector__XXX
+BO_ 608 x260: 4 VCM
  SG_ AvailablePowerCluster : 0|8@1+ (1,0) [0|90] "kW" Vector__XXX
  SG_ AvailableRegenCluster : 8|8@1+ (1,0) [0|50] "kW" Vector__XXX
  SG_ MotorLoadCluster : 23|16@0+ (1,0) [100|16000] "" Vector__XXX
 
-BO_ 640 x280: 8 Vector__XXX
+BO_ 640 x280: 8 MA
  SG_ Unknown_280_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_280_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_280_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -157,21 +160,21 @@ BO_ 640 x280: 8 Vector__XXX
  SG_ Unknown_280_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_280_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 644 x284: 8 Vector__XXX
+BO_ 644 x284: 8 ABS
  SG_ FrontRightWheelSpeed : 7|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ FrontLeftWheelSpeed : 23|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ VehicleSpeedFromABS : 39|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_284_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_284_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 645 x285: 8 Vector__XXX
+BO_ 645 x285: 8 ABS
  SG_ RearRightWheelSpeed : 7|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ RearLeftWheelSpeed : 23|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ NotUsed_285_4_5 : 39|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_285_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_285_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 658 x292: 8 Vector__XXX
+BO_ 658 x292: 8 ABS
  SG_ Unknown_292_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_292_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_292_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -191,8 +194,8 @@ BO_ 734 x2DE: 8 Vector__XXX
  SG_ Unknown_2DE_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_2DE_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 768 x300: 1 Vector__XXX
- SG_ SteeringWheelForce : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 768 x300: 1 STRG
+ SG_ SteeringWheelForce : 0|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 834 x342: 8 Vector__XXX
  SG_ Unknown_342_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -214,8 +217,8 @@ BO_ 849 x351: 8 Vector__XXX
  SG_ Unknown_351_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_351_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 852 x354: 8 Vector__XXX
- SG_ VehicleSpeedABS : 7|16@0+ (1,0) [0|0] "" Vector__XXX
+BO_ 852 x354: 8 ABS
+ SG_ VehicleSpeedABS : 7|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
  SG_ Unknown_354_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_354_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ StatusFlagABS : 32|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -223,7 +226,7 @@ BO_ 852 x354: 8 Vector__XXX
  SG_ Unknown_354_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_354_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 853 x355: 8 Vector__XXX
+BO_ 853 x355: 8 MA
  SG_ VehicleSpeedToVCM : 7|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ VehicleSpeedToVCM2 : 23|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ ClusterUnitsSelected : 32|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -340,11 +343,158 @@ BO_ 1370 x55A: 8 Vector__XXX
 
 BO_ 1449 x5A9: 8 Vector__XXX
  SG_ Unknown_5A9_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ GIDStoClusterMaybe : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5A9_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5A9_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5A9_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5A9_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5A9_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5A9_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1459 x5B3: 8 VCM
+ SG_ BatteryPackTemperature : 0|8@1+ (1,0) [0|255] "0.25C/bit" Vector__XXX
+ SG_ BatteryStateOfHealth : 9|7@1+ (1,0) [0|127] "%" Vector__XXX
+ SG_ Unknown_5B3_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5B3_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5B3_4 : 33|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryGIDS : 32|9@0+ (1,0) [0|511] "GIDs" Vector__XXX
+ SG_ BatteryAvailableChargeBars : 51|5@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ Unknown_5B3_6 : 48|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MuxedCapacityAndSOH : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1472 x5C0: 8 VCM
+ SG_ Mux_5C0 M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClusterTemperature2 m64 : 16|8@1+ (1,0) [0|0] "dC" Vector__XXX
+ SG_ DisOrChargeTimeCounter : 24|8@1+ (1,0) [0|255] "counter" Vector__XXX
+ SG_ Unknown_5C0_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C0_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C0_5_mux40 m64 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C0_5_mux80 m128 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C0_5_muxC0 m192 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1477 x5C5: 8 MA
+ SG_ Unknown_5C5_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Odometer : 15|24@0+ (1,0) [0|16777215] "km / m" Vector__XXX
+ SG_ Unknown_5C5_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C5_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C5_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C5_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1507 x5E3: 4 Vector__XXX
+ SG_ Unknown_5E3_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5E3_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5E3_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5E3_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1508 x5E4: 3 Vector__XXX
+ SG_ Unknown_5E4_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5E4_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5E4_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1515 x5EB: 8 Vector__XXX
+ SG_ Unknown_5EB_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1528 x5F8: 8 Vector__XXX
+ SG_ Unknown_5F8_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F8_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F8_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F8_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F8_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F8_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F8_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F8_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1529 x5F9: 8 Vector__XXX
+ SG_ Unknown_5F9_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F9_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F9_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F9_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SystemTimeMinutes : 32|6@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SystemTimeHours : 43|5@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F9_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5F9_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1539 x603: 8 Vector__XXX
+ SG_ Unknown_603_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_603_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_603_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_603_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_603_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_603_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_603_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_603_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1540 x604: 8 Vector__XXX
+ SG_ Unknown_604_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_604_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_604_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_604_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_604_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_604_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_604_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_604_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1549 x60D: 8 BCM
+ SG_ Unknown_60D_bit : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_ParkingLights : 1|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_PassengerDoorOpen : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_DriverDoorOpen : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_RearLeftDoorOpen : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_RearRightDoorOpen : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_TrunkOpen : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_FogLights : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_VehicleState : 9|2@1+ (1,0) [0|3] "Enumeration" Vector__XXX
+ SG_ Unknown_Bit_1_3 : 11|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_Bit_1_4 : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_LeftTurnSignalFeedback : 13|1@1+ (1,0) [0|1] "On/Off" Vector__XXX
+ SG_ BCM_RightTurnSignalFeedback : 14|1@1+ (1,0) [0|1] "On/Off" Vector__XXX
+ SG_ BCM_HighBeamLights : 15|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_TurnSignal : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_60D_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_60D_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_60D_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_60D_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_60D_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1573 x625: 6 BCM
+ SG_ Unknown_625_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HeadlightFoglightStatus : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1666 x682: 8 Vector__XXX
+
+BO_ 1676 x68C: 8 Vector__XXX
+
+BO_ 1782 x6f6: 3 Vector__XXX
+ SG_ Unknown_6F6_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_6F6_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_6F6_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
-CM_ BO_ 2 "???
-Steering angle sensor signal. Goes to AV unit, Brake, and ABS modules";
+CM_ BU_ BCM "Body Control Module";
+CM_ BU_ VSP "Approaching vehicle sound for pedestrians (VSP) control unit";
+CM_ BU_ STRG "Steering angle sensor";
+CM_ BU_ MA "Combination meter";
+CM_ BU_ EPS "Electronic Power Steering control unit";
+CM_ BU_ AV "AV control unit (Optional)";
+CM_ BU_ AVM "Around view monitor control unit (Optional)";
+CM_ BU_ AIRBAG "Air bag diagnosis sensor unit";
+CM_ BU_ IPDMer "Intelligent Power Distribution Module Engine Room";
+CM_ BU_ BRAKE "Electrically-driven intelligent brake unit";
+CM_ BU_ ABS "ABS actuator and electric control unit";
+CM_ BU_ VCM "Vehicle Control Module";
+CM_ BO_ 2 "Steering angle sensor signal. Goes to AV unit, Brake, and ABS modules";
 CM_ SG_ 2 SteeringAngle "Steering Angle LSB:MSB
 Left is negative
 Degrees = value/10 (3600 = 360.0deg)";
@@ -355,9 +505,9 @@ CM_ BO_ 42 "???";
 CM_ SG_ 42 Unknown_2A_0 "Always 0?";
 CM_ SG_ 42 Unknown_2A_1 "Always 0?";
 CM_ SG_ 42 Unknown_2A_2 "Always 0?";
-CM_ BO_ 304 "ABS Module";
+CM_ BO_ 304 "";
 CM_ SG_ 304 BitmaskABS "Bit5 = 1 = Traction control off?";
-CM_ BO_ 372 "Probably VCM Relay from eshift on EV CAN";
+CM_ BO_ 372 "Relayed from E-Shift on EV-CAN";
 CM_ SG_ 372 ShifterPosition "AA:Park/Neutral BB:Drive 99:Reverse";
 CM_ SG_ 372 Unknown_174_4 "00...0F";
 CM_ BO_ 374 "Might be VCM relay of Inverter message of motor RPM?";
@@ -375,21 +525,23 @@ CM_ SG_ 384 MotorAmp "2's compliment; Tracks power when multiplied with 176.23 a
 CM_ SG_ 384 MotorAmpAlternative "Very similar to 180:B2/3 expect is clipped and decays to zero during regen";
 CM_ BO_ 458 "Brake Control Module
 (Not present on MY2013)";
-CM_ BO_ 459 "Brake Control Module";
+CM_ BO_ 459 "Brake Module";
 CM_ SG_ 459 TargetRegenBraking "Appears to be target regen before getting qualified by charge level, etc.";
 CM_ SG_ 459 TargetBraking "Units track motor amps in m180.23";
-CM_ BO_ 469 "Brake Control Module?";
+CM_ BO_ 469 "Brake Module?";
 CM_ BO_ 505 "VCM?";
 CM_ BO_ 533 "? Key system ?";
 CM_ BO_ 534 "Related to proximity key? 
 I saw these messages on CAR can when there shouldn't be activity but I was walking near the car.";
 CM_ BO_ 581 "???";
 CM_ SG_ 581 Unknown_245_4 "Just ramps and wraps";
-CM_ BO_ 608 "VCM to cluster?";
+CM_ BO_ 608 "Data for instrumentation cluster";
 CM_ SG_ 608 AvailablePowerCluster "50-5A (80-90kW) observed in normal driving, decays to 31 (51kW) around turtle";
 CM_ SG_ 608 AvailableRegenCluster "Used to generate regen bubbles with hysteresis.  Bubbles turn at @ 6,C,12,&18 and turn off at 0,6,C, & 12 respectively (6,12,18,24kW)";
 CM_ SG_ 608 MotorLoadCluster "Units are unknown (100-16000) - doesn't include accessory- It is probably the dash power display \"inner\" bubbles. Observe byte 2 at 0x19 and byte 3 at 00 when at idle.";
-CM_ BO_ 640 "VCM to cluster? or vice versa?";
+CM_ BO_ 640 "Instrumentation cluster output 
+TODO:
+This area might contain lots of signals, see the LAN.pdf";
 CM_ SG_ 640 Unknown_280_0 "Some activity here even when car is off, might be related to other dash lights (like the red key light)";
 CM_ SG_ 640 Unknown_280_1 "Some activity here even when car is off, might be related to other dash lights (like the red key light)
 370Z had seatbelt status as byte 0 bit 0. Need to verify. Could probably sync video of startup and CAN log to get the various lights and bytes used";
@@ -412,7 +564,7 @@ CM_ SG_ 658 FrictionBrakePressure "Measured to provide the same braking force as
 CM_ BO_ 734 "???";
 CM_ SG_ 734 Unknown_2DE_6 "03";
 CM_ SG_ 734 Unknown_2DE_7 "CA";
-CM_ BO_ 768 "Steering Angle Sensor";
+CM_ BO_ 768 "Steering Angle Sensor, force applied";
 CM_ SG_ 768 SteeringWheelForce "Steering force applied to wheel";
 CM_ BO_ 834 "? Key system ?
 
@@ -494,7 +646,84 @@ CM_ SG_ 1370 UnidentifiedTemperature "InverterComBoardTemp? CabinTemperature? Ve
 CM_ SG_ 1370 Unknown_55A_2 "IGBTTemperature?";
 CM_ SG_ 1370 Unknown_55A_3 "IGBTDriverBoardTemperature?";
 CM_ SG_ 1370 RawTemperature1 "MotorTemperature?";
-CM_ BO_ 1449 "VCM to cluster?";
+CM_ BO_ 1449 "VCM to instrument cluster?";
+CM_ SG_ 1449 GIDStoClusterMaybe "Seems to *somewhat* follow GIDs";
+CM_ BO_ 1459 "VCM relayed and processed data to instrument cluster";
+CM_ SG_ 1459 BatteryPackTemperature "Probably used to drive temp bars on cluster";
+CM_ SG_ 1459 BatteryStateOfHealth "Confirmed to contain State-Of-Health (SOH)";
+CM_ SG_ 1459 BatteryGIDS "A GID is a measure used by the LEAF internally, and seems to be roughly equivalent to about 80 watt-hours. A new 24kWh LEAF will charge up to about 271 GIDs on a 100% charge when the battery is new.";
+CM_ SG_ 1459 BatteryAvailableChargeBars "Is this really 5bits? 4 would be enough to make 15DEC
+
+From EV-BUS
+Range 0-15 (Below data from test at 0%SOC, writing values to bus)
+15 = 12 chargebars on instrument cluster
+14 = 12 chargebars
+13 = 11 chargebars
+12 = 10 chargebars
+11 = 9 chargebars
+10 = 8 chargebars !
+9 = 8 chargebars !
+8 = 7 chargebars
+7 = 6 chargebars
+6 = 5 chargebars
+5 = 4 chargebars !
+4 = 4 chargebars !
+3 = 3 chargebars
+2 = 2 chargebars
+1 = 1 chargebars
+0 = 0 chargebars";
+CM_ SG_ 1459 MuxedCapacityAndSOH "Possibly capacity bargraph when D0=FE; SOH otherwise. TODO: Add mux to this message after testing";
+CM_ BO_ 1472 "Relayed LBC message from EV-CAN";
+CM_ SG_ 1472 Mux_5C0 "40,80,c0";
+CM_ SG_ 1472 ClusterTemperature2 "Position in the frame? The indicated temperature on the instrument cluster is controlled by another muxed field, when 0x5C0 is 0x40, the indicated temperature is controlled by the 3rd byte of 0x5C0
+
+Dala: Doesn't seem to line up, third byte 0x60 = 6 when on the cluster 4 temp bars are active.";
+CM_ SG_ 1472 DisOrChargeTimeCounter "Linear positive ramp up during charge and negative ramp down during discharge.  Starts from 00 regardless of initial charge level. Charging time?";
+CM_ SG_ 1472 Unknown_5C0_4 "(2015 S C5/C9 depending on mux)";
+CM_ BO_ 1477 "Instrument cluster -> BCM / AV / VCM";
+CM_ SG_ 1477 Odometer "Odo is handled by the cluster display and is transmitted to body control module, AV, and VCM";
+CM_ BO_ 1507 "???";
+CM_ BO_ 1508 "???";
+CM_ BO_ 1515 "??? Only active when driving
+
+Might be various bit flags to turn on warning lights in the dash cluster";
+CM_ BO_ 1528 "???";
+CM_ SG_ 1528 Unknown_5F8_0 "Increments once a minute?";
+CM_ BO_ 1529 "???";
+CM_ SG_ 1529 SystemTimeMinutes "Time:minute (0-59)";
+CM_ SG_ 1529 SystemTimeHours "Time:hour (0-23)";
+CM_ BO_ 1539 "Wake up message
+
+Noticing this shows up on CARcan right after 68c shows up on EVCan. Probably VCM relay from TCU.";
+CM_ BO_ 1540 "???";
+CM_ BO_ 1549 "Body control module
+
+Most likely, not confirmed
+
+Funfact, In the 370z there are lock, door, and headlight statuses in this message";
+CM_ SG_ 1549 BCM_ParkingLights "3 - dim lights 
+2 - parking lights (first mode on the control)";
+CM_ SG_ 1549 BCM_FogLights "1 - fog lights (together with 1-2 bits of the byte #0) TODO: Verify message";
+CM_ SG_ 1549 BCM_VehicleState "0 - OFF, 
+1 - power button is pressed once without brakes.
+2 - is sent during the startup sequence before 1 and 3 for 2 seconds
+3 - either car is in Ready On mode or the power button is pressed the second time after the mode '1'";
+CM_ SG_ 1549 BCM_LeftTurnSignalFeedback "Not the control, but the actual light";
+CM_ SG_ 1549 BCM_RightTurnSignalFeedback "Not the control, but the actual light";
+CM_ SG_ 1549 BCM_HighBeamLights "1 - high beam lights (together with 1-2 bits of the byte #0) TODO: Verify this";
+CM_ SG_ 1549 BCM_TurnSignal "06: Turn signal off 26: Right 46: Left";
+CM_ BO_ 1573 "Body Control Module?
+
+Funfact, In 370z there are climate related statuses in this message";
+CM_ SG_ 1573 HeadlightFoglightStatus "00: Lights off 60: Headlights on 40: Parking Lights on 68:Headlights and fog lights";
+CM_ BO_ 1666 "Wake up message
+
+In 370z this \"Sleep wakeup\" perhaps modules on the car can use this to wake up VCM";
+CM_ BO_ 1676 "Wake up message
+
+68C on EVcan is TCU (Carwings) so it might be a relay from VCM or a log mixup";
+CM_ BO_ 1782 "???";
+VAL_ 372 ShifterPosition 170 "Park/Neutral" 187 "Drive" 153 "Reverse" ;
 VAL_ 853 ClusterUnitsSelected 0 "Kilometers" 32 "Miles" ;
 VAL_ 853 ClusterOdometerUnits 64 "Kilometers" 96 "Miles" ;
 VAL_ 856 TurnSignalStatus 0 "BothOff" 4 "Left Signal ON" 8 "Right Signal ON" 12 "Both Signals ON (Hazards)" ;
@@ -502,4 +731,5 @@ VAL_ 1057 DashShifterPosition 24 "Neutral" 8 "Park" 32 "Drive" 16 "Reverse" 38 "
 VAL_ 1296 ClimateControlActive 0 "CC Off" 1 "CC On" ;
 VAL_ 1355 ClimateControlStatusChange 0 "No change" 1 "Changed" ;
 VAL_ 1355 FanSpeedStatusChange 0 "No change" 1 "Change" ;
+VAL_ 1549 BCM_VehicleState 0 "Vehicle OFF" 1 "Power button pressed once without brakes" 2 "Booting up. 2 during the startup sequence before state1 and state3 for 2 seconds" 3 "Vehicle ON (Ready or ACC)" ;
 
