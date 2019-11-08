@@ -33,13 +33,13 @@ NS_ :
 
 BS_:
 
-BU_:
+BU_: VCM INVmc EShift HVAC TCU OBCpd HVBAT
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Unknown_55B_5 m3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1468 x5BC: 8 Vector__XXX
+BO_ 1468 x5BC: 8 HVBAT
  SG_ GIDs : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
  SG_ Mux M : 32|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BatteryTemperature : 24|8@1+ (1,0) [0|0] "dC" Vector__XXX
@@ -47,26 +47,26 @@ BO_ 1468 x5BC: 8 Vector__XXX
  SG_ ChargeBars m8 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
  SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
 
-BO_ 475 x1DB: 8 Vector__XXX
+BO_ 475 x1DB: 8 HVBAT
  SG_ BatteryVoltageSignal : 23|10@0+ (1,0) [0|0] "V/2" Vector__XXX
  SG_ BatteryCurrentSignal : 7|11@0+ (1,0) [0|5000] "centiA/2?" Vector__XXX
  SG_ CRC_1DB : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
  SG_ Mux_1DB : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1371 x55B: 8 Vector__XXX
+BO_ 1371 x55B: 8 HVBAT
  SG_ LBCStateOfCharge : 7|10@0+ (1,0) [0|0] "%+1" Vector__XXX
  SG_ HeartbeatLBC : 16|8@1+ (1,0) [85|170] "" Vector__XXX
  SG_ Unknown_55B_4 : 32|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ Mux_55B M : 48|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_55B : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1370 x55A: 8 Vector__XXX
+BO_ 1370 x55A: 8 INVmc
  SG_ MotorTemperature : 40|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
  SG_ InverterComBoardTemp : 8|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
  SG_ IGBTTemperature : 16|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
  SG_ IGBTDriverBoardTemperature : 24|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
 
-BO_ 476 x1DC: 8 Vector__XXX
+BO_ 476 x1DC: 8 HVBAT
  SG_ AvailableBatteryPower : 0|8@1+ (1,0) [0|110] "kW" Vector__XXX
  SG_ MaximumCurrentDuringCharge : 15|12@0+ (1,0) [0|250] "A" Vector__XXX
  SG_ QuickchargeUnknownValue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -75,30 +75,30 @@ BO_ 476 x1DC: 8 Vector__XXX
  SG_ BatteryPairing3 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_1DC : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 474 x1DA: 8 Vector__XXX
+BO_ 474 x1DA: 8 INVmc
  SG_ InverterVoltage : 0|8@1+ (1,0) [0|200] "V*2" Vector__XXX
  SG_ MotorAmps : 19|12@0+ (1,0) [0|250] "A" Vector__XXX
  SG_ MotorSpeed : 39|16@0+ (1,0) [0|24000] "rpm/2" Vector__XXX
- SG_ Counter : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Counter : 48|8@1+ (1,0) [0|3] "" Vector__XXX
  SG_ CRC_1DA : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
-BO_ 1465 x5B9: 8 Vector__XXX
+BO_ 1465 x5B9: 8 VCM
  SG_ ActiveFuelBars : 3|5@1+ (1,0) [0|12] "-" Vector__XXX
  SG_ ChargeMinutesRemaining : 2|11@0+ (1,0) [0|2047] "minutes" Vector__XXX
 
-BO_ 1359 x54F: 8 Vector__XXX
+BO_ 1359 x54F: 8 HVAC
  SG_ InteriorIntakeTemp : 0|8@1+ (1,0) [0|0] "F or 0.5C" Vector__XXX
  SG_ ACPowerConsumption : 8|8@1+ (1,0) [0|0] "50W/bit?" Vector__XXX
  SG_ ACAutoAmpStatus : 46|2@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ HeaterPowerConsumption : 40|6@1+ (1,0) [0|0] "300W/bit?" Vector__XXX
 
-BO_ 1356 x54C: 8 Vector__XXX
+BO_ 1356 x54C: 8 HVAC
  SG_ ACEvaporatorTemperature : 0|8@1+ (1,0) [0|0] "0.25C/bit?" Vector__XXX
  SG_ ClimateControlStatus2 : 8|8@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ FanVoltage : 40|8@1+ (1,0) [0|0] "0.05 V/bit" Vector__XXX
  SG_ OutsideAmbientTemperature : 48|8@1+ (1,0) [0|0] "F/C" Vector__XXX
 
-BO_ 282 x11A: 8 Vector__XXX
+BO_ 282 x11A: 8 VCM
  SG_ JoystickGearPosition : 4|4@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ CarOnOffStatus : 8|8@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ Mulitplexor M : 48|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -112,31 +112,36 @@ BO_ 282 x11A: 8 Vector__XXX
 BO_ 468 x1D4: 8 Vector__XXX
  SG_ MotorAmpTorqueRequest : 23|12@0+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_1D4 : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+ SG_ Unknown_1D4_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_1D4_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_1D4_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_1D4_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_1D4_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 498 x1F2: 8 Vector__XXX
+BO_ 498 x1F2: 8 VCM
  SG_ CommandedChargePower : 1|10@0+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 644 x284: 8 Vector__XXX
+BO_ 644 x284: 8 VCM
  SG_ LeftWheelSpeedSensor : 7|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
  SG_ RightWheelSpeedSensor : 23|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
  SG_ AverageRearSpeedSensor : 39|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
  SG_ DistanceTraveled1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ DistanceTraveled2 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
-BO_ 1355 x54B: 8 Vector__XXX
+BO_ 1355 x54B: 8 HVAC
  SG_ ClimateControlStatus1 : 0|8@1+ (1,0) [0|0] "status" Vector__XXX
  SG_ ClimateVentModeTarget : 16|8@1+ (1,0) [0|0] "status" Vector__XXX
  SG_ ClimateVentModeIntake : 24|8@1+ (1,0) [0|0] "status" Vector__XXX
  SG_ FanSpeed : 36|4@1+ (1,0) [1|7] "speed" Vector__XXX
  SG_ CCButtonPress : 56|8@1+ (1,0) [0|0] "0/1" Vector__XXX
 
-BO_ 1449 x5A9: 8 Vector__XXX
+BO_ 1449 x5A9: 8 VCM
  SG_ DiagSomething0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ DiagSomething1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ DiagSomething2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ DiagSomething3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1472 x5C0: 8 Vector__XXX
+BO_ 1472 x5C0: 8 HVBAT
  SG_ Mux5C0 M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ClusterTemperature2 m64 : 16|8@1+ (1,0) [0|0] "dC" Vector__XXX
  SG_ DisOrChargeTimeCounter : 24|8@1- (1,0) [0|255] "Counter" Vector__XXX
@@ -145,7 +150,7 @@ BO_ 1472 x5C0: 8 Vector__XXX
  SG_ Unknown5C0_byte5_mux80 m128 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown5C0_byte5_muxC0 m192 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1290 x50A: 8 Vector__XXX
+BO_ 1290 x50A: 8 VCM
  SG_ Unknown_50A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50A_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -168,11 +173,11 @@ BO_ 1292 x50C: 6 Vector__XXX
  SG_ Unknown_50C_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50C_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50C_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50C_3 M : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mux_50C M : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50C_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_50C_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1354 x54A: 8 Vector__XXX
+BO_ 1354 x54A: 8 HVAC
  SG_ CCStatusPlusUnknown : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_54A_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_54A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -201,6 +206,8 @@ BO_ 915 x393: 8 Vector__XXX
 
 
 
+CM_ BU_ VCM "Vehicle Control Module";
+CM_ BU_ INVmc "Inverter Motor Controller";
 CM_ BO_ 1468 "Lithium Battery Controller";
 CM_ SG_ 1468 GIDs "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
 1 LSB = 65-85WH";
@@ -248,7 +255,9 @@ CM_ SG_ 475 BatteryCurrentSignal "2s comp, 1lSB = 0.5A (motorola?)";
 CM_ SG_ 475 CRC_1DB "CRC";
 CM_ BO_ 1371 "Lithium Battery Controller";
 CM_ SG_ 1371 LBCStateOfCharge "Does not affect cluster or VCM at all";
-CM_ SG_ 1371 HeartbeatLBC "55,AA (alternates every 500ms)";
+CM_ SG_ 1371 HeartbeatLBC "55,AA (alternates every 500ms) Works as a mux
+
+This message is repeated 5x, to offer backwardscompability to 2011/2013 models. The message on these cars are run at 500ms.";
 CM_ SG_ 1371 Unknown_55B_4 "Stable, doesn't seem to be muxed";
 CM_ SG_ 1371 Mux_55B "00,01,02,03";
 CM_ BO_ 1370 "Inverter";
@@ -272,12 +281,12 @@ Just a hint on those pursuing 40/30/24kWh translations: We are suspecting the 'p
 CM_ SG_ 476 CRC_1DC "CRC byte for msg. Poly is 0x85; left shift; D0 first; 64 shifts padding with 0's on last 8";
 CM_ BO_ 474 "Inverter";
 CM_ SG_ 474 InverterVoltage "2V/bit
-01..b9 Follows BVS until near end of drive (turtle?) or end of charging ";
+01..b9 Follows BVS(BatteryVoltageSignal) until near end of drive (turtle?) or end of charging ";
 CM_ SG_ 474 MotorAmps "Something not right here.
 
 Motor Amps * Motor Volts is really close to pack watts*40 Maybe 1lsb=0.5A";
 CM_ SG_ 474 MotorSpeed "16 bits; 1 LSB = 0.5rpm? Stays at zero when applying torque with brake on so not likely volts.";
-CM_ SG_ 474 Counter "Safety counter";
+CM_ SG_ 474 Counter "Safety counter / Or mux?";
 CM_ SG_ 474 CRC_1DA "CRC";
 CM_ BO_ 1465 "Vehicle Control Module";
 CM_ SG_ 1465 ActiveFuelBars "From VCM->Cluster";
@@ -371,9 +380,9 @@ CM_ BO_ 1292 "??? Unknown sender module";
 CM_ SG_ 1292 Unknown_50C_0 "00";
 CM_ SG_ 1292 Unknown_50C_1 "00";
 CM_ SG_ 1292 Unknown_50C_2 "00 (for 2013+ also 06)";
-CM_ SG_ 1292 Unknown_50C_3 "0,1,2,3";
-CM_ SG_ 1292 Unknown_50C_4 "5d,b2";
-CM_ SG_ 1292 Unknown_50C_5 "0d,31,5f,63,9a,a6,c8,f4";
+CM_ SG_ 1292 Mux_50C "0,1,2,3";
+CM_ SG_ 1292 Unknown_50C_4 "5d,b2 Dala: does not fit with mux";
+CM_ SG_ 1292 Unknown_50C_5 "0d,31,5f,63,9a,a6,c8,f4 Dala: This value can be muxed but unsure about content";
 CM_ BO_ 1354 "AC Auto Amp";
 CM_ SG_ 1354 CCStatusPlusUnknown "12,3c- CC Off; a0,da- CC On";
 CM_ SG_ 1354 Unknown_54A_1 "00 (80 in 2013+)";
@@ -386,10 +395,12 @@ CM_ SG_ 1354 AmbientTempAC "Appears to track ambient (+41)
 4f,8c-90";
 CM_ BO_ 1118 "??? Unknown sender module(Also empty)";
 CM_ BO_ 1438 "??? Unknown sender module";
-CM_ SG_ 1438 Unknown_59E_1 "0e always?";
+CM_ SG_ 1438 Unknown_59E_1 "0e always? Rest of the signals in this message are empty";
 CM_ SG_ 1438 Unknown_59E_2 "60 always?";
-CM_ SG_ 1438 Unknown_59E_3 "90 always?";
+CM_ SG_ 1438 Unknown_59E_3 "Dala: DEC 152, 144, 136 seen here in short log";
 CM_ BO_ 1153 "??? Unknown sender module";
+CM_ SG_ 1153 Unknown_481_1 "Dala: Static 0x40";
+CM_ SG_ 1153 Unknown_481_2 "Dala: Static 0x00";
 CM_ BO_ 912 "??? Unknown sender module";
 CM_ SG_ 912 Unknown_390_7 "Sawtooth, from 200-250";
 CM_ BO_ 915 "??? Unknown sender module";
