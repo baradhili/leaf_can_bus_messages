@@ -70,9 +70,9 @@ BO_ 476 x1DC: 8 HVBAT
  SG_ AvailableBatteryPower : 0|8@1+ (1,0) [0|110] "kW" Vector__XXX
  SG_ MaximumCurrentDuringCharge : 15|12@0+ (1,0) [0|250] "A" Vector__XXX
  SG_ QuickchargeUnknownValue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryPairing1 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryPairing2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryPairing3 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryUnknown1 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryUnknown2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BatteryUnknown3 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_1DC : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 474 x1DA: 8 INVmc
@@ -269,15 +269,9 @@ CM_ BO_ 476 "Lithium Battery Controller";
 CM_ SG_ 476 AvailableBatteryPower "Max available power that can be pulled from battery. 6e=110kW, less is seen below LBW, 31=51kW observed near turtle";
 CM_ SG_ 476 MaximumCurrentDuringCharge "Looks like this is maximum current during charge?";
 CM_ SG_ 476 QuickchargeUnknownValue "This value changes during QC. Unknown function";
-CM_ SG_ 476 BatteryPairing1 "
-
-Just a hint on those pursuing 40/30/24kWh translations: We are suspecting the 'pairing' tool just changes 0x1DC bytes 5 and 6 (as in: third and second to last bytes). Beyond that, there are some very minor differences between the LBCs, but the most important bits are in the same place and work the same way. You get a P3183 DTC when swapping batteries.";
-CM_ SG_ 476 BatteryPairing2 "
-
-Just a hint on those pursuing 40/30/24kWh translations: We are suspecting the 'pairing' tool just changes 0x1DC bytes 5 and 6 (as in: third and second to last bytes). Beyond that, there are some very minor differences between the LBCs, but the most important bits are in the same place and work the same way. You get a P3183 DTC when swapping batteries.";
-CM_ SG_ 476 BatteryPairing3 "
-
-Just a hint on those pursuing 40/30/24kWh translations: We are suspecting the 'pairing' tool just changes 0x1DC bytes 5 and 6 (as in: third and second to last bytes). Beyond that, there are some very minor differences between the LBCs, but the most important bits are in the same place and work the same way. You get a P3183 DTC when swapping batteries.";
+CM_ SG_ 476 BatteryUnknown1 "";
+CM_ SG_ 476 BatteryUnknown2 "";
+CM_ SG_ 476 BatteryUnknown3 "";
 CM_ SG_ 476 CRC_1DC "CRC byte for msg. Poly is 0x85; left shift; D0 first; 64 shifts padding with 0's on last 8";
 CM_ BO_ 474 "Inverter";
 CM_ SG_ 474 InverterVoltage "2V/bit
