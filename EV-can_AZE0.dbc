@@ -226,12 +226,7 @@ BO_ 1539 x603: 8 Vector__XXX
 
 CM_ BU_ VCM "Vehicle Control Module";
 CM_ BU_ INVmc "Inverter Motor Controller";
-CM_ SG_ 3221225472 BatteryPairingSpace "40kWh upgrade into 24kWh
-
-frame.data[3] = (frame.data[3] & 0xC0) | swap_1db_byte3;
-//frame.data[3] = 0x7F;//(frame.data[3] & 0xC0) | 0x2A; //doesnt actually seem necessary?
-
-frame.data[3] = (frame.data[3] & 0xC0) | 0x2A; //FRLYON=1, INTERLOCK=1, POUT=normal limit";
+CM_ SG_ 3221225472 BatteryPairingSpace ";
 CM_ BO_ 1468 "Lithium Battery Controller";
 CM_ SG_ 1468 GIDs "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
 1 LSB = 65-85WH";
