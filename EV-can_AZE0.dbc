@@ -39,7 +39,6 @@ BU_: VCM INVmc EShift HVAC TCU OBCpd HVBAT
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Unknown_55B_5 m3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ StopChargeMaybe : 52|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryPairingSpace : 24|6@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1468 x5BC: 8 HVBAT
  SG_ GIDs : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
@@ -226,7 +225,6 @@ BO_ 1539 x603: 8 Vector__XXX
 
 CM_ BU_ VCM "Vehicle Control Module";
 CM_ BU_ INVmc "Inverter Motor Controller";
-CM_ SG_ 3221225472 BatteryPairingSpace ";
 CM_ BO_ 1468 "Lithium Battery Controller";
 CM_ SG_ 1468 GIDs "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
 1 LSB = 65-85WH";
@@ -275,9 +273,7 @@ CM_ SG_ 475 BatteryCurrentSignal "2s comp, 1lSB = 0.5A (motorola?)";
 CM_ SG_ 475 CRC_1DB "CRC";
 CM_ SG_ 475 SOCLocation "Contains SOC for dash (% without decimals) [For 40kWh clean upgrades]
 ";
-CM_ SG_ 475 BatteryStopChargingRequest "Request Stop chargin
-
-This is the command to request stop charging
+CM_ SG_ 475 BatteryStopChargingRequest "Request Stop charging. This is the command to request stop charging
 frame.data[1] = (frame.data[1] & 0xE0) | 2;";
 CM_ BO_ 1371 "Lithium Battery Controller";
 CM_ SG_ 1371 LBCStateOfCharge "Does not affect cluster or VCM at all";
