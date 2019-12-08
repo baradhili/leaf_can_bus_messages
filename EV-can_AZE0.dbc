@@ -49,12 +49,18 @@ BO_ 1468 x5BC: 8 HVBAT
  SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
 
 BO_ 475 x1DB: 8 HVBAT
- SG_ BatteryVoltageSignal : 23|10@0+ (1,0) [0|0] "V/2" Vector__XXX
- SG_ BatteryCurrentSignal : 7|11@0+ (1,0) [0|5000] "centiA/2?" Vector__XXX
+ SG_ LB_Current : 7|11@0+ (0.5,0) [-400|200] "A" Vector__XXX
+ SG_ LB_Relay_Cut_Request : 11|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Failsafe_Status : 8|3@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Total_Voltage : 23|10@0+ (0.5,0) [0|450] "V" Vector__XXX
+ SG_ LB_MainRelayOn_flag : 29|1@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Full_CHARGE_flag : 28|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_INTER_LOCK : 27|1@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Discharge_Power_Status : 25|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Voltage_Latch_Flag : 24|1@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Usable_SOC : 32|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_PRUN_1DB : 48|2@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_1DB : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
- SG_ Mux_1DB : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ SOCLocation : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryStopChargingRequest : 8|5@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1371 x55B: 8 HVBAT
  SG_ LBCStateOfCharge : 7|10@0+ (1,0) [0|0] "%+1" Vector__XXX
@@ -70,14 +76,16 @@ BO_ 1370 x55A: 8 INVmc
  SG_ IGBTDriverBoardTemperature : 24|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
 
 BO_ 476 x1DC: 8 HVBAT
- SG_ AvailableBatteryPower : 0|8@1+ (1,0) [0|110] "kW" Vector__XXX
- SG_ MaximumCurrentDuringCharge : 15|12@0+ (1,0) [0|250] "A" Vector__XXX
- SG_ QuickchargeUnknownValue : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryUnknown1 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryUnknown2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryUnknown3 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CRC_1DC : 56|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ UnknownNibble : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_Discharge_Power_Limit : 7|10@0+ (0.25,0) [0|254] "kW" Vector__XXX
+ SG_ LB_Charge_Power_Limit : 13|10@0+ (0.25,0) [0|254] "kW" Vector__XXX
+ SG_ LB_MAX_POWER_FOR_CHARGER : 19|10@0+ (0.1,-10) [-10|90] "kW" Vector__XXX
+ SG_ LB_Charge_Power_Status : 24|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_BPCMAX_UPRATE : 37|3@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_CODE_CONDITION : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_CODE1 : 33|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_CODE2 : 41|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_PRUN_1DC : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CRC_1DC : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 474 x1DA: 8 INVmc
  SG_ InverterVoltage : 0|8@1+ (1,0) [0|200] "V*2" Vector__XXX
@@ -267,14 +275,24 @@ CM_ SG_ 1468 CapacityBars "0-15
 1 = 1 capacitybars
 0 = 0 capacitybars
 ";
-CM_ BO_ 475 "Lithium Battery Controller";
-CM_ SG_ 475 BatteryVoltageSignal "0.5v/bit";
-CM_ SG_ 475 BatteryCurrentSignal "2s comp, 1lSB = 0.5A (motorola?)";
-CM_ SG_ 475 CRC_1DB "CRC";
-CM_ SG_ 475 SOCLocation "Contains SOC for dash (% without decimals) [For 40kWh clean upgrades]
+CM_ BO_ 475 "Lithium Battery Controller (10ms)";
+CM_ SG_ 475 LB_Current "BatteryCurrentSignal , 2s comp, 1lSB = 0.5A";
+CM_ SG_ 475 LB_Relay_Cut_Request "00 = No-Request 01 = Main Relay OFF Request 10 = Main Relay OFF Request 11 = Main Relay OFF Request";
+CM_ SG_ 475 LB_Failsafe_Status "Request Stop charging. This is the command to request stop charging
+frame.data[1] = (frame.data[1] & 0xE0) | 2;
+
+000b = normal start Request 001b = Normal Stop Request 010b = Charging Mode Stop Request 011b = Charging Mode Stop Request & Normal Stop Request 100b = Caution Lamp Request 101b = Caution Lamp Request & Normal Stop Request 110b = Caution Lamp Request & Charging Mode Stop Request 111b = Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request";
+CM_ SG_ 475 LB_Total_Voltage "0.5V/bit
 ";
-CM_ SG_ 475 BatteryStopChargingRequest "Request Stop charging. This is the command to request stop charging
-frame.data[1] = (frame.data[1] & 0xE0) | 2;";
+CM_ SG_ 475 LB_MainRelayOn_flag "0h = No-Permission 1h = Main Relay On Permission";
+CM_ SG_ 475 LB_Full_CHARGE_flag "";
+CM_ SG_ 475 LB_INTER_LOCK "0h = Not Inter Lock connected 1h = Inter Lock connected";
+CM_ SG_ 475 LB_Discharge_Power_Status "00b = Reserved 01b = Normal limit POUT 10b = High rate limit POUT 11b = Immediate limit POUT";
+CM_ SG_ 475 LB_Voltage_Latch_Flag "0->1:Cell Volatage Latch
+1->0:Cell Volatage Latch";
+CM_ SG_ 475 LB_Usable_SOC "Contains SOC for dash (% without decimals) [Needs to be copied to this location when doing 40/62kWh swaps into AZE0]";
+CM_ SG_ 475 LB_PRUN_1DB "MPR1DB";
+CM_ SG_ 475 CRC_1DB "CRC";
 CM_ BO_ 1371 "Lithium Battery Controller";
 CM_ SG_ 1371 LBCStateOfCharge "Does not affect cluster or VCM at all";
 CM_ SG_ 1371 BackwardscompatibleCounter "55,AA (alternates every 500ms) Works as a mux
@@ -287,15 +305,16 @@ CM_ SG_ 1370 MotorTemperature "Stays at 0 on 2015 Leaf?";
 CM_ SG_ 1370 InverterComBoardTemp "Inverter communications board temp";
 CM_ SG_ 1370 IGBTTemperature "";
 CM_ SG_ 1370 IGBTDriverBoardTemperature "Temperature only active during drive (IGBT driver board?)";
-CM_ BO_ 476 "Lithium Battery Controller";
-CM_ SG_ 476 AvailableBatteryPower "Max available power that can be pulled from battery. 6e=110kW, less is seen below LBW, 31=51kW observed near turtle";
-CM_ SG_ 476 MaximumCurrentDuringCharge "Looks like this is maximum current during charge?";
-CM_ SG_ 476 QuickchargeUnknownValue "This value changes during QC. Unknown function";
-CM_ SG_ 476 BatteryUnknown1 "";
-CM_ SG_ 476 BatteryUnknown2 "";
-CM_ SG_ 476 BatteryUnknown3 "";
-CM_ SG_ 476 CRC_1DC "CRC byte for msg. Poly is 0x85; left shift; D0 first; 64 shifts padding with 0's on last 8";
-CM_ SG_ 476 UnknownNibble "";
+CM_ BO_ 476 "Lithium Battery Controller (10ms)";
+CM_ SG_ 476 LB_Discharge_Power_Limit "Max available power that can be pulled from battery";
+CM_ SG_ 476 LB_Charge_Power_Limit "Max power that battery can be charged with";
+CM_ SG_ 476 LB_MAX_POWER_FOR_CHARGER "";
+CM_ SG_ 476 LB_Charge_Power_Status "00b = Reserved 01b = Normal limit PIN 10b = High rate limit PIN 11b = Immediate limit PIN";
+CM_ SG_ 476 LB_BPCMAX_UPRATE "000b : BPC MAX Uprate Level 1 001b : BPC MAX Uprate Level 2 010b : BPC MAX Uprate Level 3 011b : BPC MAX Uprate Level 4 100b : BPC MAX Uprate Level 5 101b : BPC MAX Uprate Level 6 110b : BPC MAX Uprate Level 7 111b : BPC MAX Uprate Level 8";
+CM_ SG_ 476 LB_CODE_CONDITION "";
+CM_ SG_ 476 LB_CODE1 "";
+CM_ SG_ 476 LB_CODE2 "";
+CM_ SG_ 476 CRC_1DC "CRC";
 CM_ BO_ 474 "Inverter";
 CM_ SG_ 474 InverterVoltage "2V/bit
 01..b9 Follows BVS(BatteryVoltageSignal) until near end of drive (turtle?) or end of charging ";
@@ -435,6 +454,13 @@ CM_ BO_ 915 "??? Unknown sender module";
 CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
 VAL_ 1468 Mux 8 "Fuel bars" 9 "Capacity bars" ;
+VAL_ 475 LB_Relay_Cut_Request 0 "No-Request" 1 "Main Relay OFF Request" 2 "Main Relay OFF Request" 3 "Main Relay OFF Request" ;
+VAL_ 475 LB_Failsafe_Status 0 "Normal Start Request" 1 "Normal Stop Request" 2 "Charging Mode Stop Request" 3 "Charging Mode Stop Request & Normal Stop Request" 4 "Caution Lamp Request" 5 "Caution Lamp Request & Normal Stop Request" 6 "Caution Lamp Request & Charging Mode Stop Request" 7 "Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request" ;
+VAL_ 475 LB_MainRelayOn_flag 0 "No-Permission" 1 "Main Relay On Permission" ;
+VAL_ 475 LB_INTER_LOCK 0 "Not Inter Lock connected" 1 "Inter Lock connected" ;
+VAL_ 475 LB_Discharge_Power_Status 0 "Reserved" 1 "Normal limit POUT" 2 "High rate limit POUT" 3 " Immediate limit POUT" ;
+VAL_ 476 LB_Charge_Power_Status 0 "Reserved" 1 "Normal limit PIN" 2 "High rate limit PIN" 3 "Immediate limit PIN" ;
+VAL_ 476 LB_BPCMAX_UPRATE 0 "BPC MAX Uprate Level 1" 1 "BPC MAX Uprate Level 2" 2 "BPC MAX Uprate Level 3" 3 "BPC MAX Uprate Level 4" 4 "BPC MAX Uprate Level 5" 5 "BPC MAX Uprate Level 6" 6 "BPC MAX Uprate Level 7" 7 "BPC MAX Uprate Level 8" ;
 VAL_ 1356 ClimateControlStatus2 102 "CC ON" 255 "CC OFF" ;
 VAL_ 282 JoystickGearPosition 2 "Reverse" 3 "Neutral" 4 "Drive/B" 0 "Parked" ;
 VAL_ 282 CarOnOffStatus 64 "CarOff" 128 "CarOn" ;
