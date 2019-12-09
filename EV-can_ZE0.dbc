@@ -262,7 +262,7 @@ CM_ BO_ 475 "Lithium Battery Controller (10ms)";
 CM_ SG_ 475 LB_Total_Voltage "0.5v/bit";
 CM_ SG_ 475 LB_Current "BatteryCurrentSignal , 2s comp, 1lSB = 0.5A";
 CM_ SG_ 475 CRC_1DB "CRC";
-CM_ SG_ 475 LB_PRUN_1DB "MPR1DB";
+CM_ SG_ 475 LB_PRUN_1DB "MPR1DB Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 475 LB_Relay_Cut_Request "00 = No-Request 01 = Main Relay OFF Request 10 = Main Relay OFF Request 11 = Main Relay OFF Request";
 CM_ SG_ 475 LB_Failsafe_Status "000b = normal start Request 001b = Normal Stop Request 010b = Charging Mode Stop Request 011b = Charging Mode Stop Request & Normal Stop Request 100b = Caution Lamp Request 101b = Caution Lamp Request & Normal Stop Request 110b = Caution Lamp Request & Charging Mode Stop Request 111b = Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request";
 CM_ SG_ 475 LB_MainRelayOn_flag "0h = No-Permission 1h = Main Relay On Permission";
@@ -274,7 +274,7 @@ CM_ SG_ 1371 LB_ALU_ANSWER "Question:B2h Answer(LBC):AAh Question:5Dh Answer(LBC
 
 This message is repeated 5x, to offer backwardscompability to 2011/2013 models. The message on these cars are run at 500ms.";
 CM_ SG_ 1371 LB_IR_Sensor_Wave_Voltage "LB_IRSEN_VOL";
-CM_ SG_ 1371 Mux_55B "LB_PRUN_55B 00,01,02,03";
+CM_ SG_ 1371 Mux_55B "LB_PRUN_55B 00,01,02,03 Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 1371 LB_IR_Sensor_Malfunction "0h = Normal 1h = Malfunction";
 CM_ SG_ 1371 LB_Capacity_Empty "0h = Not Batt Empty 1h = Batt Empty";
 CM_ SG_ 1371 LB_RefusetoSleep "00 = reserved 01 = RefuseToSleep 10 = ReadyToSleep 11 = reserved";
@@ -292,11 +292,11 @@ CM_ SG_ 476 LB_Charge_Power_Status "LB_PIN_STATUS
 CM_ SG_ 476 LB_BPCMAX_UPRATE "000b : BPC MAX Uprate Level 1 001b : BPC MAX Uprate Level 2 010b : BPC MAX Uprate Level 3 011b : BPC MAX Uprate Level 4 100b : BPC MAX Uprate Level 5 101b : BPC MAX Uprate Level 6 110b : BPC MAX Uprate Level 7 111b : BPC MAX Uprate Level 8";
 CM_ SG_ 476 LB_CODE_CONDITION "000b : No.1,2 001b : No,3,4 010b : No.5,6 011b : No.7,8 100b : reserved 101b : reserved 110b : reserved 111b : Invalid";
 CM_ SG_ 476 CRC_1DC "CRC byte for msg. Poly is 0x85; left shift; D0 first; 64 shifts padding with 0's on last 8";
-CM_ SG_ 476 LB_PRUN_1DC "MPR1DC";
+CM_ SG_ 476 LB_PRUN_1DC "MPR1DC Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ BO_ 474 "Inverter (10ms)";
 CM_ SG_ 474 MG_EffectiveTorque "2S";
 CM_ SG_ 474 MG_OutputRevolution "";
-CM_ SG_ 474 MG_Clock "MPRUN";
+CM_ SG_ 474 MG_Clock "MPRUN Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 474 CRC_1DA "CRC";
 CM_ BO_ 1465 "Vehicle Control Module";
 CM_ SG_ 1465 ActiveFuelBars "From VCM->Cluster";
@@ -341,6 +341,7 @@ CM_ BO_ 498 "Vehicle Control Module (10ms)";
 CM_ SG_ 498 TargetChargeSOC "0h:100% 1h:Deterioration restraint";
 CM_ SG_ 498 Charge_StatusTransitionReqest "00:other 01:namal charge 10:quick charge 11:stop request
 ";
+CM_ SG_ 498 MPRUN "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN";
 CM_ SG_ 644 LeftWheelSpeedSensor "2's comp";
 CM_ SG_ 644 RightWheelSpeedSensor "2's comp";

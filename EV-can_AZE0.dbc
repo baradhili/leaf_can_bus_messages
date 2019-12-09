@@ -39,14 +39,33 @@ BU_: VCM INVmc EShift HVAC TCU OBCpd HVBAT
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Unknown_55B_5 m3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ StopChargeMaybe : 52|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_59E_3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_1D4_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_1D4_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HCM_WakeUpSleepCommand : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5_1 m1 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5_0 m0 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5_2 m2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5_3 m3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALU_Question : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mux_50C M : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TCSOC : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1468 x5BC: 8 HVBAT
- SG_ GIDs : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
- SG_ Mux M : 32|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BatteryTemperature : 24|8@1+ (1,0) [0|0] "dC" Vector__XXX
- SG_ BatteryChargeGaugeOffset : 36|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LB_Remain_Capacity_GIDS : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
+ SG_ LB_Remaining_Capacity_Segments : 16|8@1+ (1,0) [0|240] "" Vector__XXX
+ SG_ LB_Temperature_Segment_For_Dash : 24|8@1+ (0.4166666,0) [0|100] "%" Vector__XXX
+ SG_ LB_Capacity_Deterioration_Rate : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_Remain_Cap_Segment_Swit_Flag : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_Output_Power_Limit_Reason : 45|3@1+ (1,0) [0|7] "modemask" Vector__XXX
+ SG_ LB_Remain_Charge_Time_Condition : 41|5@0+ (1,0) [0|30] "modemask" Vector__XXX
+ SG_ LB_Remain_Charge_Time : 52|13@0+ (1,0) [0|8190] "" Vector__XXX
+ SG_ Mux_5BC M : 32|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ChargeBars m8 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
- SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
 
 BO_ 475 x1DB: 8 HVBAT
  SG_ LB_Current : 7|11@0+ (0.5,0) [-400|200] "A" Vector__XXX
@@ -63,11 +82,14 @@ BO_ 475 x1DB: 8 HVBAT
  SG_ CRC_1DB : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 1371 x55B: 8 HVBAT
- SG_ LBCStateOfCharge : 7|10@0+ (1,0) [0|0] "%+1" Vector__XXX
- SG_ BackwardscompatibleCounter : 16|8@1+ (1,0) [85|170] "" Vector__XXX
- SG_ InsulationResistance : 32|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Mux_55B M : 48|4@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CRC_55B : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_SOC : 7|10@0+ (1,0) [0|1000] "%+1" Vector__XXX
+ SG_ LB_ALU_ANSWER : 16|8@1+ (1,0) [85|170] "" Vector__XXX
+ SG_ LB_IR_Sensor_Wave_Voltage : 39|10@0+ (1,0) [0|4990] "mV (5000/1024)" Vector__XXX
+ SG_ LB_IR_Sensor_Malfunction : 40|1@1+ (1,0) [0|1] "modemask" Vector__XXX
+ SG_ LB_Capacity_Empty : 55|1@1+ (1,0) [0|1] "modemask" Vector__XXX
+ SG_ LB_RefusetoSleep : 53|2@1+ (1,0) [0|3] "modemask" Vector__XXX
+ SG_ LB_PRUN_55B : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CRC_55B : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 1370 x55A: 8 INVmc
  SG_ MotorTemperature : 40|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
@@ -88,10 +110,10 @@ BO_ 476 x1DC: 8 HVBAT
  SG_ CRC_1DC : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 474 x1DA: 8 INVmc
- SG_ InverterVoltage : 0|8@1+ (1,0) [0|200] "V*2" Vector__XXX
- SG_ MotorAmps : 19|12@0+ (1,0) [0|250] "A" Vector__XXX
- SG_ MotorSpeed : 39|16@0+ (1,0) [0|24000] "rpm/2" Vector__XXX
- SG_ Counter : 48|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MG_InputVoltage : 0|8@1+ (2,0) [0|508] "V" Vector__XXX
+ SG_ MG_EffectiveTorque : 18|11@0- (0.5,0) [-274|274] "Nm" Vector__XXX
+ SG_ MG_OutputRevolution : 39|15@0- (1,0) [-16382|16382] "rpm" Vector__XXX
+ SG_ MG_CLOCK : 48|8@1+ (1,0) [0|3] "" Vector__XXX
  SG_ CRC_1DA : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 1465 x5B9: 7 VCM
@@ -125,21 +147,20 @@ BO_ 282 x11A: 8 VCM
  SG_ Unknown_11A_4_2 m2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_11A_4_3 m3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 468 x1D4: 8 Vector__XXX
+BO_ 468 x1D4: 8 VCM
  SG_ MotorAmpTorqueRequest : 23|12@0+ (1,0) [0|0] "" Vector__XXX
- SG_ CRC_1D4 : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
- SG_ Unknown_1D4_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_1D4_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_1D4_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_1D4_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_1D4_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HCM_CLOCK : 38|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ StatusOfHighVoltagePowerSupply : 34|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ Relay_Plus_Output_Status : 46|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ CRC_1D4 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 498 x1F2: 8 VCM
  SG_ CommandedChargePower : 1|10@0+ (1,0) [0|0] "" Vector__XXX
- SG_ CHG_STA_RQ : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Mux_1F2 M : 48|8@1+ (1,0) [0|3] "" Vector__XXX
- SG_ CRC_1F2 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ TCSOC : 6|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TargetCharge_SOC : 7|1@1+ (1,0) [0|0] "modemask" Vector__XXX
+ SG_ Charge_StatusTransitionReqest : 21|2@1+ (1,0) [0|3] "modemask" Vector__XXX
+ SG_ Keep_SOC_Request : 20|1@1+ (1,0) [0|0] "modemask" Vector__XXX
+ SG_ PCS_Connector_Detection : 17|1@1+ (1,0) [0|0] "modemask" Vector__XXX
+ SG_ MPRUN : 48|2@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 644 x284: 8 VCM
  SG_ LeftWheelSpeedSensor : 7|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
@@ -162,13 +183,19 @@ BO_ 1449 x5A9: 8 VCM
  SG_ DiagSomething3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1472 x5C0: 8 HVBAT
- SG_ Mux5C0 M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ClusterTemperature2 m64 : 16|8@1+ (1,0) [0|0] "dC" Vector__XXX
- SG_ DisOrChargeTimeCounter : 24|8@1- (1,0) [0|255] "Counter" Vector__XXX
- SG_ Unknown5C0_byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown5C0_byte5_mux40 m64 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown5C0_byte5_mux80 m128 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown5C0_byte5_muxC0 m192 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_Historical_Data_Swich_Flag : 6|2@1+ (1,0) [0|3] "modemask" Vector__XXX
+ SG_ LB_Heating_Start_Send_Request : 5|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_Heating_Stop_Send_Request : 4|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_HistData_HighLow_Voltage_Time : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_Tempera_Wakeup_Phase : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ Batt_Heater_Mail_Send_Request : 8|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_Historical_Data_Temperature : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Integrated_Current : 24|8@1- (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_Degrade_IntRes_Coeff : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HEATEXIST : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_Historical_Data_Cell_Voltage : 42|6@1+ (1,0) [0|4380] "mV" Vector__XXX
+ SG_ LB_NextWakeupTimeForBatterHeater : 48|5@1+ (1,0) [0|1800] "minutes" Vector__XXX
+ SG_ LB_Diagnosis_Trouble_Code : 56|8@1+ (1,0) [0|255] "DTC" Vector__XXX
 
 BO_ 1290 x50A: 8 VCM
  SG_ Unknown_50A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -181,24 +208,14 @@ BO_ 1290 x50A: 8 VCM
  SG_ Unknown_50A_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1291 x50B: 7 VCM
- SG_ Unknown_50B_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50B_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CANMASK : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ HCM_WakeUpSleepCommand : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50B_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50B_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50B_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiagMuxOn_VCM : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HCM_WakeUpSleepCmd : 30|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Batt_Heater_Mail_Send_OK : 53|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1292 x50C: 6 Vector__XXX
- SG_ Unknown_50C_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50C_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50C_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Mux_50C M : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ALU_Question : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50C_5_0 m0 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50C_5_1 m1 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50C_5_2 m2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_50C_5_3 m3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1292 x50C: 6 VCM
+ SG_ HCM_CLOCK_50C : 24|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALU_QUESTION_FOR_LBC : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC : 40|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 1354 x54A: 8 HVAC
  SG_ CCStatusPlusUnknown : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -212,34 +229,54 @@ BO_ 1354 x54A: 8 HVAC
 
 BO_ 1118 x45E: 1 Vector__XXX
 
-BO_ 1438 x59E: 8 Vector__XXX
- SG_ Unknown_59E_1 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_59E_2 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_59E_3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1438 x59E: 8 HVBAT
+ SG_ LB_Full_Capacity_for_QC : 20|9@0+ (100,0) [0|50000] "Wh" Vector__XXX
+ SG_ LB_Remain_Capacity_for_QC : 27|9@0+ (100,0) [0|50000] "Wh" Vector__XXX
 
 BO_ 1153 x481: 2 Vector__XXX
  SG_ Unknown_481_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_481_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 912 x390: 8 Vector__XXX
- SG_ Unknown_390_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 912 x390: 8 VCM
+ SG_ OBC_Status_AC_Voltage : 27|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ OBC_Flag_QC_Relay_On_Announcemen : 38|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ OBC_Flag_QC_IR_Sensor : 47|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ OBC_Maximum_Charge_Power_Out : 40|9@0+ (0.1,0) [0|0] "kW" Vector__XXX
 
 BO_ 915 x393: 8 Vector__XXX
  SG_ Unknown_393_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1539 x603: 8 Vector__XXX
+BO_ 1539 x603: 8 VCM
 
 
 
 CM_ BU_ VCM "Vehicle Control Module";
 CM_ BU_ INVmc "Inverter Motor Controller";
-CM_ BO_ 1468 "Lithium Battery Controller";
-CM_ SG_ 1468 GIDs "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
-1 LSB = 65-85WH";
-CM_ SG_ 1468 Mux "Mux field for capacity bars and charge bars 
-8/9 on 2013-2017, 14/15 on 2018-2019";
-CM_ SG_ 1468 BatteryTemperature "Should be average of the 3/4 sensors inside the battery pack (0x50 = 80DEC = 8.0*C)";
-CM_ SG_ 1468 BatteryChargeGaugeOffset "Somehow effects the charge gauge, lower numbers mean more bars";
+CM_ SG_ 3221225472 Unknown_59E_3 "Dala: DEC 152, 144, 136 seen here in short log";
+CM_ SG_ 3221225472 HCM_WakeUpSleepCommand "";
+CM_ SG_ 3221225472 Unknown_50B_4 "00";
+CM_ SG_ 3221225472 Unknown_50B_5 "";
+CM_ SG_ 3221225472 Unknown_50B_6 "";
+CM_ SG_ 3221225472 Unknown_50C_5_1 "Dala, def muxed";
+CM_ SG_ 3221225472 Unknown_50C_5_0 "Dala, def muxed
+
+Mux 1 and 2 look like the inverse of 0 and 3";
+CM_ SG_ 3221225472 Unknown_50C_5_2 "Dala, def muxed";
+CM_ SG_ 3221225472 Unknown_50C_5_3 "Dala, def muxed";
+CM_ SG_ 3221225472 ALU_Question "5d,b2 Dala: Used for backwardscompability?";
+CM_ SG_ 3221225472 Mux_50C "0,1,2,3";
+CM_ SG_ 3221225472 TCSOC "Position in frame?";
+CM_ BO_ 1468 "Lithium Battery Controller (100ms)";
+CM_ SG_ 1468 LB_Remain_Capacity_GIDS "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh 
+1 LSB = 80WH";
+CM_ SG_ 1468 LB_Remaining_Capacity_Segments "Contains chargebars and capacitybars, alternating depending on mux. Simplified lower down in the message";
+CM_ SG_ 1468 LB_Temperature_Segment_For_Dash "For instrumentation cluster. Unit is %, times 5/12 according to documentation, kinda strange .Should be average of the 3 sensors inside the battery pack.";
+CM_ SG_ 1468 LB_Capacity_Deterioration_Rate "SOH (State-of-Health) Effects the charge gauge, lower numbers mean more chargebars";
+CM_ SG_ 1468 LB_Remain_Cap_Segment_Swit_Flag "";
+CM_ SG_ 1468 LB_Output_Power_Limit_Reason "";
+CM_ SG_ 1468 LB_Remain_Charge_Time_Condition "Is this a mux for LB_Remain_Charge_Time? Values are known";
+CM_ SG_ 1468 LB_Remain_Charge_Time "Contains many values, but when mux = ? this is chargeminutes. Confirmed by watching charging log that one of the values decrement";
+CM_ SG_ 1468 Mux_5BC "Multiplexor";
 CM_ SG_ 1468 ChargeBars "Range 0-15 (Below data from test at 0%SOC, writing values to bus)
 15 = 12 chargebars
 14 = 12 chargebars
@@ -257,7 +294,7 @@ CM_ SG_ 1468 ChargeBars "Range 0-15 (Below data from test at 0%SOC, writing valu
 2 = 2 chargebars
 1 = 1 chargebars
 0 = 0 chargebars";
-CM_ SG_ 1468 CapacityBars "0-15 
+CM_ SG_ 1468 CapacityBars "Range 0-15 Below test data by writing to bus and seeing what happens
 15 = 12 capacitybars
 14 = 12 capacitybars
 13 = 11 capacitybars
@@ -273,8 +310,7 @@ CM_ SG_ 1468 CapacityBars "0-15
 3 = 3 capacitybars
 2 = 2 capacitybars
 1 = 1 capacitybars
-0 = 0 capacitybars
-";
+0 = 0 capacitybars,";
 CM_ BO_ 475 "Lithium Battery Controller (10ms)";
 CM_ SG_ 475 LB_Current "BatteryCurrentSignal , 2s comp, 1lSB = 0.5A";
 CM_ SG_ 475 LB_Relay_Cut_Request "00 = No-Request 01 = Main Relay OFF Request 10 = Main Relay OFF Request 11 = Main Relay OFF Request";
@@ -288,18 +324,20 @@ CM_ SG_ 475 LB_MainRelayOn_flag "0h = No-Permission 1h = Main Relay On Permissio
 CM_ SG_ 475 LB_Full_CHARGE_flag "";
 CM_ SG_ 475 LB_INTER_LOCK "0h = Not Inter Lock connected 1h = Inter Lock connected";
 CM_ SG_ 475 LB_Discharge_Power_Status "00b = Reserved 01b = Normal limit POUT 10b = High rate limit POUT 11b = Immediate limit POUT";
-CM_ SG_ 475 LB_Voltage_Latch_Flag "0->1:Cell Volatage Latch
-1->0:Cell Volatage Latch";
+CM_ SG_ 475 LB_Voltage_Latch_Flag "0->1:Cell Voltage Latch
+1->0:Cell Voltage Latch";
 CM_ SG_ 475 LB_Usable_SOC "Contains SOC for dash (% without decimals) [Needs to be copied to this location when doing 40/62kWh swaps into AZE0]";
-CM_ SG_ 475 LB_PRUN_1DB "MPR1DB";
+CM_ SG_ 475 LB_PRUN_1DB "MPR1DB Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 475 CRC_1DB "CRC";
-CM_ BO_ 1371 "Lithium Battery Controller";
-CM_ SG_ 1371 LBCStateOfCharge "Does not affect cluster or VCM at all";
-CM_ SG_ 1371 BackwardscompatibleCounter "55,AA (alternates every 500ms) Works as a mux
+CM_ BO_ 1371 "Lithium Battery Controller (100ms)";
+CM_ SG_ 1371 LB_SOC "State of Charge. Does not affect cluster or VCM at all";
+CM_ SG_ 1371 LB_ALU_ANSWER "HCM:B2h LBC:AAh HCM:5Dh LBC:55h
 
-This message is repeated 5x, to offer backwardscompability to 2011/2013 models. The message on these cars are run at 500ms.";
-CM_ SG_ 1371 InsulationResistance "";
-CM_ SG_ 1371 Mux_55B "00,01,02,03";
+This message is repeated 5x, to offer backwardscompability to 2011/2013 models? The message on these cars are run at 500ms.";
+CM_ SG_ 1371 LB_IR_Sensor_Wave_Voltage "Internal resistance wave voltage";
+CM_ SG_ 1371 LB_IR_Sensor_Malfunction "";
+CM_ SG_ 1371 LB_PRUN_55B "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 1371 CRC_55B "CRC";
 CM_ BO_ 1370 "Inverter";
 CM_ SG_ 1370 MotorTemperature "Stays at 0 on 2015 Leaf?";
 CM_ SG_ 1370 InverterComBoardTemp "Inverter communications board temp";
@@ -314,15 +352,14 @@ CM_ SG_ 476 LB_BPCMAX_UPRATE "000b : BPC MAX Uprate Level 1 001b : BPC MAX Uprat
 CM_ SG_ 476 LB_CODE_CONDITION "";
 CM_ SG_ 476 LB_CODE1 "";
 CM_ SG_ 476 LB_CODE2 "";
+CM_ SG_ 476 LB_PRUN_1DC "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 476 CRC_1DC "CRC";
-CM_ BO_ 474 "Inverter";
-CM_ SG_ 474 InverterVoltage "2V/bit
+CM_ BO_ 474 "Inverter? Or relayed via VCM? (10ms)";
+CM_ SG_ 474 MG_InputVoltage "Inverter input voltage? 
 01..b9 Follows BVS(BatteryVoltageSignal) until near end of drive (turtle?) or end of charging ";
-CM_ SG_ 474 MotorAmps "Something not right here.
-
-Motor Amps * Motor Volts is really close to pack watts*40 Maybe 1lsb=0.5A";
-CM_ SG_ 474 MotorSpeed "16 bits; 1 LSB = 0.5rpm? Stays at zero when applying torque with brake on so not likely volts.";
-CM_ SG_ 474 Counter "Safety counter / Or mux?";
+CM_ SG_ 474 MG_EffectiveTorque "2S";
+CM_ SG_ 474 MG_OutputRevolution "16 bits; 1 LSB = 0.5rpm? Stays at zero when applying torque with brake on so not likely volts.";
+CM_ SG_ 474 MG_CLOCK "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 474 CRC_1DA "CRC";
 CM_ BO_ 1465 "Vehicle Control Module";
 CM_ SG_ 1465 ActiveFuelBars "From VCM->Cluster";
@@ -359,16 +396,19 @@ CM_ SG_ 282 SteeringWheelButton "00,04,80 observed here (ECO button logic here?)
 CM_ SG_ 282 HeartbeatVCM "55,AA (alternating between these two values, heartbeat?)
 01010101
 10101010";
-CM_ BO_ 468 "Vehicle Control Module?";
+CM_ BO_ 468 "Vehicle Control Module (10ms)";
 CM_ SG_ 468 MotorAmpTorqueRequest "Motor Amps?  Requested Torque?
 Less noisy than the 1da signal";
-CM_ SG_ 468 CRC_1D4 "CRC";
-CM_ BO_ 498 "Vehicle Control Module";
+CM_ SG_ 468 HCM_CLOCK "PRUN Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 468 StatusOfHighVoltagePowerSupply "BTONFN";
+CM_ SG_ 468 Relay_Plus_Output_Status "RLYP";
+CM_ BO_ 498 "Vehicle Control Module (10ms)";
 CM_ SG_ 498 CommandedChargePower "? 64 drive, 84-64 charge (tapers at end)";
-CM_ SG_ 498 CHG_STA_RQ "CHG_STA_RQ (1F2 byte 2 bit 6 length 2)
-
-From muxsan document. Charging start request?";
-CM_ SG_ 498 TCSOC "Position in frame?";
+CM_ SG_ 498 TargetCharge_SOC "TCSOC";
+CM_ SG_ 498 Charge_StatusTransitionReqest "CHG_STA_RQ";
+CM_ SG_ 498 Keep_SOC_Request "KEEP_SOC_REQ";
+CM_ SG_ 498 PCS_Connector_Detection "PSCONDET";
+CM_ SG_ 498 MPRUN "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN";
 CM_ SG_ 644 LeftWheelSpeedSensor "2's comp";
 CM_ SG_ 644 RightWheelSpeedSensor "2's comp";
@@ -387,16 +427,15 @@ This message appeared after recall/update in March 2012. Probably VCM to TCU for
 CM_ SG_ 1449 DiagSomething0 "Active during drive, FF charge";
 CM_ SG_ 1449 DiagSomething1 "Active during drive, FF charge";
 CM_ SG_ 1449 DiagSomething3 "Seems to be related to SOC but not LTI";
-CM_ BO_ 1472 "Lithium Battery Controller";
-CM_ SG_ 1472 Mux5C0 "40,80,c0";
-CM_ SG_ 1472 ClusterTemperature2 "Position in the frame? The indicated temperature on the instrument cluster is controlled by another muxed field, when 0x5C0 is 0x40, the indicated temperature is controlled by the 3rd byte of 0x5C0
-
-Dala: Doesn't seem to line up, third byte 0x60 = 6 when on the cluster 4 temp bars are active.";
-CM_ SG_ 1472 DisOrChargeTimeCounter "Linear positive ramp up during charge and negative ramp down during discharge.  Starts from 00 regardless of initial charge level. Charging time?";
-CM_ SG_ 1472 Unknown5C0_byte4 "a4 for TT, I have 7C here (2015 S C5/C9 depending on mux)";
-CM_ SG_ 1472 Unknown5C0_byte5_mux40 "UnknownValue lies here. Multiplexed field";
-CM_ SG_ 1472 Unknown5C0_byte5_mux80 "UnknownValue lies here. Multiplexed field";
-CM_ SG_ 1472 Unknown5C0_byte5_muxC0 "UnknownValue lies here. Multiplexed field";
+CM_ BO_ 1472 "Lithium Battery Controller (500ms)";
+CM_ SG_ 1472 LB_Historical_Data_Swich_Flag "Mux for entire message?";
+CM_ SG_ 1472 LB_Heating_Start_Send_Request "0->1 Heat start Mail send request";
+CM_ SG_ 1472 LB_Heating_Stop_Send_Request "0->1 Heat stop Mail send request";
+CM_ SG_ 1472 LB_HistData_HighLow_Voltage_Time "";
+CM_ SG_ 1472 LB_HistData_Tempera_Wakeup_Phase "";
+CM_ SG_ 1472 Batt_Heater_Mail_Send_Request "";
+CM_ SG_ 1472 LB_Historical_Data_Temperature "";
+CM_ SG_ 1472 LB_HistData_Integrated_Current "2S";
 CM_ BO_ 1290 "VCM relay from A/C Auto Amp and AC Pressor Sensor (which is measured directly from VCM) Message is identical on EV CAN and CAR CAN";
 CM_ SG_ 1290 Unknown_50A_0 "04,84,85";
 CM_ SG_ 1290 Unknown_50A_1 "02,13,33,40,42,53,72,73 Dala (ECO button affects?)";
@@ -408,28 +447,14 @@ CM_ SG_ 1290 ACStatusBits_RestUnknown "00,80  BIT1 = Rear defrost on/off";
 CM_ SG_ 1290 Unknown_50A_5 "a0";
 CM_ SG_ 1290 Unknown_50A_6 "04 , Only present in 2013+ (otherwise frame stops at 6bytes)";
 CM_ SG_ 1290 Unknown_50A_7 "00 , Only present in 2013+ (otherwise frame stops at 6bytes)";
-CM_ BO_ 1291 "HCM_WakeUpSleepCommand";
-CM_ SG_ 1291 Unknown_50B_0 "00";
-CM_ SG_ 1291 Unknown_50B_1 "00";
-CM_ SG_ 1291 CANMASK "00,02,06 (for 2013+: also 0x04)
-
-Bootup sequence: 06,00,02,06";
-CM_ SG_ 1291 HCM_WakeUpSleepCommand "C0 from log";
-CM_ SG_ 1291 Unknown_50B_4 "00";
-CM_ SG_ 1291 Unknown_50B_5 "00,60 (for 2013: 0x00 only)";
-CM_ SG_ 1291 Unknown_50B_6 "00, Only present in 2013+ (otherwise frame stops at 6bytes)";
-CM_ BO_ 1292 "??? Unknown sender module";
-CM_ SG_ 1292 Unknown_50C_0 "00";
-CM_ SG_ 1292 Unknown_50C_1 "00";
-CM_ SG_ 1292 Unknown_50C_2 "00 (for 2013+ also 06)";
-CM_ SG_ 1292 Mux_50C "0,1,2,3";
-CM_ SG_ 1292 ALU_Question "5d,b2 Dala: Used for backwardscompability?";
-CM_ SG_ 1292 Unknown_50C_5_0 "Dala, def muxed
-
-Mux 1 and 2 look like the inverse of 0 and 3";
-CM_ SG_ 1292 Unknown_50C_5_1 "Dala, def muxed";
-CM_ SG_ 1292 Unknown_50C_5_2 "Dala, def muxed";
-CM_ SG_ 1292 Unknown_50C_5_3 "Dala, def muxed";
+CM_ BO_ 1291 "Vehicle Control Module (100ms)";
+CM_ SG_ 1291 DiagMuxOn_VCM "CANMASK";
+CM_ SG_ 1291 HCM_WakeUpSleepCmd "FirstFrameValueIfAlgorithmNotReady = 3";
+CM_ SG_ 1291 Batt_Heater_Mail_Send_OK "";
+CM_ BO_ 1292 "Vehicle Control Module (100ms)";
+CM_ SG_ 1292 HCM_CLOCK_50C "PRUN Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 1292 ALU_QUESTION_FOR_LBC "";
+CM_ SG_ 1292 CRC "CRC";
 CM_ BO_ 1354 "AC Auto Amp";
 CM_ SG_ 1354 CCStatusPlusUnknown "12,3c- CC Off; a0,da- CC On";
 CM_ SG_ 1354 Unknown_54A_1 "00 (80 in 2013+)";
@@ -441,34 +466,55 @@ CM_ SG_ 1354 Unknown_54A_6 "00";
 CM_ SG_ 1354 AmbientTempAC "Appears to track ambient (+41)
 4f,8c-90";
 CM_ BO_ 1118 "??? Unknown sender module(Also empty)";
-CM_ BO_ 1438 "??? Unknown sender module";
-CM_ SG_ 1438 Unknown_59E_1 "0e always? Rest of the signals in this message are empty";
-CM_ SG_ 1438 Unknown_59E_2 "60 always?";
-CM_ SG_ 1438 Unknown_59E_3 "Dala: DEC 152, 144, 136 seen here in short log";
+CM_ BO_ 1438 "Lithium Battery Controller (500ms)";
+CM_ SG_ 1438 LB_Full_Capacity_for_QC "";
+CM_ SG_ 1438 LB_Remain_Capacity_for_QC "";
 CM_ BO_ 1153 "??? Unknown sender module";
 CM_ SG_ 1153 Unknown_481_1 "Dala: Static 0x40";
 CM_ SG_ 1153 Unknown_481_2 "Dala: Static 0x00";
-CM_ BO_ 912 "??? Unknown sender module";
-CM_ SG_ 912 Unknown_390_7 "Sawtooth, from 200-250";
+CM_ BO_ 912 "Vehicle Control Module? (100ms)";
+CM_ SG_ 912 OBC_Status_AC_Voltage "ACVOLST";
+CM_ SG_ 912 OBC_Flag_QC_Relay_On_Announcemen "FQCRELAYST";
+CM_ SG_ 912 OBC_Flag_QC_IR_Sensor "FQCIRSENS";
+CM_ SG_ 912 OBC_Maximum_Charge_Power_Out "MAXCHGPOUT";
 CM_ BO_ 915 "??? Unknown sender module";
 CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
-VAL_ 1468 Mux 8 "Fuel bars" 9 "Capacity bars" ;
+VAL_ 1468 LB_Remain_Cap_Segment_Swit_Flag 0 "Remaining capacity" 1 "Full capacity" ;
+VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity drop" 2 "LBC Malfunction" 3 "High temperature" 4 "Low temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
+VAL_ 1468 LB_Remain_Charge_Time_Condition 0 "Quickcharge" 5 "Normal Charge 6kW Full" 8 "Normal Charge 200V Full" 11 "Normal Charge 100V Full" 18 "Normal Charge 6kW 80%" 21 "Normal Charge 200V 80%" 24 "Normal Charge 100V 80%" ;
 VAL_ 475 LB_Relay_Cut_Request 0 "No-Request" 1 "Main Relay OFF Request" 2 "Main Relay OFF Request" 3 "Main Relay OFF Request" ;
 VAL_ 475 LB_Failsafe_Status 0 "Normal Start Request" 1 "Normal Stop Request" 2 "Charging Mode Stop Request" 3 "Charging Mode Stop Request & Normal Stop Request" 4 "Caution Lamp Request" 5 "Caution Lamp Request & Normal Stop Request" 6 "Caution Lamp Request & Charging Mode Stop Request" 7 "Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request" ;
 VAL_ 475 LB_MainRelayOn_flag 0 "No-Permission" 1 "Main Relay On Permission" ;
 VAL_ 475 LB_INTER_LOCK 0 "Not Inter Lock connected" 1 "Inter Lock connected" ;
 VAL_ 475 LB_Discharge_Power_Status 0 "Reserved" 1 "Normal limit POUT" 2 "High rate limit POUT" 3 " Immediate limit POUT" ;
+VAL_ 1371 LB_IR_Sensor_Malfunction 0 "Normal" 1 "Malfunction" ;
+VAL_ 1371 LB_Capacity_Empty 0 "Not Empty" 1 "Battery Empty" ;
+VAL_ 1371 LB_RefusetoSleep 0 "Reserved" 1 "RefuseToSleep" 2 "ReadyToSleep" 3 "Reserved" ;
 VAL_ 476 LB_Charge_Power_Status 0 "Reserved" 1 "Normal limit PIN" 2 "High rate limit PIN" 3 "Immediate limit PIN" ;
 VAL_ 476 LB_BPCMAX_UPRATE 0 "BPC MAX Uprate Level 1" 1 "BPC MAX Uprate Level 2" 2 "BPC MAX Uprate Level 3" 3 "BPC MAX Uprate Level 4" 4 "BPC MAX Uprate Level 5" 5 "BPC MAX Uprate Level 6" 6 "BPC MAX Uprate Level 7" 7 "BPC MAX Uprate Level 8" ;
 VAL_ 1356 ClimateControlStatus2 102 "CC ON" 255 "CC OFF" ;
 VAL_ 282 JoystickGearPosition 2 "Reverse" 3 "Neutral" 4 "Drive/B" 0 "Parked" ;
 VAL_ 282 CarOnOffStatus 64 "CarOff" 128 "CarOn" ;
+VAL_ 468 StatusOfHighVoltagePowerSupply 0 "High Voltage not supplied" 1 "High Voltage supplied" ;
+VAL_ 468 Relay_Plus_Output_Status 0 "Main Relay Plus not output" 1 "Main Relay Plus ON" ;
 VAL_ 498 CommandedChargePower 64 "Drive" ;
+VAL_ 498 TargetCharge_SOC 0 "100%" 1 "Deteroiration Restraint 80%" ;
+VAL_ 498 Charge_StatusTransitionReqest 0 "other" 1 "Normal Charge" 2 "Quick Charge" 3 "Stop Request" ;
+VAL_ 498 Keep_SOC_Request 0 "Normal charge mode (Initial Value)" 1 "Keep SOC charge mode" ;
+VAL_ 498 PCS_Connector_Detection 0 "other" 1 "Vehicle-to-Home mode" ;
 VAL_ 1355 ClimateControlStatus1 16 "CC On" 17 "CC Off" 0 "CC On" 1 "CC Off" ;
 VAL_ 1355 ClimateVentModeTarget 128 "CC OFF" 136 "Face only" 144 "Face/Feet" 152 "Feet only" 160 "Feet/Defrost" 168 "Defrost only" ;
 VAL_ 1355 ClimateVentModeIntake 9 "Recirculate" 18 "Fresh air" 146 "Defrost" ;
 VAL_ 1449 DiagSomething0 255 "Charging" ;
 VAL_ 1449 DiagSomething1 255 "Charging" ;
-VAL_ 1472 Mux5C0 64 "TemperatureActive" 128 "UnknownMux" 192 "UnknownMux2" ;
+VAL_ 1472 LB_Historical_Data_Swich_Flag 0 "Not Calculated" 1 "Maximum Data" 2 "Average Data" 3 "Minimum Data" ;
+VAL_ 1472 Batt_Heater_Mail_Send_Request 0 "No request" 1 "Mail send request" ;
+VAL_ 1472 LB_HEATEXIST 0 "Without Battery Heating" 1 "With Battery Heating" ;
+VAL_ 1291 DiagMuxOn_VCM 0 "Storage of CAN mute/absent failures not authorized" 1 "Storage of CAN mute/absent failures" ;
+VAL_ 1291 HCM_WakeUpSleepCmd 0 "GoToSleep" 1 "reserved" 2 "reserved" 3 "WakeUp" ;
+VAL_ 1291 Batt_Heater_Mail_Send_OK 0 "Mail send NG" 1 "Mail send OK" ;
+VAL_ 912 OBC_Status_AC_Voltage 0 "No Signal" 1 "100V" 2 "200V" 3 "Abnormal Wave" ;
+VAL_ 912 OBC_Flag_QC_Relay_On_Announcemen 1 "Announce OFF" 2 "Announce ON" ;
+VAL_ 912 OBC_Flag_QC_IR_Sensor 0 "Without" 1 "With" ;
 
