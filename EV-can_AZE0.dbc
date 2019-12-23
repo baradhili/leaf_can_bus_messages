@@ -161,6 +161,8 @@ BO_ 498 x1F2: 8 VCM
  SG_ Keep_SOC_Request : 20|1@1+ (1,0) [0|0] "modemask" Vector__XXX
  SG_ PCS_Connector_Detection : 17|1@1+ (1,0) [0|0] "modemask" Vector__XXX
  SG_ MPRUN : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_498 : 63|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CSUM_498 : 56|4@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 644 x284: 8 VCM
  SG_ LeftWheelSpeedSensor : 7|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
@@ -409,6 +411,8 @@ CM_ SG_ 498 Charge_StatusTransitionReqest "CHG_STA_RQ";
 CM_ SG_ 498 Keep_SOC_Request "KEEP_SOC_REQ";
 CM_ SG_ 498 PCS_Connector_Detection "PSCONDET";
 CM_ SG_ 498 MPRUN "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 498 CSUM_498 "checksum. all other nibbles including the CAN ID";
+CM_ SG_ 498 Unknown_498 "unknown - may indicate charging";
 CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN";
 CM_ SG_ 644 LeftWheelSpeedSensor "2's comp";
 CM_ SG_ 644 RightWheelSpeedSensor "2's comp";
