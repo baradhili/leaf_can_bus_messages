@@ -89,7 +89,7 @@ BO_ 1371 x55B: 8 HVBAT
  SG_ LB_SOC : 7|10@0+ (1,0) [0|0] "%+1" Vector__XXX
  SG_ LB_ALU_ANSWER : 16|8@1+ (1,0) [85|170] "" Vector__XXX
  SG_ LB_IR_Sensor_Wave_Voltage : 39|10@0+ (1,0) [0|4990] "mV 5000/1024" Vector__XXX
- SG_ Mux_55B M : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_PRUN_55B : 48|2@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CRC_55B : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ LB_IR_Sensor_Malfunction : 40|1@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
  SG_ LB_Capacity_Empty : 55|1@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
@@ -153,7 +153,7 @@ BO_ 468 x1D4: 8 Vector__XXX
  SG_ CRC_1D4 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 498 x1F2: 8 VCM
- SG_ TargetChargeSOC : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TargetChargeSOC : 7|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Charge_StatusTransitionReqest : 21|2@1+ (1,0) [0|3] "Modemask" Vector__XXX
  SG_ MPRUN : 48|2@1+ (1,0) [0|3] "" Vector__XXX
 
@@ -211,7 +211,7 @@ BO_ 1290 x50A: 8 VCM
 
 BO_ 1291 x50B: 7 VCM
  SG_ DiagMuxOn_VCM : 18|1@1+ (1,0) [0|0] "-" Vector__XXX
- SG_ VCM_WakeUpSleepCmd : 8|8@1+ (1,0) [0|3] "MODEMASK" Vector__XXX
+ SG_ VCM_WakeUpSleepCmd : 30|2@1+ (1,0) [0|3] "MODEMASK" Vector__XXX
 
 BO_ 1292 x50C: 6 VCM
  SG_ VCM_CLOCK M : 24|2@1+ (1,0) [0|3] "" Vector__XXX
@@ -246,6 +246,10 @@ BO_ 896 x380: 8 Vector__XXX
  SG_ Normal_Charger_Relay_Status_Flag : 38|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Quick_Charger_Relay_Status_Flag : 37|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ AC_Voltage : 42|9@0+ (0.5,70) [0|0] "V/2 +70" Vector__XXX
+
+BO_ 1539 x603: 8 VCM
+
+BO_ 1676 x68C: 8 VCM
 
 
 
@@ -298,7 +302,7 @@ CM_ SG_ 1371 LB_ALU_ANSWER "Question:B2h Answer(LBC):AAh Question:5Dh Answer(LBC
 
 This message is repeated 5x, to offer backwardscompability to 2011/2013 models. The message on these cars are run at 500ms.";
 CM_ SG_ 1371 LB_IR_Sensor_Wave_Voltage "LB_IRSEN_VOL";
-CM_ SG_ 1371 Mux_55B "LB_PRUN_55B 00,01,02,03 Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 1371 LB_PRUN_55B "LB_PRUN_55B 00,01,02,03 Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 1371 LB_IR_Sensor_Malfunction "0h = Normal 1h = Malfunction";
 CM_ SG_ 1371 LB_Capacity_Empty "0h = Not Batt Empty 1h = Batt Empty";
 CM_ SG_ 1371 LB_RefusetoSleep "00 = reserved 01 = RefuseToSleep 10 = ReadyToSleep 11 = reserved";
@@ -419,11 +423,13 @@ CM_ BO_ 912 "??? Unknown sender module";
 CM_ SG_ 912 Unknown_390_7 "Sawtooth, from 200-250";
 CM_ BO_ 915 "??? Unknown sender module";
 CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
-CM_ BO_ 896 "(100ms)";
+CM_ BO_ 896 "Charger? (100ms)";
 CM_ SG_ 896 Quick_Charger_IR_Sensor_Flag "FQCHGIRSENS 0h = Not IR circuit 1h = IR circuit have";
 CM_ SG_ 896 Charger_Output_Power "MAXCHGPOUT";
 CM_ SG_ 896 Normal_Charger_Relay_Status_Flag "FNCRELAYSTATUS 0h = OFF 1h = ON";
 CM_ SG_ 896 Quick_Charger_Relay_Status_Flag "FQCRELAYSTATUS 0h = OFF 1h = ON";
+CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
+CM_ BO_ 1676 "Bootup Message, appears once during power on after a few sec";
 VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity Drop" 2 "LBC Malfunction" 3 "High Temperature" 4 "Low Temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
 VAL_ 1468 LB_Capacity_Bal_Complete_Flag 0 "Not Finished" 1 "Finished" ;
 VAL_ 475 LB_Relay_Cut_Request 0 "No-Request" 1 "Main Relay OFF Request" 2 "Main Relay OFF Request" 3 "Main Relay OFF Request" ;
