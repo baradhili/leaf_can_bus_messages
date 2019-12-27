@@ -136,7 +136,7 @@ BO_ 1356 x54C: 8 HVAC
  SG_ ACEvaporatorTemperature : 0|8@1+ (1,0) [0|0] "0.25C/bit?" Vector__XXX
  SG_ ClimateControlStatus2 : 8|8@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ FanVoltage : 40|8@1+ (1,0) [0|0] "0.05 V/bit" Vector__XXX
- SG_ OutsideAmbientTemperature : 48|8@1+ (0.5,-40) [-40|87.5] "degC" Vector__XXX
+ SG_ OutsideAmbientTemperature : 48|8@1+ (0.5,-40.5) [-40|60] "degC" Vector__XXX
 
 BO_ 282 x11A: 8 VCM
  SG_ JoystickGearPosition : 4|4@1+ (1,0) [0|0] "-" Vector__XXX
@@ -289,7 +289,7 @@ CM_ SG_ 3221225472 LB_HistData_Tempera_Wakeup_Phase "";
 CM_ SG_ 3221225472 LB_Historical_Data_Temperature "";
 CM_ SG_ 3221225472 LB_HistData_Integrated_Current "2S";
 CM_ BO_ 1468 "Lithium Battery Controller (100ms)";
-CM_ SG_ 1468 LB_Remain_Capacity_GIDS "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh 
+CM_ SG_ 1468 LB_Remain_Capacity_GIDS "0-281 for 24kWh, 0-363 for 30kWh, 0-498 for 40kWh, 0-775 for 62kWh
 1 LSB = 80WH";
 CM_ SG_ 1468 LB_Remaining_Capacity_Segments "Contains chargebars and capacitybars, alternating depending on mux. Simplified lower down in the message";
 CM_ SG_ 1468 LB_Temperature_Segment_For_Dash "For instrumentation cluster. Unit is %, times 5/12 according to documentation, kinda strange .Should be average of the 3 sensors inside the battery pack.";
@@ -451,6 +451,10 @@ CM_ SG_ 1472 LB_Heating_Start_Send_Request "0->1 Heat start Mail send request";
 CM_ SG_ 1472 LB_Heating_Stop_Send_Request "0->1 Heat stop Mail send request";
 CM_ SG_ 1472 Batt_Heater_Mail_Send_Request "";
 CM_ SG_ 1472 LB_HEATEXIST "Specifies if battery pack is equipped with heating elements";
+CM_ SG_ 1472 LB_Diagnosis_Trouble_Code "Up to 2 error codes are indicated concurrently. If concurrent indication, they are sent alternately on each 500ms update cycle.
+
+Start-up restriction by LB_DTC:
+Wait on error stop mode and not to start-up when LB_DTC=153~200 is received during system start-up or operation.";
 CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_MIN "LB_Historical_Data_High_or_Low_Voltage_Times";
 CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_MAX "LB_Historical_Data_High_or_Low_Voltage_Times";
 CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_AVG "LB_Historical_Data_High_or_Low_Voltage_Times";

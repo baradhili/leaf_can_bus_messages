@@ -179,7 +179,7 @@ BO_ 1449 x5A9: 8 VCM
 
 BO_ 1472 x5C0: 8 HVBAT
  SG_ LB_Historical_Data_Swich_Flag M : 6|2@1+ (1,0) [0|0] "mux" Vector__XXX
- SG_ LB_Diagnosis_Trouble_Code : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LB_Diagnosis_Trouble_Code : 56|8@1+ (1,0) [0|255] "DTC" Vector__XXX
  SG_ LB_HistData_Temperature_MIN m3 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
  SG_ LB_HistData_Temperature_MAX m1 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
  SG_ LB_HistData_Temperature_AVG m2 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
@@ -281,7 +281,9 @@ CM_ SG_ 1468 LB_Remain_Capacity "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kW
 1 LSB = 65-85WH";
 CM_ SG_ 1468 LB_New_Full_Capacity "";
 CM_ SG_ 1468 LB_Remaining_Capacity_Segment "";
-CM_ SG_ 1468 LB_Average_Battery_Temperature "-40 offset. Average of all temp measurements";
+CM_ SG_ 1468 LB_Average_Battery_Temperature "LB_AVET Average of all temp measurements
+
+When battery temperature (LB_AVET) exceeds 55degC: Stop INV, Indicate error message";
 CM_ SG_ 1468 LB_Capacity_Deterioration_Rate "LB_SOH State of Health";
 CM_ SG_ 1468 LB_Remaining_Capaci_Segment_Swit "FlagLB_CAPSW 0b = Remainig capacity 1b = Full capacity";
 CM_ SG_ 1468 LB_Output_Power_Limit_Reason "000 = Normal 001 = Capacity Drop 010 = LBC Malfunction 011 = High Temperature 100 = Low Temperature 101 = reserved 110 = reserved 111 = reserved";
@@ -291,10 +293,14 @@ CM_ SG_ 475 LB_Total_Voltage "0.5v/bit";
 CM_ SG_ 475 LB_Current "BatteryCurrentSignal , 2s comp, 1lSB = 0.5A";
 CM_ SG_ 475 CRC_1DB "CRC";
 CM_ SG_ 475 LB_PRUN_1DB "MPR1DB Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
-CM_ SG_ 475 LB_Relay_Cut_Request "00 = No-Request 01 = Main Relay OFF Request 10 = Main Relay OFF Request 11 = Main Relay OFF Request";
-CM_ SG_ 475 LB_Failsafe_Status "000b = normal start Request 001b = Normal Stop Request 010b = Charging Mode Stop Request 011b = Charging Mode Stop Request & Normal Stop Request 100b = Caution Lamp Request 101b = Caution Lamp Request & Normal Stop Request 110b = Caution Lamp Request & Charging Mode Stop Request 111b = Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request";
-CM_ SG_ 475 LB_MainRelayOn_flag "0h = No-Permission 1h = Main Relay On Permission";
-CM_ SG_ 475 LB_INTER_LOCK "0h = Not Inter Lock connected 1h = Inter Lock connected";
+CM_ SG_ 475 LB_Relay_Cut_Request "LB_FAIL 
+00 = No-Request 01 = Main Relay OFF Request 10 = Main Relay OFF Request 11 = Main Relay OFF Request";
+CM_ SG_ 475 LB_Failsafe_Status "LB_STATUS 
+000b = normal start Request 001b = Normal Stop Request 010b = Charging Mode Stop Request 011b = Charging Mode Stop Request & Normal Stop Request 100b = Caution Lamp Request 101b = Caution Lamp Request & Normal Stop Request 110b = Caution Lamp Request & Charging Mode Stop Request 111b = Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request";
+CM_ SG_ 475 LB_MainRelayOn_flag "LB_FRLYON 
+0h = No-Permission 1h = Main Relay On Permission";
+CM_ SG_ 475 LB_INTER_LOCK "LB_INTERLOCK 
+0h = Not Inter Lock connected 1h = Inter Lock connected";
 CM_ SG_ 475 LB_Discharge_Power_Status "00b = Reserved 01b = Normal limit POUT 10b = High rate limit POUT 11b = Immediate limit POUT";
 CM_ BO_ 1371 "Lithium Battery Controller (100ms)";
 CM_ SG_ 1371 LB_SOC "Does not affect cluster or VCM at all";
@@ -386,6 +392,10 @@ CM_ SG_ 1449 DiagSomething1 "Active during drive, FF charge";
 CM_ SG_ 1449 DiagSomething3 "Seems to be related to SOC but not LTI";
 CM_ BO_ 1472 "Lithium Battery Controller (500ms)";
 CM_ SG_ 1472 LB_Historical_Data_Swich_Flag "00b = Not calculated 01b = Maximum data 10b = Average data 11b = Minimum data";
+CM_ SG_ 1472 LB_Diagnosis_Trouble_Code "Up to 2 error codes are indicated concurrently. If concurrent indication, they are sent alternately on each 500ms update cycle.
+
+Start-up restriction by LB_DTC:
+Wait on error stop mode and not to start-up when LB_DTC=153~200 is received during system start-up or operation.";
 CM_ SG_ 1472 LB_HistData_Temperature_MAX "Affects cluster gauge for temperature?";
 CM_ BO_ 1290 "VCM relay from A/C Auto Amp and AC Pressor Sensor (which is measured directly from VCM) Message is identical on EV CAN and CAR CAN";
 CM_ SG_ 1290 Unknown_50A_0 "04,84,85";
