@@ -124,7 +124,7 @@ BO_ 1465 x5B9: 8 VCM
  SG_ ChargeMinutesRemaining : 2|11@0+ (1,0) [0|2047] "minutes" Vector__XXX
 
 BO_ 1359 x54F: 8 HVAC
- SG_ InteriorIntakeTemp : 0|8@1+ (1,0) [0|0] "F or 0.5C" Vector__XXX
+ SG_ InteriorIntakeTemp : 0|8@1+ (0.5,-14) [0|0] "degC" Vector__XXX
  SG_ ACPowerConsumption : 8|8@1+ (1,0) [0|0] "50W/bit?" Vector__XXX
  SG_ ACAutoAmpStatus : 46|2@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ HeaterPowerConsumption : 40|6@1+ (1,0) [0|0] "300W/bit?" Vector__XXX
@@ -133,7 +133,7 @@ BO_ 1356 x54C: 8 HVAC
  SG_ ACEvaporatorTemperature : 0|8@1+ (1,0) [0|0] "0.25C/bit?" Vector__XXX
  SG_ ClimateControlStatus2 : 8|8@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ FanVoltage : 40|8@1+ (1,0) [0|0] "0.05 V/bit" Vector__XXX
- SG_ OutsideAmbientTemperature : 48|8@1+ (1,0) [0|0] "F/C" Vector__XXX
+ SG_ OutsideAmbientTemperature : 48|8@1+ (0.5,-40) [-40|87.5] "degC" Vector__XXX
 
 BO_ 282 x11A: 8 EShift
  SG_ JoystickGearPosition : 4|4@1+ (1,0) [0|0] "-" Vector__XXX
@@ -319,7 +319,9 @@ CM_ SG_ 476 CRC_1DC "CRC byte for msg. Poly is 0x85; left shift; D0 first; 64 sh
 CM_ SG_ 476 LB_PRUN_1DC "MPR1DC Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ BO_ 474 "Inverter (10ms)";
 CM_ SG_ 474 MG_EffectiveTorque "2S";
-CM_ SG_ 474 MG_OutputRevolution "";
+CM_ SG_ 474 MG_OutputRevolution "16 bits; Signed value, negative for reverse.
+
+Values 0x7fff and 0x7ffe are seen during turning on of car";
 CM_ SG_ 474 MG_Clock "MPRUN Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 474 CRC_1DA "CRC";
 CM_ BO_ 1465 "Vehicle Control Module";
@@ -331,13 +333,7 @@ Example:
 0000 1001 1111 1110
 001 1111 1110 = 510min";
 CM_ BO_ 1359 "AC Auto Amp";
-CM_ SG_ 1359 InteriorIntakeTemp "Appears to be interior intake temp
-(2013: sometimes is <0x20 when the temp is definitely higher)
-
-My testing during 8*C according to dash, warm interior
-0x34 = 52 DEC
-52F = 11C?
-52/2= 26C?";
+CM_ SG_ 1359 InteriorIntakeTemp "Climate control's measurement of temperature inside the car. Subtracting 14 is a bit of a guess worked out by observing how auto climate control reacts when this reaches the target setting.";
 CM_ SG_ 1359 ACPowerConsumption "Rises to a steady value with ac on.  Off immediately with ac off.  No change with heater on";
 CM_ SG_ 1359 ACAutoAmpStatus "location?";
 CM_ SG_ 1359 HeaterPowerConsumption "Goes up slowly with heater on; no change with ac on";
@@ -345,7 +341,7 @@ CM_ BO_ 1356 "AC Auto Amp";
 CM_ SG_ 1356 ACEvaporatorTemperature "drops with ac on (after short lag).  No change with heater on";
 CM_ SG_ 1356 ClimateControlStatus2 "66 CC on, ff CC off";
 CM_ SG_ 1356 FanVoltage "Commanded fan speed is proportional to Voltage";
-CM_ SG_ 1356 OutsideAmbientTemperature "0x92=90F;0x86=79F (90F & 79F read from dash)";
+CM_ SG_ 1356 OutsideAmbientTemperature "Ambient temperature. This one has half-degree C resolution and seems to stay within a degree or two of the \"eyebrow\" temp display.";
 CM_ BO_ 282 "Shift controller module";
 CM_ SG_ 282 JoystickGearPosition "(MSBits probably selected gear: 4 for D/B, 3 for N, 2 for R,0 for Parked)";
 CM_ SG_ 282 Mulitplexor "0, 1, 2, 3";

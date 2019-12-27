@@ -84,7 +84,7 @@ BO_ 384 x180: 8 VCM
  SG_ Unknown_180_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ MotorAmp : 23|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ MotorAmpAlternative : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ThrottlePosition : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ThrottlePosition : 40|8@1+ (0.5,0) [0|100] "%" Vector__XXX
  SG_ Unknown_180_5 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_180_6 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_180_7 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -164,8 +164,8 @@ BO_ 644 x284: 8 ABS
  SG_ FrontRightWheelSpeed : 7|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ FrontLeftWheelSpeed : 23|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ VehicleSpeedFromABS : 39|16@0+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_284_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_284_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DistanceTraveled1 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DistanceTraveled2 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 645 x285: 8 ABS
  SG_ RearRightWheelSpeed : 7|16@0+ (1,0) [0|0] "" Vector__XXX
@@ -255,10 +255,10 @@ BO_ 861 x35D: 8 Vector__XXX
  SG_ Unknown_35D_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 901 x385: 8 Vector__XXX
- SG_ TirePressure1 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ TirePressure2 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ TirePressure3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ TirePressure4 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TirePressure1 : 16|8@1+ (0.25,0) [0|0] "PSI" Vector__XXX
+ SG_ TirePressure2 : 24|8@1+ (0.25,0) [0|0] "PSI" Vector__XXX
+ SG_ TirePressure3 : 32|8@1+ (0.25,0) [0|0] "PSI" Vector__XXX
+ SG_ TirePressure4 : 40|8@1+ (0.25,0) [0|0] "PSI" Vector__XXX
 
 BO_ 1057 x421: 1 Vector__XXX
  SG_ DashShifterPosition : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -301,7 +301,7 @@ BO_ 1296 x510: 8 Vector__XXX
  SG_ Unknown_510_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_510_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_510_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ OutsideAmbientTemperature : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ OutsideAmbientTemperature : 56|8@1+ (0.5,-40) [-40|87.5] "degC" Vector__XXX
 
 BO_ 1354 x54A: 8 Vector__XXX
  SG_ CCStatusPlusUnknown : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -318,7 +318,7 @@ BO_ 1355 x54B: 8 Vector__XXX
  SG_ ClimateOnOrOffStatus1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ClimateOnOrOffStatus2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_54B_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ RequestedFanSpeed : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RequestedFanSpeed : 35|5@1+ (1,0) [1|7] "speed" Vector__XXX
  SG_ Unknown_54B_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_54B_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ FanSpeedStatusChange : 56|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -344,7 +344,7 @@ BO_ 1370 x55A: 8 Vector__XXX
 BO_ 1449 x5A9: 8 Vector__XXX
  SG_ Unknown_5A9_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ GIDStoClusterMaybe : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_5A9_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RangeInstrument : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5A9_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5A9_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5A9_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -363,17 +363,34 @@ BO_ 1459 x5B3: 8 VCM
  SG_ MuxedCapacityAndSOH : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1472 x5C0: 8 VCM
- SG_ Mux_5C0 M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ClusterTemperature2 m64 : 16|8@1+ (1,0) [0|0] "dC" Vector__XXX
- SG_ DisOrChargeTimeCounter : 24|8@1+ (1,0) [0|255] "counter" Vector__XXX
- SG_ Unknown_5C0_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_5C0_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_5C0_5_mux40 m64 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_5C0_5_mux80 m128 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_5C0_5_muxC0 m192 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_Historical_Data_Swich_Flag M : 6|2@1+ (1,0) [0|3] "mux" Vector__XXX
+ SG_ LB_Heating_Start_Send_Request : 5|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_Heating_Stop_Send_Request : 4|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ Batt_Heater_Mail_Send_Request : 8|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_HEATEXIST : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_NextWakeupTimeForBatterHeater : 48|5@1+ (1,0) [0|1800] "minutes" Vector__XXX
+ SG_ LB_Diagnosis_Trouble_Code : 56|8@1+ (1,0) [0|255] "DTC" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_MIN m3 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_MAX m1 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_AVG m2 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_MIN m3 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_MAX m1 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_AVG m2 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_MIN m3 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_MAX m1 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_AVG m2 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentMIN m3 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentMAX m1 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentAVG m2 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffMIN m3 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffMAX m1 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffAVG m2 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_MIN m3 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_MAX m1 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_AVG m2 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
 
 BO_ 1477 x5C5: 8 MA
- SG_ Unknown_5C5_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ParkingBrakeStatus : 2|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Odometer : 15|24@0+ (1,0) [0|16777215] "km / m" Vector__XXX
  SG_ Unknown_5C5_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5C5_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -444,24 +461,27 @@ BO_ 1540 x604: 8 Vector__XXX
 BO_ 1549 x60D: 8 BCM
  SG_ Unknown_60D_bit : 0|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BCM_ParkingLights : 1|2@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BCM_PassengerDoorOpen : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BCM_DriverDoorOpen : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BCM_RearLeftDoorOpen : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BCM_RearRightDoorOpen : 6|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BCM_TrunkOpen : 7|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BCM_FogLights : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_PassengerDoorOpen : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_DriverDoorOpen : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RearLeftDoorOpen : 5|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RearRightDoorOpen : 6|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_TrunkOpen : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_FogLights : 8|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ BCM_VehicleState : 9|2@1+ (1,0) [0|3] "Enumeration" Vector__XXX
- SG_ Unknown_Bit_1_3 : 11|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_Bit_1_4 : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_MainBeam : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Unknown_Bit_1_4 : 12|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ BCM_LeftTurnSignalFeedback : 13|1@1+ (1,0) [0|1] "On/Off" Vector__XXX
  SG_ BCM_RightTurnSignalFeedback : 14|1@1+ (1,0) [0|1] "On/Off" Vector__XXX
- SG_ BCM_HighBeamLights : 15|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ BCM_TurnSignal : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_HighBeamLights : 15|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_LeftTurnSignalCommand : 22|1@1+ (1,0) [0|1] "On/Off" Vector__XXX
  SG_ Unknown_60D_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_60D_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_60D_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_60D_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_60D_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BCM_RightTurnSignalCommand : 21|1@1+ (1,0) [0|1] "On/Off" Vector__XXX
+ SG_ BCM_DoorLockStatus_DriverDoor : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_DoorLockStatus_OtherDoors : 19|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1573 x625: 6 BCM
  SG_ Unknown_625_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -583,6 +603,8 @@ CM_ SG_ 853 ClusterUnitsSelected "Selected dash miles/eff units
 0x00=km;0x20=mi";
 CM_ SG_ 853 ClusterOdometerUnits "Dash odometer units
 
+The odometer value on the bus is always in units appropriate for the car's intended market and is unaffected by the dash display preference (in d[4] bit 5).
+
 0x60=miles;0x40=km";
 CM_ BO_ 856 "Body Control Module";
 CM_ SG_ 856 HeadlightStatus "1 = ON, changes with manual control or auto";
@@ -591,6 +613,10 @@ CM_ BO_ 861 "Body Control Module (Please investigate)
 
 Possibly Similar to 370z, if so there's wiper data here";
 CM_ BO_ 901 "Tire Pressure Monitoring System";
+CM_ SG_ 901 TirePressure1 "FL?";
+CM_ SG_ 901 TirePressure2 "FR?";
+CM_ SG_ 901 TirePressure3 "RL?";
+CM_ SG_ 901 TirePressure4 "RR?";
 CM_ BO_ 1057 "VCM relay from shifter on EV bus to Instrument panel and VSP. Does this exist on AZE0?";
 CM_ SG_ 1057 DashShifterPosition "Controls PRNDE display on dash (investigate B mode?)
 
@@ -619,7 +645,9 @@ CM_ BO_ 1296 "VCM relay from A/C Auto Amp, to eyebrow display and A/V unit";
 CM_ SG_ 1296 CounterUnknownSlow "Increments roughly every 6seconds";
 CM_ SG_ 1296 CounterUnknownFast "Increments roughly every second";
 CM_ SG_ 1296 ClimateControlPowerConsumption "0.25kW per lsb";
-CM_ SG_ 1296 OutsideAmbientTemperature "0x92=90F;0x86=79F (90F & 79F read from dash), identical to EV CAN msg 54C byte 6";
+CM_ SG_ 1296 OutsideAmbientTemperature "Identical to EV CAN msg 0x54C byte 6
+
+This one has half-degree C resolution and seems to stay within a degree or two of the \"eyebrow\" temp display.";
 CM_ BO_ 1354 "VCM relay from A/C Auto Amp to A/V unit for climate display";
 CM_ SG_ 1354 CCStatusPlusUnknown "12,3c- CC Off; a0,da- CC On";
 CM_ SG_ 1354 Unknown_54A_1 "00 (80 in 2013+)";
@@ -638,6 +666,7 @@ CM_ SG_ 1355 ClimateControlStatusChange "Used to alert A/V unit that CC being to
 CM_ SG_ 1355 ClimateOnOrOffStatus1 "08 off, 78 on";
 CM_ SG_ 1355 ClimateOnOrOffStatus2 "80 off, 88 on";
 CM_ SG_ 1355 Unknown_54B_3 "00,08,09,10,12 observed, mostly 09 while CC on";
+CM_ SG_ 1355 RequestedFanSpeed "1<->7 ";
 CM_ SG_ 1355 FanSpeedStatusChange "Used to alert A/V unit that fan speed is being changed by the user so the A/V can display the fan and CC settings on the display 00 no change, 01 change";
 CM_ BO_ 1361 "??? On 370Z this message contains engine coolant temp and cruise control";
 CM_ SG_ 1361 Unknown_551_4 "80 with CC on , 00 off";
@@ -648,6 +677,12 @@ CM_ SG_ 1370 Unknown_55A_3 "IGBTDriverBoardTemperature?";
 CM_ SG_ 1370 RawTemperature1 "MotorTemperature?";
 CM_ BO_ 1449 "VCM to instrument cluster?";
 CM_ SG_ 1449 GIDStoClusterMaybe "Seems to *somewhat* follow GIDs";
+CM_ SG_ 1449 RangeInstrument "OVMS sets nl_range from this with the following formula
+
+nl_range = d[1] << 4 | d[2] >> 4;
+m_range_instrument->SetValue(nl_range / 5, Kilometers);
+
+TODO, set bitpos according to OVMS";
 CM_ BO_ 1459 "VCM relayed and processed data to instrument cluster";
 CM_ SG_ 1459 BatteryPackTemperature "Probably used to drive temp bars on cluster";
 CM_ SG_ 1459 BatteryStateOfHealth "Confirmed to contain State-Of-Health (SOH)";
@@ -674,13 +709,31 @@ Range 0-15 (Below data from test at 0%SOC, writing values to bus)
 0 = 0 chargebars";
 CM_ SG_ 1459 MuxedCapacityAndSOH "Possibly capacity bargraph when D0=FE; SOH otherwise. TODO: Add mux to this message after testing";
 CM_ BO_ 1472 "Relayed LBC message from EV-CAN";
-CM_ SG_ 1472 Mux_5C0 "40,80,c0";
-CM_ SG_ 1472 ClusterTemperature2 "Position in the frame? The indicated temperature on the instrument cluster is controlled by another muxed field, when 0x5C0 is 0x40, the indicated temperature is controlled by the 3rd byte of 0x5C0
+CM_ SG_ 1472 LB_Historical_Data_Swich_Flag "Mux for historical data signals";
+CM_ SG_ 1472 LB_Heating_Start_Send_Request "0->1 Heat start Mail send request";
+CM_ SG_ 1472 LB_Heating_Stop_Send_Request "0->1 Heat stop Mail send request";
+CM_ SG_ 1472 LB_HEATEXIST "Specifies if battery pack is equipped with heating elements";
+CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_MIN "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_MAX "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_AVG "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_MIN "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_MAX "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_AVG "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temperature_MAX "Affects cluster gauge for temperature?";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentMIN "2S
 
-Dala: Doesn't seem to line up, third byte 0x60 = 6 when on the cluster 4 temp bars are active.";
-CM_ SG_ 1472 DisOrChargeTimeCounter "Linear positive ramp up during charge and negative ramp down during discharge.  Starts from 00 regardless of initial charge level. Charging time?";
-CM_ SG_ 1472 Unknown_5C0_4 "(2015 S C5/C9 depending on mux)";
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentMAX "2S
+
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentAVG "2S
+
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffMIN "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient ";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffMAX "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient ";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffAVG "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient ";
 CM_ BO_ 1477 "Instrument cluster -> BCM / AV / VCM";
+CM_ SG_ 1477 ParkingBrakeStatus "This is the parking brake (which is foot-operated on AZE0)";
 CM_ SG_ 1477 Odometer "Odo is handled by the cluster display and is transmitted to body control module, AV, and VCM";
 CM_ BO_ 1507 "???";
 CM_ BO_ 1508 "???";
@@ -703,6 +756,7 @@ Most likely, not confirmed
 Funfact, In the 370z there are lock, door, and headlight statuses in this message";
 CM_ SG_ 1549 BCM_ParkingLights "3 - dim lights 
 2 - parking lights (first mode on the control)";
+CM_ SG_ 1549 BCM_TrunkOpen "";
 CM_ SG_ 1549 BCM_FogLights "1 - fog lights (together with 1-2 bits of the byte #0) TODO: Verify message";
 CM_ SG_ 1549 BCM_VehicleState "0 - OFF, 
 1 - power button is pressed once without brakes.
@@ -711,7 +765,8 @@ CM_ SG_ 1549 BCM_VehicleState "0 - OFF,
 CM_ SG_ 1549 BCM_LeftTurnSignalFeedback "Not the control, but the actual light";
 CM_ SG_ 1549 BCM_RightTurnSignalFeedback "Not the control, but the actual light";
 CM_ SG_ 1549 BCM_HighBeamLights "1 - high beam lights (together with 1-2 bits of the byte #0) TODO: Verify this";
-CM_ SG_ 1549 BCM_TurnSignal "06: Turn signal off 26: Right 46: Left";
+CM_ SG_ 1549 BCM_LeftTurnSignalCommand "Control Value";
+CM_ SG_ 1549 BCM_RightTurnSignalCommand "Control Value";
 CM_ BO_ 1573 "Body Control Module?
 
 Funfact, In 370z there are climate related statuses in this message";
@@ -731,5 +786,8 @@ VAL_ 1057 DashShifterPosition 24 "Neutral" 8 "Park" 32 "Drive" 16 "Reverse" 38 "
 VAL_ 1296 ClimateControlActive 0 "CC Off" 1 "CC On" ;
 VAL_ 1355 ClimateControlStatusChange 0 "No change" 1 "Changed" ;
 VAL_ 1355 FanSpeedStatusChange 0 "No change" 1 "Change" ;
+VAL_ 1472 LB_Historical_Data_Swich_Flag 0 "Not Calculated" 1 "Maximum Data" 2 "Average Data" 3 "Minimum Data" ;
+VAL_ 1472 Batt_Heater_Mail_Send_Request 0 "No request" 1 "Mail send request" ;
+VAL_ 1477 ParkingBrakeStatus 0 "Parking brake off" 1 "Parking brake on" ;
 VAL_ 1549 BCM_VehicleState 0 "Vehicle OFF" 1 "Power button pressed once without brakes" 2 "Booting up. 2 during the startup sequence before state1 and state3 for 2 seconds" 3 "Vehicle ON (Ready or ACC)" ;
 

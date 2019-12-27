@@ -53,6 +53,12 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ ALU_Question : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Mux_50C M : 24|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ TCSOC : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_HistData_HighLow_Voltage_Time : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_Tempera_Wakeup_Phase : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_Historical_Data_Temperature : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Integrated_Current : 24|8@1- (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_Degrade_IntRes_Coeff : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_Historical_Data_Cell_Voltage : 42|6@1+ (1,0) [0|4380] "mV" Vector__XXX
 
 BO_ 1468 x5BC: 8 HVBAT
  SG_ LB_Remain_Capacity_GIDS : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
@@ -121,7 +127,7 @@ BO_ 1465 x5B9: 7 VCM
  SG_ ChargeMinutesRemaining : 2|11@0+ (1,0) [0|2047] "minutes" Vector__XXX
 
 BO_ 1359 x54F: 8 HVAC
- SG_ InteriorIntakeTemp : 0|8@1+ (1,0) [0|0] "F or 0.5C" Vector__XXX
+ SG_ InteriorIntakeTemp : 0|8@1+ (0.5,-14) [0|0] "degC" Vector__XXX
  SG_ ACPowerConsumption : 8|8@1+ (1,0) [0|0] "50W/bit?" Vector__XXX
  SG_ ACAutoAmpStatus : 46|2@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ HeaterPowerConsumption : 40|6@1+ (1,0) [0|0] "300W/bit?" Vector__XXX
@@ -130,7 +136,7 @@ BO_ 1356 x54C: 8 HVAC
  SG_ ACEvaporatorTemperature : 0|8@1+ (1,0) [0|0] "0.25C/bit?" Vector__XXX
  SG_ ClimateControlStatus2 : 8|8@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ FanVoltage : 40|8@1+ (1,0) [0|0] "0.05 V/bit" Vector__XXX
- SG_ OutsideAmbientTemperature : 48|8@1+ (1,0) [0|0] "F/C" Vector__XXX
+ SG_ OutsideAmbientTemperature : 48|8@1+ (0.5,-40) [-40|87.5] "degC" Vector__XXX
 
 BO_ 282 x11A: 8 VCM
  SG_ JoystickGearPosition : 4|4@1+ (1,0) [0|0] "-" Vector__XXX
@@ -183,19 +189,31 @@ BO_ 1449 x5A9: 8 VCM
  SG_ DiagSomething3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1472 x5C0: 8 HVBAT
- SG_ LB_Historical_Data_Swich_Flag : 6|2@1+ (1,0) [0|3] "modemask" Vector__XXX
+ SG_ LB_Historical_Data_Swich_Flag M : 6|2@1+ (1,0) [0|3] "mux" Vector__XXX
  SG_ LB_Heating_Start_Send_Request : 5|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ LB_Heating_Stop_Send_Request : 4|1@1+ (1,0) [0|1] "status" Vector__XXX
- SG_ LB_HistData_HighLow_Voltage_Time : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
- SG_ LB_HistData_Tempera_Wakeup_Phase : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
  SG_ Batt_Heater_Mail_Send_Request : 8|1@1+ (1,0) [0|1] "status" Vector__XXX
- SG_ LB_Historical_Data_Temperature : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
- SG_ LB_HistData_Integrated_Current : 24|8@1- (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
- SG_ LB_HistData_Degrade_IntRes_Coeff : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ LB_HEATEXIST : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
- SG_ LB_Historical_Data_Cell_Voltage : 42|6@1+ (1,0) [0|4380] "mV" Vector__XXX
  SG_ LB_NextWakeupTimeForBatterHeater : 48|5@1+ (1,0) [0|1800] "minutes" Vector__XXX
  SG_ LB_Diagnosis_Trouble_Code : 56|8@1+ (1,0) [0|255] "DTC" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_MIN m3 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_MAX m1 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_AVG m2 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_MIN m3 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_MAX m1 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_AVG m2 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_MIN m3 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_MAX m1 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_AVG m2 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentMIN m3 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentMAX m1 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentAVG m2 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffMIN m3 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffMAX m1 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffAVG m2 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_MIN m3 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_MAX m1 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_AVG m2 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
 
 BO_ 1290 x50A: 8 VCM
  SG_ Unknown_50A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -266,6 +284,10 @@ CM_ SG_ 3221225472 Unknown_50C_5_3 "Dala, def muxed";
 CM_ SG_ 3221225472 ALU_Question "5d,b2 Dala: Used for backwardscompability?";
 CM_ SG_ 3221225472 Mux_50C "0,1,2,3";
 CM_ SG_ 3221225472 TCSOC "Position in frame?";
+CM_ SG_ 3221225472 LB_HistData_HighLow_Voltage_Time "";
+CM_ SG_ 3221225472 LB_HistData_Tempera_Wakeup_Phase "";
+CM_ SG_ 3221225472 LB_Historical_Data_Temperature "";
+CM_ SG_ 3221225472 LB_HistData_Integrated_Current "2S";
 CM_ BO_ 1468 "Lithium Battery Controller (100ms)";
 CM_ SG_ 1468 LB_Remain_Capacity_GIDS "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh 
 1 LSB = 80WH";
@@ -358,7 +380,9 @@ CM_ BO_ 474 "Inverter? Or relayed via VCM? (10ms)";
 CM_ SG_ 474 MG_InputVoltage "Inverter input voltage? 
 01..b9 Follows BVS(BatteryVoltageSignal) until near end of drive (turtle?) or end of charging ";
 CM_ SG_ 474 MG_EffectiveTorque "2S";
-CM_ SG_ 474 MG_OutputRevolution "16 bits; 1 LSB = 0.5rpm? Stays at zero when applying torque with brake on so not likely volts.";
+CM_ SG_ 474 MG_OutputRevolution "16 bits; Signed value, negative for reverse.
+
+Values 0x7fff and 0x7ffe are seen during turning on of car";
 CM_ SG_ 474 MG_CLOCK "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 474 CRC_1DA "CRC";
 CM_ BO_ 1465 "Vehicle Control Module";
@@ -370,13 +394,7 @@ Example:
 0000 1001 1111 1110
 001 1111 1110 = 510min";
 CM_ BO_ 1359 "AC Auto Amp";
-CM_ SG_ 1359 InteriorIntakeTemp "Appears to be interior intake temp
-(2013: sometimes is <0x20 when the temp is definitely higher)
-
-My testing during 8*C according to dash, warm interior
-0x34 = 52 DEC
-52F = 11C?
-52/2= 26C?";
+CM_ SG_ 1359 InteriorIntakeTemp "Climate control's measurement of temperature inside the car. Subtracting 14 is a bit of a guess worked out by observing how auto climate control reacts when this reaches the target setting.";
 CM_ SG_ 1359 ACPowerConsumption "Rises to a steady value with ac on.  Off immediately with ac off.  No change with heater on";
 CM_ SG_ 1359 ACAutoAmpStatus "location?";
 CM_ SG_ 1359 HeaterPowerConsumption "Goes up slowly with heater on; no change with ac on";
@@ -384,7 +402,7 @@ CM_ BO_ 1356 "AC Auto Amp";
 CM_ SG_ 1356 ACEvaporatorTemperature "drops with ac on (after short lag).  No change with heater on";
 CM_ SG_ 1356 ClimateControlStatus2 "66 CC on, ff CC off";
 CM_ SG_ 1356 FanVoltage "Commanded fan speed is proportional to Voltage";
-CM_ SG_ 1356 OutsideAmbientTemperature "0x92=90F;0x86=79F (90F & 79F read from dash)";
+CM_ SG_ 1356 OutsideAmbientTemperature "Ambient temperature. This one has half-degree C resolution and seems to stay within a degree or two of the \"eyebrow\" temp display.";
 CM_ BO_ 282 "Vehicle Control Module 2013+ (Shift controller module for 2011-2012)";
 CM_ SG_ 282 JoystickGearPosition "(MSBits probably selected gear: 4 for D/B, 3 for N, 2 for R,0 for Parked)";
 CM_ SG_ 282 Mulitplexor "0, 1, 2, 3";
@@ -412,7 +430,7 @@ CM_ SG_ 498 MPRUN "Detection of frozen data. Message-PRUN-Diag. The transmitting
 CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN";
 CM_ SG_ 644 LeftWheelSpeedSensor "2's comp";
 CM_ SG_ 644 RightWheelSpeedSensor "2's comp";
-CM_ SG_ 644 AverageRearSpeedSensor "??? speed sensor.  Maybe average of both rear?";
+CM_ SG_ 644 AverageRearSpeedSensor "??? speed sensor.  Maybe average of both rear? Or VehicleSpeedFromABS?";
 CM_ SG_ 644 DistanceTraveled1 "00..ff (wraps ~360 times in a 25 mile drive)";
 CM_ SG_ 644 DistanceTraveled2 "00..ff (wraps ~360 times in a 25 mile drive)";
 CM_ BO_ 1355 "AC Auto Amp";
@@ -428,17 +446,34 @@ CM_ SG_ 1449 DiagSomething0 "Active during drive, FF charge";
 CM_ SG_ 1449 DiagSomething1 "Active during drive, FF charge";
 CM_ SG_ 1449 DiagSomething3 "Seems to be related to SOC but not LTI";
 CM_ BO_ 1472 "Lithium Battery Controller (500ms)";
-CM_ SG_ 1472 LB_Historical_Data_Swich_Flag "Mux for entire message?";
+CM_ SG_ 1472 LB_Historical_Data_Swich_Flag "Mux for historical data signals";
 CM_ SG_ 1472 LB_Heating_Start_Send_Request "0->1 Heat start Mail send request";
 CM_ SG_ 1472 LB_Heating_Stop_Send_Request "0->1 Heat stop Mail send request";
-CM_ SG_ 1472 LB_HistData_HighLow_Voltage_Time "";
-CM_ SG_ 1472 LB_HistData_Tempera_Wakeup_Phase "";
 CM_ SG_ 1472 Batt_Heater_Mail_Send_Request "";
-CM_ SG_ 1472 LB_Historical_Data_Temperature "";
-CM_ SG_ 1472 LB_HistData_Integrated_Current "2S";
+CM_ SG_ 1472 LB_HEATEXIST "Specifies if battery pack is equipped with heating elements";
+CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_MIN "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_MAX "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_AVG "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_MIN "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_MAX "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_AVG "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temperature_MAX "Affects cluster gauge for temperature?";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentMIN "2S
+
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentMAX "2S
+
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentAVG "2S
+
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffMIN "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient Dala: Trending MIN/MAX/AVG is strange. MAX/MIN sits at 100, AVG sits at 99";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffMAX "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffAVG "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient";
+CM_ SG_ 1472 LB_HistData_Cell_Voltage_MIN "Dala: Trending MIN/MAX/AVG is strange. AVG/MIN sits round 3700mV, MAX sits at 2100mV";
 CM_ BO_ 1290 "VCM relay from A/C Auto Amp and AC Pressor Sensor (which is measured directly from VCM) Message is identical on EV CAN and CAR CAN";
 CM_ SG_ 1290 Unknown_50A_0 "04,84,85";
-CM_ SG_ 1290 Unknown_50A_1 "02,13,33,40,42,53,72,73 Dala (ECO button affects?)";
+CM_ SG_ 1290 Unknown_50A_1 "02,13,33,40,42,53,72,73";
 CM_ SG_ 1290 Unknown_50A_2 "00,a0";
 CM_ SG_ 1290 ACCompressorPressure "Some sort of pressure/temperature?? 2c-44;
 
@@ -472,7 +507,36 @@ CM_ SG_ 1438 LB_Remain_Capacity_for_QC "";
 CM_ BO_ 1153 "??? Unknown sender module";
 CM_ SG_ 1153 Unknown_481_1 "Dala: Static 0x40";
 CM_ SG_ 1153 Unknown_481_2 "Dala: Static 0x00";
-CM_ BO_ 912 "Vehicle Control Module? (100ms)";
+CM_ BO_ 912 "Vehicle Control Module? (100ms)
+
+// Gen 2 Charger (FROM OVMS CODE)
+      //
+      // When the data is valid, can_databuffer[6] is the J1772 maximum
+      // available current if we're plugged in, and 0 when we're not.
+      // can_databuffer[3] seems to govern when it's valid, and is probably a
+      // bit field, but I don't have a full decoding
+      //
+      // specifically the last few frames before shutdown to wait for the charge
+      // timer contain zero in can_databuffer[6] so we ignore them and use the
+      // valid data in the earlier frames
+      //
+      // During plug in with charge timer activated, byte 3 & 6:
+      //
+      // 0x390 messages start
+      // 0x00 0x21
+      // 0x60 0x21
+      // 0x60 0x00
+      // 0xa0 0x00
+      // 0xb0 0x00
+      // 0xb2 0x15 -- byte 6 now contains valid j1772 pilot amps
+      // 0xb3 0x15
+      // 0xb1 0x00
+      // 0x71 0x00
+      // 0x69 0x00
+      // 0x61 0x00
+      // 0x390 messages stop
+      //
+      // byte 3 is 0xb3 during ch";
 CM_ SG_ 912 OBC_Status_AC_Voltage "ACVOLST";
 CM_ SG_ 912 OBC_Flag_QC_Relay_On_Announcemen "FQCRELAYST";
 CM_ SG_ 912 OBC_Flag_QC_IR_Sensor "FQCIRSENS";
