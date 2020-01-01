@@ -64,14 +64,15 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
 BO_ 1468 x5BC: 8 HVBAT
  SG_ LB_Remain_Capacity : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
  SG_ LB_New_Full_Capacity : 13|10@0+ (1,0) [0|0] "wh +FAh" Vector__XXX
- SG_ LB_Remaining_Capacity_Segment : 16|4@1+ (1,0) [0|12] "dash bars" Vector__XXX
+ SG_ LB_Remaining_Capacity_Segment m1 : 16|4@1+ (1,0) [0|12] "dash bars" Vector__XXX
  SG_ LB_Average_Battery_Temperature : 24|8@1+ (1,-40) [-40|105] "degC" Vector__XXX
  SG_ LB_Capacity_Deterioration_Rate : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
- SG_ LB_Remaining_Capaci_Segment_Swit : 32|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LB_Remaining_Capaci_Segment_Swit M : 32|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ LB_Output_Power_Limit_Reason : 45|3@1+ (1,0) [0|7] "Modemask" Vector__XXX
  SG_ LB_Capacity_Bal_Complete_Flag : 42|1@1+ (1,0) [0|1] "Modemask" Vector__XXX
  SG_ LB_Remain_charge_time_condition : 41|5@0+ (1,0) [0|30] "Modemask" Vector__XXX
  SG_ LB_Remain_charge_time : 52|13@0+ (1,0) [0|8190] "minutes" Vector__XXX
+ SG_ LB_Remaining_Charge_Segment m0 : 16|4@1+ (1,0) [0|12] "dash bars" Vector__XXX
 
 BO_ 475 x1DB: 8 HVBAT
  SG_ LB_Total_Voltage : 23|10@0+ (0.5,0) [0|450] "V" Vector__XXX
@@ -280,7 +281,7 @@ CM_ BO_ 1468 "Lithium Battery Controller (500ms)";
 CM_ SG_ 1468 LB_Remain_Capacity "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
 1 LSB = 65-85WH";
 CM_ SG_ 1468 LB_New_Full_Capacity "";
-CM_ SG_ 1468 LB_Remaining_Capacity_Segment "";
+CM_ SG_ 1468 LB_Remaining_Capacity_Segment "Capacity bars";
 CM_ SG_ 1468 LB_Average_Battery_Temperature "LB_AVET Average of all temp measurements
 
 When battery temperature (LB_AVET) exceeds 55degC: Stop INV, Indicate error message";
@@ -288,6 +289,7 @@ CM_ SG_ 1468 LB_Capacity_Deterioration_Rate "LB_SOH State of Health";
 CM_ SG_ 1468 LB_Remaining_Capaci_Segment_Swit "FlagLB_CAPSW 0b = Remainig capacity 1b = Full capacity";
 CM_ SG_ 1468 LB_Output_Power_Limit_Reason "000 = Normal 001 = Capacity Drop 010 = LBC Malfunction 011 = High Temperature 100 = Low Temperature 101 = reserved 110 = reserved 111 = reserved";
 CM_ SG_ 1468 LB_Remain_charge_time_condition "00000b = Quick charge 01001b = Normal Charge 200V SOC100% 01010b = Normal Charge 200V SOC80% 10001b = Normal Charge 100V SOC100% 10010b = Normal Charge 100V SOC80% 11111b = Invalid value";
+CM_ SG_ 1468 LB_Remaining_Charge_Segment "Charge bars";
 CM_ BO_ 475 "Lithium Battery Controller (10ms)";
 CM_ SG_ 475 LB_Total_Voltage "0.5v/bit";
 CM_ SG_ 475 LB_Current "BatteryCurrentSignal , 2s comp, 1lSB = 0.5A";
