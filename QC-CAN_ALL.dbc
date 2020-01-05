@@ -1,0 +1,143 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Vehicle QuickChargeStation
+
+
+BO_ 256 x100: 8 Vehicle
+ SG_ MaximumBatteryVoltage : 39|16@0+ (1,0) [0|600] "V" Vector__XXX
+ SG_ ConstantOfChargingRateIndication : 48|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 257 x101: 8 Vehicle
+ SG_ MaxChargingTime10sBit : 8|8@1+ (10,0) [0|2540] "seconds" Vector__XXX
+ SG_ MaxChargingTime1minBit : 16|8@1+ (1,0) [0|255] "minutes" Vector__XXX
+ SG_ EstimatedChargingTime : 24|8@1+ (1,0) [0|254] "minutes" Vector__XXX
+ SG_ RatedBatteryCapacity : 47|16@0+ (0.11,0) [0|100] "kWh" Vector__XXX
+
+BO_ 258 x102: 8 Vehicle
+ SG_ ControlProtocolNumberEV : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ TargetBatteryVoltage : 15|16@0+ (1,0) [0|600] "V" Vector__XXX
+ SG_ ChargingCurrentRequest : 24|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ FaultBatteryVoltageDeviation : 36|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultHighBatteryTemperature : 35|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultBatteryCurrentDeviation : 34|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultBatteryUndervoltage : 33|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultBatteryOvervoltage : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusNormalStopRequest : 44|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusVehicle : 43|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusChargingSystem : 42|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusVehicleShifterPosition : 41|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusVehicleCharging : 40|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ ChargingRate : 48|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 264 x108: 8 QuickChargeStation
+ SG_ EVContactorWeldingDetection : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AvailableOutputVoltage : 15|16@0+ (1,0) [0|600] "V" Vector__XXX
+ SG_ AvailableOutputCurrent : 24|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ ThresholdVoltage : 39|16@0+ (1,0) [0|600] "V" Vector__XXX
+
+BO_ 265 x109: 8 QuickChargeStation
+ SG_ ControlProtocolNumberQC : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ OutputVoltage : 15|16@0+ (1,0) [0|600] "V" Vector__XXX
+ SG_ OutputCurrent : 24|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ StatusChargerStopControl : 45|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultChargingSystemMalfunction : 44|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultBatteryIncompatibility : 43|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusVehicleConnectorLock : 42|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultStationMalfunction : 41|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusStation : 40|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ RemainingChargingTime10sBit : 48|8@1+ (10,0) [0|2540] "seconds" Vector__XXX
+ SG_ RemainingChargingTime1minBit : 56|8@1+ (1,0) [0|255] "minutes" Vector__XXX
+
+
+
+CM_ BO_ 256 "100ms";
+CM_ SG_ 256 MaximumBatteryVoltage "The maximum battery voltage value at the vehicle inlet terminals, at which the station stops charging to protect the vehicle battery";
+CM_ SG_ 256 ConstantOfChargingRateIndication "Fixed value for charging rate indication which is the maximum charging rate (100%) of vehicle battery";
+CM_ BO_ 257 "100ms";
+CM_ SG_ 257 MaxChargingTime10sBit "Maximum charging time permited by EV, set by10s";
+CM_ SG_ 257 MaxChargingTime1minBit "Maximum charging time permited by EV, set by minute";
+CM_ SG_ 257 EstimatedChargingTime "Estimated remaining time before the end of charging calculated by EV";
+CM_ SG_ 257 RatedBatteryCapacity "Rated capacity of battery";
+CM_ BO_ 258 "100ms";
+CM_ SG_ 258 ControlProtocolNumberEV "Software version of control protocol to which EV corresponds";
+CM_ SG_ 258 TargetBatteryVoltage "Target charging voltage at the vehicle inlet terminals";
+CM_ SG_ 258 ChargingCurrentRequest "Current value requested by EV during charging";
+CM_ SG_ 258 FaultBatteryVoltageDeviation "Status flag indicating whether or not the vehicle battery voltage deviates from the output voltage measured by the station";
+CM_ SG_ 258 FaultHighBatteryTemperature "Status flag indicating whether or not the temperature of vehicle battery exceeds the maximum limit";
+CM_ SG_ 258 FaultBatteryCurrentDeviation "Status flag indicating whether or not the output current deviates from EV requested current";
+CM_ SG_ 258 FaultBatteryUndervoltage "Status flag indicating whether or not the vehicle battery voltage is less than the lower limit specified by EV";
+CM_ SG_ 258 FaultBatteryOvervoltage "Status flag indicating whether or not the vehicle battery voltage exceeds the maximum limit specified by EV";
+CM_ SG_ 258 StatusNormalStopRequest "Status flag indicating the request of EV to stop charging control";
+CM_ SG_ 258 StatusVehicle "Status flag indicating the EV contactor status";
+CM_ SG_ 258 StatusChargingSystem "Status flag indicating malfunction caused by EV or the station, and detected by EV";
+CM_ SG_ 258 StatusVehicleShifterPosition "Status flag indicating the shift lever position ";
+CM_ SG_ 258 StatusVehicleCharging "Status flag indicating charge permission status of EV";
+CM_ SG_ 258 ChargingRate "Charging rate of vehicle battery";
+CM_ BO_ 264 "100ms";
+CM_ SG_ 264 EVContactorWeldingDetection "Identifier indicating whether or not the station deals with EV contactor welding detection";
+CM_ SG_ 264 AvailableOutputVoltage "Maximum output voltage value at the vehicle connector terminals";
+CM_ SG_ 264 AvailableOutputCurrent "Maximum output current value of the station";
+CM_ SG_ 264 ThresholdVoltage "Threshold voltage to stop the charging process in order to protect vehicle battery";
+CM_ BO_ 265 "100ms";
+CM_ SG_ 265 ControlProtocolNumberQC "Software version number of control protocol or charging sequences that the station deal with";
+CM_ SG_ 265 OutputVoltage "Supply voltage value of the output circuit in the station";
+CM_ SG_ 265 OutputCurrent "Supply current value of the output circuit in the station";
+CM_ SG_ 265 StatusChargerStopControl "Status flag indicating whether or not the status proceeds with shutdown process";
+CM_ SG_ 265 FaultChargingSystemMalfunction "Status flag indicating whether or not there is a problem with EV, such as improper connection";
+CM_ SG_ 265 FaultBatteryIncompatibility "Status flag indicating the compatibility of vehicle battery with the output voltage of station";
+CM_ SG_ 265 StatusVehicleConnectorLock "Status flag indicating the electromagnetic lock status of the vehicle";
+CM_ SG_ 265 FaultStationMalfunction "Status flag indicating whether or not there is a malfunction caused by the station";
+CM_ SG_ 265 StatusStation "Status flag indicating the energy transfer from the station";
+CM_ SG_ 265 RemainingChargingTime10sBit "Remaining time before the end of charging (counted by 10 s)";
+CM_ SG_ 265 RemainingChargingTime1minBit "Remaining time before the end of charging (counted by minutes)";
+VAL_ 258 FaultBatteryVoltageDeviation 0 "Normal" 1 "Fault" ;
+VAL_ 258 FaultHighBatteryTemperature 0 "Normal" 1 "Fault" ;
+VAL_ 258 FaultBatteryCurrentDeviation 0 "Normal" 1 "Fault" ;
+VAL_ 258 FaultBatteryUndervoltage 0 "Normal" 1 "Fault" ;
+VAL_ 258 FaultBatteryOvervoltage 0 "Normal" 1 "Fault" ;
+VAL_ 258 StatusNormalStopRequest 0 "No request" 1 "Request to stop" ;
+VAL_ 258 StatusVehicle 0 "EV contactor closed or during welding detection" 1 "EV contactor open or welding detection finished" ;
+VAL_ 258 StatusChargingSystem 0 "Normal" 1 "Fault" ;
+VAL_ 258 StatusVehicleShifterPosition 0 "Parked" 1 "Other position" ;
+VAL_ 258 StatusVehicleCharging 0 "Disabled" 1 "Enabled" ;
+VAL_ 264 EVContactorWeldingDetection 0 "Not supported" 1 "Supporting vehicle welding detection" ;
+VAL_ 265 StatusChargerStopControl 0 "Operating" 1 "Shutdown or stop charging" ;
+VAL_ 265 FaultChargingSystemMalfunction 0 "Normal" 1 "Malfunction" ;
+VAL_ 265 FaultBatteryIncompatibility 0 "Compatible" 1 "Not compatible" ;
+VAL_ 265 StatusVehicleConnectorLock 0 "Unlocked" 1 "Locked" ;
+VAL_ 265 FaultStationMalfunction 0 "Normal" 1 "Fault" ;
+VAL_ 265 StatusStation 0 "Standby" 1 "Charging" ;
+
