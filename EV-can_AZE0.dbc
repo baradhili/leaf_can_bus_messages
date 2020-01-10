@@ -290,7 +290,9 @@ CM_ SG_ 3221225472 LB_Historical_Data_Temperature "";
 CM_ SG_ 3221225472 LB_HistData_Integrated_Current "2S";
 CM_ BO_ 1468 "Lithium Battery Controller (100ms)";
 CM_ SG_ 1468 LB_Remain_Capacity_GIDS "0-281 for 24kWh, 0-363 for 30kWh, 0-498 for 40kWh, 0-775 for 62kWh
-1 LSB = 80WH";
+1 LSB = 80WH
+
+LB_CAPR (aka 'gids') is an 80Wh resolution capacity indication used by the GOM and combined with LB_FULLCAP on gen1 Leafs to generate the capacity dashes behind the GOM.";
 CM_ SG_ 1468 LB_Remaining_Capacity_Segments "Contains chargebars and capacitybars, alternating depending on mux. Simplified lower down in the message";
 CM_ SG_ 1468 LB_Temperature_Segment_For_Dash "For instrumentation cluster. Unit is %, times 5/12 according to documentation, kinda strange .Should be average of the 3 sensors inside the battery pack.";
 CM_ SG_ 1468 LB_Capacity_Deterioration_Rate "SOH (State-of-Health) Effects the charge gauge, lower numbers mean more chargebars";
@@ -348,11 +350,11 @@ CM_ SG_ 475 LB_INTER_LOCK "0h = Not Inter Lock connected 1h = Inter Lock connect
 CM_ SG_ 475 LB_Discharge_Power_Status "00b = Reserved 01b = Normal limit POUT 10b = High rate limit POUT 11b = Immediate limit POUT";
 CM_ SG_ 475 LB_Voltage_Latch_Flag "0->1:Cell Voltage Latch
 1->0:Cell Voltage Latch";
-CM_ SG_ 475 LB_Usable_SOC "Contains SOC for dash (% without decimals) [Needs to be copied to this location when doing 40/62kWh swaps into AZE0]";
+CM_ SG_ 475 LB_Usable_SOC "Contains SOC for dash. LB_USABLE_SOC is a 1% resolution 'proper' SOC calculated by the LBC and used by ABB chargers and the SOC display in the dash menu as well as the 3-light charging indicator on top of the dash [Needs to be copied to this location when doing 40/62kWh swaps into AZE0]";
 CM_ SG_ 475 LB_PRUN_1DB "MPR1DB Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 475 CRC_1DB "CRC";
 CM_ BO_ 1371 "Lithium Battery Controller (100ms)";
-CM_ SG_ 1371 LB_SOC "State of Charge. Does not affect cluster or VCM at all";
+CM_ SG_ 1371 LB_SOC "State of charge. LB_SOC is a 0.1% resolution SOC that is used on startup by Leaf Spy Pro and then ignored in favor of 0x7BB groups, and seemingly used nowhere in the car";
 CM_ SG_ 1371 LB_ALU_ANSWER "HCM:B2h LBC:AAh HCM:5Dh LBC:55h
 
 This message is repeated 5x, to offer backwardscompability to 2011/2013 models? The message on these cars are run at 500ms.";

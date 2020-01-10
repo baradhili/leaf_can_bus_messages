@@ -278,8 +278,10 @@ CM_ SG_ 3221225472 LB_Hist_Data_Integrated_Current "";
 CM_ SG_ 3221225472 LB_Hist_Data_Degradation_IR "";
 CM_ SG_ 3221225472 LB_Hist_Data_Cell_Voltage "";
 CM_ BO_ 1468 "Lithium Battery Controller (500ms)";
-CM_ SG_ 1468 LB_Remain_Capacity "0-281 for 24kWh  0-363 for 30kWh 0-498 for 40kWh
-1 LSB = 65-85WH";
+CM_ SG_ 1468 LB_Remain_Capacity "0-281 for 24kWh, 0-363 for 30kWh, 0-498 for 40kWh, 0-775 for 62kWh
+1 LSB = 80WH
+
+LB_CAPR (aka 'gids') is an 80Wh resolution capacity indication used by the GOM and combined with LB_FULLCAP on gen1 Leafs to generate the capacity dashes behind the GOM.";
 CM_ SG_ 1468 LB_New_Full_Capacity "";
 CM_ SG_ 1468 LB_Remaining_Capacity_Segment "Capacity bars";
 CM_ SG_ 1468 LB_Average_Battery_Temperature "LB_AVET Average of all temp measurements
@@ -305,7 +307,7 @@ CM_ SG_ 475 LB_INTER_LOCK "LB_INTERLOCK
 0h = Not Inter Lock connected 1h = Inter Lock connected";
 CM_ SG_ 475 LB_Discharge_Power_Status "00b = Reserved 01b = Normal limit POUT 10b = High rate limit POUT 11b = Immediate limit POUT";
 CM_ BO_ 1371 "Lithium Battery Controller (100ms)";
-CM_ SG_ 1371 LB_SOC "Does not affect cluster or VCM at all";
+CM_ SG_ 1371 LB_SOC "State of charge. LB_SOC is a 0.1% resolution SOC that is used on startup by Leaf Spy Pro and then ignored in favor of 0x7BB groups, and seemingly used nowhere in the car";
 CM_ SG_ 1371 LB_ALU_ANSWER "Question:B2h Answer(LBC):AAh Question:5Dh Answer(LBC):55h
 
 This message is repeated 5x, to offer backwardscompability to 2011/2013 models. The message on these cars are run at 500ms.";
