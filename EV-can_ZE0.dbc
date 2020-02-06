@@ -60,6 +60,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ LB_Hist_Data_Integrated_Current : 24|8@1+ (1,0) [-76.8|76.8] "Ah (2s)" Vector__XXX
  SG_ LB_Hist_Data_Degradation_IR : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ LB_Hist_Data_Cell_Voltage : 42|6@1+ (1,0) [40|1900] "mV *40" Vector__XXX
+ SG_ InverterVoltage : 2|11@0+ (0.5,0) [0|0] "" Vector__XXX
 
 BO_ 1468 x5BC: 8 HVBAT
  SG_ LB_Remain_Capacity : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
@@ -97,10 +98,10 @@ BO_ 1371 x55B: 8 HVBAT
  SG_ LB_RefusetoSleep : 52|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
 
 BO_ 1370 x55A: 8 INVmc
- SG_ MotorTemperature : 40|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
- SG_ InverterComBoardTemp : 8|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
- SG_ IGBTTemperature : 16|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
- SG_ IGBTDriverBoardTemperature : 24|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ MotorTemperature : 40|8@1+ (0.5,0) [0|255] "dC" Vector__XXX
+ SG_ InverterComBoardTemp : 8|8@1+ (0.5,0) [0|255] "dC" Vector__XXX
+ SG_ IGBTTemperature : 16|8@1+ (0.5,0) [0|255] "dC" Vector__XXX
+ SG_ IGBTDriverBoardTemperature : 32|8@1+ (0.5,0) [0|255] "dC" Vector__XXX
 
 BO_ 476 x1DC: 8 HVBAT
  SG_ LB_Discharge_Power_Limit : 7|10@0+ (0.25,0) [0|254] "kW*0.25" Vector__XXX
@@ -316,11 +317,11 @@ CM_ SG_ 1371 LB_PRUN_55B "LB_PRUN_55B 00,01,02,03 Detection of frozen data. Mess
 CM_ SG_ 1371 LB_IR_Sensor_Malfunction "0h = Normal 1h = Malfunction";
 CM_ SG_ 1371 LB_Capacity_Empty "0h = Not Batt Empty 1h = Batt Empty";
 CM_ SG_ 1371 LB_RefusetoSleep "00 = reserved 01 = RefuseToSleep 10 = ReadyToSleep 11 = reserved";
-CM_ BO_ 1370 "Inverter";
+CM_ BO_ 1370 "Inverter (100ms)";
 CM_ SG_ 1370 MotorTemperature "Stays at 0 on 2015 Leaf?";
 CM_ SG_ 1370 InverterComBoardTemp "Inverter communications board temp";
 CM_ SG_ 1370 IGBTTemperature "";
-CM_ SG_ 1370 IGBTDriverBoardTemperature "Temperature only active during drive (IGBT driver board?)";
+CM_ SG_ 1370 IGBTDriverBoardTemperature "";
 CM_ BO_ 476 "Lithium Battery Controller (10ms)";
 CM_ SG_ 476 LB_Discharge_Power_Limit "Max available power that can be pulled from battery. 6e=110kW, less is seen below LBW, 31=51kW observed near turtle";
 CM_ SG_ 476 LB_Charge_Power_Limit "";
