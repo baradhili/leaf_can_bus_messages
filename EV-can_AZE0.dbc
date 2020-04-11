@@ -155,7 +155,7 @@ BO_ 282 x11A: 8 VCM
  SG_ ECOselected : 12|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 468 x1D4: 8 VCM
- SG_ MotorAmpTorqueRequest : 23|12@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MotorAmpTorqueRequest : 23|12@0+ (0.25,0) [0|1024] "Nm" Vector__XXX
  SG_ HCM_CLOCK : 38|2@1+ (1,0) [0|3] "-" Vector__XXX
  SG_ StatusOfHighVoltagePowerSupply : 34|1@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ Relay_Plus_Output_Status : 46|1@1+ (1,0) [0|0] "-" Vector__XXX
@@ -381,10 +381,10 @@ CM_ SG_ 476 LB_CODE1 "";
 CM_ SG_ 476 LB_CODE2 "";
 CM_ SG_ 476 LB_PRUN_1DC "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 476 CRC_1DC "CRC";
-CM_ BO_ 474 "Inverter? Or relayed via VCM? (10ms)";
+CM_ BO_ 474 "Inverter (10ms)";
 CM_ SG_ 474 MG_InputVoltage "Inverter input voltage? 
 01..b9 Follows BVS(BatteryVoltageSignal) until near end of drive (turtle?) or end of charging ";
-CM_ SG_ 474 MG_EffectiveTorque "2S";
+CM_ SG_ 474 MG_EffectiveTorque "2S - Response from Inverter how much torque was applied (Demand is in 0x1D4)";
 CM_ SG_ 474 MG_OutputRevolution "16 bits; Signed value, negative for reverse.
 
 Values 0x7fff and 0x7ffe are seen during turning on of car";
@@ -421,8 +421,7 @@ CM_ SG_ 282 HeartbeatVCM "55,AA (alternating between these two values, heartbeat
 10101010";
 CM_ SG_ 282 ECOselected "If set, ECO mode is active and regen is increased";
 CM_ BO_ 468 "Vehicle Control Module (10ms)";
-CM_ SG_ 468 MotorAmpTorqueRequest "Motor Amps?  Requested Torque?
-Less noisy than the 1da signal";
+CM_ SG_ 468 MotorAmpTorqueRequest "Requested Torque sent to inverter";
 CM_ SG_ 468 HCM_CLOCK "PRUN Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 468 StatusOfHighVoltagePowerSupply "BTONFN";
 CM_ SG_ 468 Relay_Plus_Output_Status "RLYP";
