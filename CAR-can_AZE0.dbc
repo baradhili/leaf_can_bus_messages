@@ -45,8 +45,8 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0089 : 9|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2 x002: 5 STRG
- SG_ SteeringAngle : 0|16@1- (0.1,0) [-3276.8|3276.7] "deg" Vector__XXX
- SG_ SteeringAngleChangeRate : 23|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ SteeringAngle : 7|16@0+ (1,0) [0|0] "ddeg" Vector__XXX
+ SG_ SteeringAngleChangeRate : 23|8@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_2_3 : 31|8@0+ (1,0) [0|0] "" Vector__XXX
  SG_ SteeringSensorHearbeat : 39|8@0+ (1,0) [0|0] "" Vector__XXX
 
@@ -90,10 +90,10 @@ BO_ 384 x180: 8 VCM
  SG_ Unknown_180_7 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 458 x1CA: 8 BRAKE
- SG_ BrakePressure1 : 0|8@1+ (0.5,0) [0|100] "%" Vector__XXX
- SG_ BrakePressure2 : 8|8@1+ (0.5,0) [0|100] "%" Vector__XXX
- SG_ BrakePressure3 : 16|8@1+ (0.5,0) [0|100] "%" Vector__XXX
- SG_ BrakePressure4 : 24|8@1+ (0.5,0) [0|100] "%" Vector__XXX
+ SG_ BrakePressure1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BrakePressure2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BrakePressure3 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ BrakePressure4 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_1CA_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ RegenBraking : 42|6@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_1CA_5_2 : 40|2@1+ (1,0) [0|0] "" Vector__XXX
@@ -149,14 +149,14 @@ BO_ 581 x245: 8 Vector__XXX
 BO_ 608 x260: 4 VCM
  SG_ AvailablePowerCluster : 0|8@1+ (1,0) [0|90] "kW" Vector__XXX
  SG_ AvailableRegenCluster : 8|8@1+ (1,0) [0|50] "kW" Vector__XXX
- SG_ MotorLoadCluster : 23|16@0+ (1,0) [100|16000] "" Vector__XXX
+ SG_ MotorLoadCluster : 23|16@0+ (1,0) [0|64000] "" Vector__XXX
 
 BO_ 640 x280: 8 MA
  SG_ Unknown_280_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_280_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_280_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_280_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ VehicleSpeedCluster : 39|16@0+ (0.01,0) [0|655.35] "km/h" Vector__XXX
+ SG_ VehicleSpeedCluster : 39|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_280_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_280_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
@@ -514,7 +514,6 @@ CM_ BU_ IPDMer "Intelligent Power Distribution Module Engine Room";
 CM_ BU_ BRAKE "Electrically-driven intelligent brake unit";
 CM_ BU_ ABS "ABS actuator and electric control unit";
 CM_ BU_ VCM "Vehicle Control Module";
-CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
 CM_ BO_ 2 "Steering angle sensor signal. Goes to AV unit, Brake, and ABS modules";
 CM_ SG_ 2 SteeringAngle "Steering Angle LSB:MSB
 Left is negative
@@ -526,6 +525,7 @@ CM_ BO_ 42 "???";
 CM_ SG_ 42 Unknown_2A_0 "Always 0?";
 CM_ SG_ 42 Unknown_2A_1 "Always 0?";
 CM_ SG_ 42 Unknown_2A_2 "Always 0?";
+CM_ BO_ 304 "";
 CM_ SG_ 304 BitmaskABS "Bit5 = 1 = Traction control off?";
 CM_ BO_ 372 "Relayed from E-Shift on EV-CAN";
 CM_ SG_ 372 ShifterPosition "AA:Park/Neutral BB:Drive 99:Reverse";
@@ -558,7 +558,7 @@ CM_ SG_ 581 Unknown_245_4 "Just ramps and wraps";
 CM_ BO_ 608 "Data for instrumentation cluster";
 CM_ SG_ 608 AvailablePowerCluster "50-5A (80-90kW) observed in normal driving, decays to 31 (51kW) around turtle";
 CM_ SG_ 608 AvailableRegenCluster "Used to generate regen bubbles with hysteresis.  Bubbles turn at @ 6,C,12,&18 and turn off at 0,6,C, & 12 respectively (6,12,18,24kW)";
-CM_ SG_ 608 MotorLoadCluster "Units are unknown (100-16000) - doesn't include accessory- It is probably the dash power display \"inner\" bubbles. Observe byte 2 at 0x19 and byte 3 at 00 when at idle.";
+CM_ SG_ 608 MotorLoadCluster "Units are unknown (0-64000) - doesn't include accessory- It is probably the dash power display \"inner\" bubbles. 32000 at stationary, 64000 under hard acceleration, 0 at maximum regen";
 CM_ BO_ 640 "Instrumentation cluster output 
 TODO:
 This area might contain lots of signals, see the LAN.pdf";

@@ -74,7 +74,7 @@ BO_ 1468 x5BC: 8 HVBAT
  SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
 
 BO_ 475 x1DB: 8 HVBAT
- SG_ LB_Current : 7|11@0+ (0.5,0) [-400|200] "A" Vector__XXX
+ SG_ LB_Current : 7|11@0- (0.5,0) [-400|200] "A" Vector__XXX
  SG_ LB_Relay_Cut_Request : 11|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
  SG_ LB_Failsafe_Status : 8|3@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
  SG_ LB_Total_Voltage : 23|10@0+ (0.5,0) [0|450] "V" Vector__XXX
@@ -155,7 +155,7 @@ BO_ 282 x11A: 8 VCM
  SG_ ECOselected : 12|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 468 x1D4: 8 VCM
- SG_ MotorAmpTorqueRequest : 23|12@0+ (0.25,0) [0|1024] "Nm" Vector__XXX
+ SG_ MotorAmpTorqueRequest : 23|12@0- (0.25,0) [0|1024] "Nm" Vector__XXX
  SG_ HCM_CLOCK : 38|2@1+ (1,0) [0|3] "-" Vector__XXX
  SG_ StatusOfHighVoltagePowerSupply : 34|1@1+ (1,0) [0|0] "-" Vector__XXX
  SG_ Relay_Plus_Output_Status : 46|1@1+ (1,0) [0|0] "-" Vector__XXX
