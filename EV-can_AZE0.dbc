@@ -344,6 +344,8 @@ CM_ SG_ 475 LB_Relay_Cut_Request "00 = No-Request 01 = Main Relay OFF Request 10
 CM_ SG_ 475 LB_Failsafe_Status "Request Stop charging. This is the command to request stop charging
 frame.data[1] = (frame.data[1] & 0xE0) | 2;
 
+Bit 0 indicates an EV system error (just the EV system warning light on the dash), bit 1 stops the car from charging and bit 2 is the turtle light and immobilizes the car.
+
 000b = normal start Request 001b = Normal Stop Request 010b = Charging Mode Stop Request 011b = Charging Mode Stop Request & Normal Stop Request 100b = Caution Lamp Request 101b = Caution Lamp Request & Normal Stop Request 110b = Caution Lamp Request & Charging Mode Stop Request 111b = Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request";
 CM_ SG_ 475 LB_Total_Voltage "0.5V/bit
 ";
@@ -499,7 +501,7 @@ CM_ SG_ 1291 HCM_WakeUpSleepCmd "FirstFrameValueIfAlgorithmNotReady = 3";
 CM_ SG_ 1291 Batt_Heater_Mail_Send_OK "";
 CM_ BO_ 1292 "Vehicle Control Module (100ms)";
 CM_ SG_ 1292 HCM_CLOCK_50C "PRUN Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
-CM_ SG_ 1292 ALU_QUESTION_FOR_LBC "";
+CM_ SG_ 1292 ALU_QUESTION_FOR_LBC "B2h = first question 5Dh = second question";
 CM_ SG_ 1292 CRC "CRC";
 CM_ BO_ 1354 "AC Auto Amp";
 CM_ SG_ 1354 CCStatusPlusUnknown "12,3c- CC Off; a0,da- CC On";

@@ -149,7 +149,7 @@ BO_ 282 x11A: 8 EShift
  SG_ HeartbeatVCM : 24|8@1+ (1,0) [85|170] "" Vector__XXX
  SG_ ECOselected : 12|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 468 x1D4: 8 Vector__XXX
+BO_ 468 x1D4: 8 VCM
  SG_ VCM_Clock : 38|2@1+ (1,0) [0|3] "-" Vector__XXX
  SG_ StatusOfHighVoltagePowerSupply : 34|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Relay_Plus_Output_Status : 46|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -246,7 +246,7 @@ BO_ 912 x390: 8 Vector__XXX
 BO_ 915 x393: 8 Vector__XXX
  SG_ Unknown_393_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 896 x380: 8 Vector__XXX
+BO_ 896 x380: 8 OBCpd
  SG_ Quick_Charger_IR_Sensor_Flag : 15|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Charger_Output_Power : 16|9@0+ (0.1,0) [0|50] "kW*0.1" Vector__XXX
  SG_ Normal_Charger_Relay_Status_Flag : 38|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -304,8 +304,15 @@ CM_ SG_ 475 CRC_1DB "CRC";
 CM_ SG_ 475 LB_PRUN_1DB "MPR1DB Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 475 LB_Relay_Cut_Request "LB_FAIL 
 00 = No-Request 01 = Main Relay OFF Request 10 = Main Relay OFF Request 11 = Main Relay OFF Request";
-CM_ SG_ 475 LB_Failsafe_Status "LB_STATUS 
-000b = normal start Request 001b = Normal Stop Request 010b = Charging Mode Stop Request 011b = Charging Mode Stop Request & Normal Stop Request 100b = Caution Lamp Request 101b = Caution Lamp Request & Normal Stop Request 110b = Caution Lamp Request & Charging Mode Stop Request 111b = Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request";
+CM_ SG_ 475 LB_Failsafe_Status "Bit 0 indicates an EV system error (just the EV system warning light on the dash), bit 1 stops the car from charging and bit 2 is the turtle light and immobilizes the car.
+
+Request Stop charging. This is the command to request stop charging
+frame.data[1] = (frame.data[1] & 0xE0) | 2;
+
+LB_STATUS 
+000b = normal start Request 001b = Normal Stop Request 010b = Charging Mode Stop Request 011b = Charging Mode Stop Request & Normal Stop Request 100b = Caution Lamp Request 101b = Caution Lamp Request & Normal Stop Request 110b = Caution Lamp Request & Charging Mode Stop Request 111b = Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request
+
+";
 CM_ SG_ 475 LB_MainRelayOn_flag "LB_FRLYON 
 0h = No-Permission 1h = Main Relay On Permission";
 CM_ SG_ 475 LB_INTER_LOCK "LB_INTERLOCK 
@@ -373,7 +380,7 @@ CM_ SG_ 282 HeartbeatVCM "55,AA (alternating between these two values, heartbeat
 01010101
 10101010";
 CM_ SG_ 282 ECOselected "If set, ECO mode is active and regen is increased";
-CM_ BO_ 468 "Vehicle Control Module? (10ms)";
+CM_ BO_ 468 "Vehicle Control Module (10ms)";
 CM_ SG_ 468 VCM_Clock "PRUN";
 CM_ SG_ 468 StatusOfHighVoltagePowerSupply "0h = High Voltage not supply 1h = High Voltage supply";
 CM_ SG_ 468 Relay_Plus_Output_Status "0h = MainRelayPlus Not Output 1h = MainRelayPlus Output";
@@ -424,7 +431,9 @@ CM_ SG_ 1290 Unknown_50A_7 "00 , Only present in 2013+ (otherwise frame stops at
 CM_ BO_ 1291 "Vehicle Control Module (100ms)";
 CM_ SG_ 1291 DiagMuxOn_VCM "CANMASK 0h = Storage of CAN mute/absent failures not authorized 1h = Storage of CAN mute/absent failures authorized";
 CM_ SG_ 1291 VCM_WakeUpSleepCmd "00 = GoToSleep 01 = reserved 10 = reserved 11 = WakeUp";
-CM_ BO_ 1292 "Vehicle Control Module (100ms)";
+CM_ BO_ 1292 "Vehicle Control Module (100ms)
+
+(VCM wake/sleep request signal)";
 CM_ SG_ 1292 VCM_CLOCK "PRUN";
 CM_ SG_ 1292 ALU_QUESTION_FOR_LBC "B2h = first question 5Dh = second question";
 CM_ SG_ 1292 CRC_50C "CRC";
@@ -446,7 +455,7 @@ CM_ BO_ 912 "??? Unknown sender module";
 CM_ SG_ 912 Unknown_390_7 "Sawtooth, from 200-250";
 CM_ BO_ 915 "??? Unknown sender module";
 CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
-CM_ BO_ 896 "Charger? (100ms)";
+CM_ BO_ 896 "On Board Charger (100ms)";
 CM_ SG_ 896 Quick_Charger_IR_Sensor_Flag "FQCHGIRSENS 0h = Not IR circuit 1h = IR circuit have";
 CM_ SG_ 896 Charger_Output_Power "MAXCHGPOUT";
 CM_ SG_ 896 Normal_Charger_Relay_Status_Flag "FNCRELAYSTATUS 0h = OFF 1h = ON";
