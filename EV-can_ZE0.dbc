@@ -201,9 +201,9 @@ BO_ 1472 x5C0: 8 HVBAT
  SG_ LB_HistData_Degradation_IR_MIN m3 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ LB_HistData_Degradation_IR_MAX m1 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ LB_HistData_Degradation_IR_AVG m2 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
- SG_ LB_Hist_Data_Cell_Voltage_MIN m3 : 42|6@1+ (1,0) [40|1900] "mV *40" Vector__XXX
- SG_ LB_Hist_Data_Cell_Voltage_MAX m1 : 42|6@1+ (1,0) [40|1900] "mV *40" Vector__XXX
- SG_ LB_Hist_Data_Cell_Voltage_AVG m2 : 42|6@1+ (1,0) [40|1900] "mV *40" Vector__XXX
+ SG_ LB_Hist_Data_Cell_Voltage_MIN m3 : 42|6@1+ (40,1900) [1900|4380] "mV " Vector__XXX
+ SG_ LB_Hist_Data_Cell_Voltage_MAX m1 : 42|6@1+ (40,1900) [1900|4380] "mV" Vector__XXX
+ SG_ LB_Hist_Data_Cell_Voltage_AVG m2 : 42|6@1+ (40,1900) [1900|4380] "mV" Vector__XXX
 
 BO_ 1290 x50A: 8 VCM
  SG_ Unknown_50A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -417,6 +417,7 @@ CM_ SG_ 1472 LB_Diagnosis_Trouble_Code "Up to 2 error codes are indicated concur
 Start-up restriction by LB_DTC:
 Wait on error stop mode and not to start-up when LB_DTC=153~200 is received during system start-up or operation.";
 CM_ SG_ 1472 LB_HistData_Temperature_MAX "Affects cluster gauge for temperature?";
+CM_ SG_ 1472 LB_Hist_Data_Cell_Voltage_MAX "Dala: Something strange when trending MAX, gives unreasonable low value.";
 CM_ BO_ 1290 "VCM relay from A/C Auto Amp and AC Pressor Sensor (which is measured directly from VCM) Message is identical on EV CAN and CAR CAN";
 CM_ SG_ 1290 Unknown_50A_0 "04,84,85";
 CM_ SG_ 1290 Unknown_50A_1 "02,13,33,40,42,53,72,73";
