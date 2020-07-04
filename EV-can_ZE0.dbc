@@ -325,8 +325,10 @@ CM_ SG_ 1371 LB_ALU_ANSWER "Question:B2h Answer(LBC):AAh Question:5Dh Answer(LBC
 This message is repeated 5x, to offer backwardscompability to 2011/2013 models. The message on these cars are run at 500ms.";
 CM_ SG_ 1371 LB_IR_Sensor_Wave_Voltage "LB_IRSEN_VOL";
 CM_ SG_ 1371 LB_PRUN_55B "LB_PRUN_55B 00,01,02,03 Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
-CM_ SG_ 1371 LB_IR_Sensor_Malfunction "0h = Normal 1h = Malfunction";
-CM_ SG_ 1371 LB_Capacity_Empty "0h = Not Batt Empty 1h = Batt Empty";
+CM_ SG_ 1371 LB_IR_Sensor_Malfunction "Note! LB_IRSEN is the IR sensor fault flag - This flag can be set in salvage packs because the car itself has had an isolation fault, due to impact damage, and LB_IRSEN doesn't clear for a good long time after it's been set. Not possible to clear with Leafspy!
+
+If you encounter this error, drop the battery pack and open it up. Inspect for water intrusion.";
+CM_ SG_ 1371 LB_Capacity_Empty "";
 CM_ SG_ 1371 LB_RefusetoSleep "00 = reserved 01 = RefuseToSleep 10 = ReadyToSleep 11 = reserved";
 CM_ BO_ 1370 "Inverter (100ms)";
 CM_ SG_ 1370 MotorTemperature "Stays at 0 on 2015 Leaf?";
@@ -471,6 +473,8 @@ VAL_ 475 LB_Failsafe_Status 0 "Normal Start Request" 1 "Normal Stop Request" 2 "
 VAL_ 475 LB_MainRelayOn_flag 0 "No-Permission" 1 "Main Relay On Permission" ;
 VAL_ 475 LB_INTER_LOCK 0 "Not Inter Lock connected" 1 "Inter Lock connected" ;
 VAL_ 475 LB_Discharge_Power_Status 0 "Reserved" 1 "Normal limit POUT" 2 "High rate limit POUT" 3 "Immediate limit POUT" ;
+VAL_ 1371 LB_IR_Sensor_Malfunction 0 "Normal" 1 "Malfunction" ;
+VAL_ 1371 LB_Capacity_Empty 0 "Not Empty" 1 "Battery Empty" ;
 VAL_ 1356 ClimateControlStatus2 102 "CC ON" 255 "CC OFF" ;
 VAL_ 282 JoystickGearPosition 2 "Reverse" 3 "Neutral" 4 "Drive/B" 0 "Parked" ;
 VAL_ 282 CarOnOffStatus 4 "CarOff" 8 "CarOn" ;

@@ -364,7 +364,9 @@ CM_ SG_ 1371 LB_ALU_ANSWER "HCM:B2h LBC:AAh HCM:5Dh LBC:55h
 
 This message is repeated 5x, to offer backwardscompability to 2011/2013 models? The message on these cars are run at 500ms.";
 CM_ SG_ 1371 LB_IR_Sensor_Wave_Voltage "Internal resistance wave voltage";
-CM_ SG_ 1371 LB_IR_Sensor_Malfunction "";
+CM_ SG_ 1371 LB_IR_Sensor_Malfunction "Note! LB_IRSEN is the IR sensor fault flag - This flag can be set in salvage packs because the car itself has had an isolation fault, due to impact damage, and LB_IRSEN doesn't clear for a good long time after it's been set. Not possible to clear with Leafspy!
+
+If you encounter this error, drop the battery pack and open it up. Inspect for water intrusion.";
 CM_ SG_ 1371 LB_PRUN_55B "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 1371 CRC_55B "CRC";
 CM_ BO_ 1370 "Inverter";
