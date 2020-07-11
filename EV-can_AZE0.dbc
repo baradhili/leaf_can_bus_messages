@@ -380,7 +380,7 @@ CM_ SG_ 1370 IGBTDriverBoardTemperature "Temperature only active during drive (I
 CM_ BO_ 476 "Lithium Battery Controller (10ms)";
 CM_ SG_ 476 LB_Discharge_Power_Limit "Max available power that can be pulled from battery";
 CM_ SG_ 476 LB_Charge_Power_Limit "Max power that battery can be charged with";
-CM_ SG_ 476 LB_MAX_POWER_FOR_CHARGER "";
+CM_ SG_ 476 LB_MAX_POWER_FOR_CHARGER "LB_BPCMAX";
 CM_ SG_ 476 LB_Charge_Power_Status "00b = Reserved 01b = Normal limit PIN 10b = High rate limit PIN 11b = Immediate limit PIN";
 CM_ SG_ 476 LB_BPCMAX_UPRATE "000b : BPC MAX Uprate Level 1 001b : BPC MAX Uprate Level 2 010b : BPC MAX Uprate Level 3 011b : BPC MAX Uprate Level 4 100b : BPC MAX Uprate Level 5 101b : BPC MAX Uprate Level 6 110b : BPC MAX Uprate Level 7 111b : BPC MAX Uprate Level 8";
 CM_ SG_ 476 LB_CODE_CONDITION "";
