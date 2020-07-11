@@ -259,16 +259,18 @@ BO_ 1153 x481: 2 Vector__XXX
  SG_ Unknown_481_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_481_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 912 x390: 8 VCM
+BO_ 912 x390: 8 OBCpd
  SG_ OBC_Status_AC_Voltage : 27|2@1+ (1,0) [0|3] "status" Vector__XXX
  SG_ OBC_Flag_QC_Relay_On_Announcemen : 38|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ OBC_Flag_QC_IR_Sensor : 47|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ OBC_Maximum_Charge_Power_Out : 40|9@0+ (0.1,0) [0|0] "kW" Vector__XXX
 
-BO_ 915 x393: 8 Vector__XXX
+BO_ 915 x393: 8 OBCpd
  SG_ Unknown_393_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1539 x603: 8 VCM
+
+BO_ 1657 x679: 1 OBCpd
 
 
 
@@ -524,7 +526,7 @@ CM_ SG_ 1438 LB_Remain_Capacity_for_QC "";
 CM_ BO_ 1153 "??? Unknown sender module";
 CM_ SG_ 1153 Unknown_481_1 "Dala: Static 0x40";
 CM_ SG_ 1153 Unknown_481_2 "Dala: Static 0x00";
-CM_ BO_ 912 "Vehicle Control Module? (100ms)
+CM_ BO_ 912 "On Board Charger (100ms)
 
 // Gen 2 Charger (FROM OVMS CODE)
       //
@@ -558,9 +560,10 @@ CM_ SG_ 912 OBC_Status_AC_Voltage "ACVOLST";
 CM_ SG_ 912 OBC_Flag_QC_Relay_On_Announcemen "FQCRELAYST";
 CM_ SG_ 912 OBC_Flag_QC_IR_Sensor "FQCIRSENS";
 CM_ SG_ 912 OBC_Maximum_Charge_Power_Out "MAXCHGPOUT";
-CM_ BO_ 915 "??? Unknown sender module";
+CM_ BO_ 915 "On Board Charger?";
 CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
+CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
 VAL_ 1468 LB_Remain_Cap_Segment_Swit_Flag 0 "Remaining capacity" 1 "Full capacity" ;
 VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity drop" 2 "LBC Malfunction" 3 "High temperature" 4 "Low temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
 VAL_ 1468 LB_Remain_Charge_Time_Condition 0 "Quickcharge" 5 "Normal Charge 6kW Full" 8 "Normal Charge 200V Full" 11 "Normal Charge 100V Full" 18 "Normal Charge 6kW 80%" 21 "Normal Charge 200V 80%" 24 "Normal Charge 100V 80%" ;

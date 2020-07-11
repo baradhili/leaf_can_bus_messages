@@ -241,10 +241,10 @@ BO_ 1153 x481: 2 Vector__XXX
  SG_ Unknown_481_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_481_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 912 x390: 8 Vector__XXX
+BO_ 912 x390: 8 OBCpd
  SG_ Unknown_390_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 915 x393: 8 Vector__XXX
+BO_ 915 x393: 8 OBCpd
  SG_ Unknown_393_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 896 x380: 8 OBCpd
@@ -257,6 +257,8 @@ BO_ 896 x380: 8 OBCpd
 BO_ 1539 x603: 8 VCM
 
 BO_ 1676 x68C: 8 VCM
+
+BO_ 1657 x679: 1 OBCpd
 
 
 
@@ -456,9 +458,9 @@ CM_ BO_ 1118 "??? Unknown sender module(Also empty)";
 CM_ BO_ 1153 "??? Unknown sender module";
 CM_ SG_ 1153 Unknown_481_1 "Dala: Static 0x40";
 CM_ SG_ 1153 Unknown_481_2 "Dala: Static 0x00";
-CM_ BO_ 912 "??? Unknown sender module";
+CM_ BO_ 912 "On Board Charger?";
 CM_ SG_ 912 Unknown_390_7 "Sawtooth, from 200-250";
-CM_ BO_ 915 "??? Unknown sender module";
+CM_ BO_ 915 "On Board Charger?";
 CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
 CM_ BO_ 896 "On Board Charger (100ms)";
 CM_ SG_ 896 Quick_Charger_IR_Sensor_Flag "FQCHGIRSENS 0h = Not IR circuit 1h = IR circuit have";
@@ -467,6 +469,7 @@ CM_ SG_ 896 Normal_Charger_Relay_Status_Flag "FNCRELAYSTATUS 0h = OFF 1h = ON";
 CM_ SG_ 896 Quick_Charger_Relay_Status_Flag "FQCRELAYSTATUS 0h = OFF 1h = ON";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1676 "Bootup Message, appears once during power on after a few sec";
+CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
 VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity Drop" 2 "LBC Malfunction" 3 "High Temperature" 4 "Low Temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
 VAL_ 1468 LB_Capacity_Bal_Complete_Flag 0 "Not Finished" 1 "Finished" ;
 VAL_ 475 LB_Relay_Cut_Request 0 "No-Request" 1 "Main Relay OFF Request" 2 "Main Relay OFF Request" 3 "Main Relay OFF Request" ;

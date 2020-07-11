@@ -438,7 +438,7 @@ BO_ 1529 x5F9: 8 Vector__XXX
  SG_ Unknown_5F9_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5F9_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1539 x603: 8 Vector__XXX
+BO_ 1539 x603: 8 VCM
  SG_ Unknown_603_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_603_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_603_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -745,9 +745,9 @@ CM_ SG_ 1528 Unknown_5F8_0 "Increments once a minute?";
 CM_ BO_ 1529 "???";
 CM_ SG_ 1529 SystemTimeMinutes "Time:minute (0-59)";
 CM_ SG_ 1529 SystemTimeHours "Time:hour (0-23)";
-CM_ BO_ 1539 "Wake up message
+CM_ BO_ 1539 "Wake up message from VCM
 
-Noticing this shows up on CARcan right after 68c shows up on EVCan. Probably VCM relay from TCU.";
+Noticing this shows up on CARcan right after 68c shows up on EVCan.";
 CM_ BO_ 1540 "???";
 CM_ BO_ 1549 "Body control module
 
