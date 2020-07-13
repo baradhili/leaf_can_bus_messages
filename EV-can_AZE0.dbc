@@ -263,7 +263,8 @@ BO_ 912 x390: 8 OBCpd
  SG_ OBC_Status_AC_Voltage : 27|2@1+ (1,0) [0|3] "status" Vector__XXX
  SG_ OBC_Flag_QC_Relay_On_Announcemen : 38|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ OBC_Flag_QC_IR_Sensor : 47|1@1+ (1,0) [0|1] "status" Vector__XXX
- SG_ OBC_Maximum_Charge_Power_Out : 40|9@0+ (0.1,0) [0|0] "kW" Vector__XXX
+ SG_ OBC_Maximum_Charge_Power_Out : 40|9@0+ (0.1,0) [0|50] "kW" Vector__XXX
+ SG_ CRC_390 : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
 
 BO_ 915 x393: 8 OBCpd
  SG_ Unknown_393_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -523,7 +524,7 @@ CM_ BO_ 1118 "??? Unknown sender module(Also empty)";
 CM_ BO_ 1438 "Lithium Battery Controller (500ms)";
 CM_ SG_ 1438 LB_Full_Capacity_for_QC "";
 CM_ SG_ 1438 LB_Remain_Capacity_for_QC "";
-CM_ BO_ 1153 "??? Unknown sender module";
+CM_ BO_ 1153 "??? Unknown sender module (500ms)";
 CM_ SG_ 1153 Unknown_481_1 "Dala: Static 0x40";
 CM_ SG_ 1153 Unknown_481_2 "Dala: Static 0x00";
 CM_ BO_ 912 "On Board Charger (100ms)
@@ -556,11 +557,12 @@ CM_ BO_ 912 "On Board Charger (100ms)
       // 0x390 messages stop
       //
       // byte 3 is 0xb3 during ch";
-CM_ SG_ 912 OBC_Status_AC_Voltage "ACVOLST";
-CM_ SG_ 912 OBC_Flag_QC_Relay_On_Announcemen "FQCRELAYST";
-CM_ SG_ 912 OBC_Flag_QC_IR_Sensor "FQCIRSENS";
-CM_ SG_ 912 OBC_Maximum_Charge_Power_Out "MAXCHGPOUT";
-CM_ BO_ 915 "On Board Charger?";
+CM_ SG_ 912 OBC_Status_AC_Voltage "ACVOLST - Type of AC voltage";
+CM_ SG_ 912 OBC_Flag_QC_Relay_On_Announcemen "FQCRELAYST - QC Relay announcement";
+CM_ SG_ 912 OBC_Flag_QC_IR_Sensor "FQCIRSENS - QC IR Sensor";
+CM_ SG_ 912 OBC_Maximum_Charge_Power_Out "MAXCHGPOUT - Maximum power supplied by charger in kW";
+CM_ SG_ 912 CRC_390 "CRC";
+CM_ BO_ 915 "On Board Charger (100ms)";
 CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
