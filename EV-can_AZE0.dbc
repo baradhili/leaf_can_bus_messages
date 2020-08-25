@@ -68,7 +68,7 @@ BO_ 1468 x5BC: 8 HVBAT
  SG_ LB_Remain_Cap_Segment_Swit_Flag : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ LB_Output_Power_Limit_Reason : 45|3@1+ (1,0) [0|7] "modemask" Vector__XXX
  SG_ LB_Remain_Charge_Time_Condition : 41|5@0+ (1,0) [0|30] "modemask" Vector__XXX
- SG_ LB_Remain_Charge_Time : 52|13@0+ (1,0) [0|8190] "" Vector__XXX
+ SG_ LB_Remain_Charge_Time : 52|13@0+ (1,0) [0|8190] "minutes" Vector__XXX
  SG_ Mux_5BC M : 32|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ChargeBars m8 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
  SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
@@ -304,9 +304,11 @@ CM_ SG_ 1468 LB_Remaining_Capacity_Segments "Contains chargebars and capacitybar
 CM_ SG_ 1468 LB_Temperature_Segment_For_Dash "For instrumentation cluster. Unit is %, times 5/12 according to documentation, kinda strange .Should be average of the 3 sensors inside the battery pack.";
 CM_ SG_ 1468 LB_Capacity_Deterioration_Rate "SOH (State-of-Health) Effects the charge gauge, lower numbers mean more chargebars";
 CM_ SG_ 1468 LB_Remain_Cap_Segment_Swit_Flag "";
-CM_ SG_ 1468 LB_Output_Power_Limit_Reason "";
-CM_ SG_ 1468 LB_Remain_Charge_Time_Condition "Is this a mux for LB_Remain_Charge_Time? Values are known";
-CM_ SG_ 1468 LB_Remain_Charge_Time "Contains many values, but when mux = ? this is chargeminutes. Confirmed by watching charging log that one of the values decrement";
+CM_ SG_ 1468 LB_Output_Power_Limit_Reason "Indicates why power is limited";
+CM_ SG_ 1468 LB_Remain_Charge_Time_Condition "Mux for LB_Remain_charge_time
+
+00000b = Quick charge 01001b = Normal Charge 200V SOC100% 01010b = Normal Charge 200V SOC80% 10001b = Normal Charge 100V SOC100% 10010b = Normal Charge 100V SOC80% 11111b = Invalid value";
+CM_ SG_ 1468 LB_Remain_Charge_Time "1FFFh is used as \"Unavailable value\"";
 CM_ SG_ 1468 Mux_5BC "Multiplexor";
 CM_ SG_ 1468 ChargeBars "Range 0-15 (Below data from test at 0%SOC, writing values to bus)
 15 = 12 chargebars

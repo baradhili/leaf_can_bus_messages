@@ -64,7 +64,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
 
 BO_ 1468 x5BC: 8 HVBAT
  SG_ LB_Remain_Capacity : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
- SG_ LB_New_Full_Capacity : 13|10@0+ (1,0) [0|0] "wh +FAh" Vector__XXX
+ SG_ LB_New_Full_Capacity : 13|10@0+ (80,250) [20000|24000] "wh" Vector__XXX
  SG_ LB_Remaining_Capacity_Segment m1 : 16|4@1+ (1,0) [0|12] "dash bars" Vector__XXX
  SG_ LB_Average_Battery_Temperature : 24|8@1+ (1,-40) [-40|105] "degC" Vector__XXX
  SG_ LB_Capacity_Deterioration_Rate : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
@@ -289,11 +289,15 @@ CM_ SG_ 3221225472 LB_Hist_Data_Integrated_Current "";
 CM_ SG_ 3221225472 LB_Hist_Data_Degradation_IR "";
 CM_ SG_ 3221225472 LB_Hist_Data_Cell_Voltage "";
 CM_ BO_ 1468 "Lithium Battery Controller (500ms)";
-CM_ SG_ 1468 LB_Remain_Capacity "0-281 for 24kWh, 0-363 for 30kWh, 0-498 for 40kWh, 0-775 for 62kWh
+CM_ SG_ 1468 LB_Remain_Capacity "LB_CAPR : Actual Engineering units for this value is 80Wh, ranging from 0->24000Wh
+
+More commonly reffered to as GIDS: 0-281 for 24kWh, 0-363 for 30kWh, 0-498 for 40kWh, 0-775 for 62kWh
 1 LSB = 80WH
 
-LB_CAPR (aka 'gids') is an 80Wh resolution capacity indication used by the GOM and combined with LB_FULLCAP on gen1 Leafs to generate the capacity dashes behind the GOM.";
-CM_ SG_ 1468 LB_New_Full_Capacity "";
+LB_CAPR (aka 'gids') is an 80Wh resolution capacity indication used by the GOM and combined with LB_FULLCAP on gen1 Leafs to generate the capacity dashes behind the GOM.
+
+";
+CM_ SG_ 1468 LB_New_Full_Capacity "LB_FULLCAP (Ranges from 20-24kWh)";
 CM_ SG_ 1468 LB_Remaining_Capacity_Segment "Capacity bars";
 CM_ SG_ 1468 LB_Average_Battery_Temperature "LB_AVET Average of all temp measurements
 
@@ -301,7 +305,10 @@ When battery temperature (LB_AVET) exceeds 55degC: Stop INV, Indicate error mess
 CM_ SG_ 1468 LB_Capacity_Deterioration_Rate "LB_SOH State of Health";
 CM_ SG_ 1468 LB_Remaining_Capaci_Segment_Swit "FlagLB_CAPSW 0b = Remainig capacity 1b = Full capacity";
 CM_ SG_ 1468 LB_Output_Power_Limit_Reason "000 = Normal 001 = Capacity Drop 010 = LBC Malfunction 011 = High Temperature 100 = Low Temperature 101 = reserved 110 = reserved 111 = reserved";
-CM_ SG_ 1468 LB_Remain_charge_time_condition "00000b = Quick charge 01001b = Normal Charge 200V SOC100% 01010b = Normal Charge 200V SOC80% 10001b = Normal Charge 100V SOC100% 10010b = Normal Charge 100V SOC80% 11111b = Invalid value";
+CM_ SG_ 1468 LB_Remain_charge_time_condition "Mux for LB_Remain_charge_time
+
+00000b = Quick charge 01001b = Normal Charge 200V SOC100% 01010b = Normal Charge 200V SOC80% 10001b = Normal Charge 100V SOC100% 10010b = Normal Charge 100V SOC80% 11111b = Invalid value";
+CM_ SG_ 1468 LB_Remain_charge_time "1FFFh is used as \"Unavailable value\"";
 CM_ SG_ 1468 LB_Remaining_Charge_Segment "Charge bars";
 CM_ BO_ 475 "Lithium Battery Controller (10ms)";
 CM_ SG_ 475 LB_Total_Voltage "0.5v/bit";
