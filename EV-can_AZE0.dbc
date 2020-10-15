@@ -385,7 +385,7 @@ CM_ SG_ 476 LB_Discharge_Power_Limit "Max available power that can be pulled fro
 CM_ SG_ 476 LB_Charge_Power_Limit "Max power that battery can be charged with";
 CM_ SG_ 476 LB_MAX_POWER_FOR_CHARGER "LB_BPCMAX";
 CM_ SG_ 476 LB_Charge_Power_Status "00b = Reserved 01b = Normal limit PIN 10b = High rate limit PIN 11b = Immediate limit PIN";
-CM_ SG_ 476 LB_BPCMAX_UPRATE "000b : BPC MAX Uprate Level 1 001b : BPC MAX Uprate Level 2 010b : BPC MAX Uprate Level 3 011b : BPC MAX Uprate Level 4 100b : BPC MAX Uprate Level 5 101b : BPC MAX Uprate Level 6 110b : BPC MAX Uprate Level 7 111b : BPC MAX Uprate Level 8";
+CM_ SG_ 476 LB_BPCMAX_UPRATE "BPC MAX Uprate Level 1-8. Dala: (CAN-bridge testing) This value specifies how quickly the VCM follows the requested power in \"LB_MAX_POWER_FOR_CHARGER\".ZE0 Example, if Level 1 is selected and battery requests 45kW of quickcharging power, it will take 8minutes for power to ramp up from 0kW->45kW. If Level 8 is selected, it will take not ramp at all, and just intantaneously follow the requested power. If low level is forced, some quickcharging stations will fail to charge the vehicle, with an error message stating that too low current was demanded. Special notes for AZE0, the newer AZE0 VCM will ramp more aggressively at level 1 compared to ZE0, and no issues with fastcharging even though slow ramp rate is selected.";
 CM_ SG_ 476 LB_CODE_CONDITION "";
 CM_ SG_ 476 LB_CODE1 "";
 CM_ SG_ 476 LB_CODE2 "";
