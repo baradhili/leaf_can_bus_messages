@@ -281,10 +281,10 @@ BO_ 493 x1ED: 3 HVBAT
  SG_ x1ED_Value2 m226 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ x1ED_Value3 m227 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 450 x1C2: 1 Vector__XXX
+BO_ 450 x1C2: 1 HVBAT
  SG_ Unknown_1C2_0 : 0|8@1+ (1,0) [50|95] "counter" Vector__XXX
 
-BO_ 1471 x5BF: 8 Vector__XXX
+BO_ 1471 x5BF: 8 HVBAT
  SG_ Unknown_5BF_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5BF_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5BF_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -294,7 +294,7 @@ BO_ 1471 x5BF: 8 Vector__XXX
  SG_ Unknown_5BF_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5BF_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 896 x380: 8 Vector__XXX
+BO_ 896 x380: 8 HVBAT
  SG_ Unknown_380_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_380_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_380_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -604,19 +604,19 @@ CM_ BO_ 915 "On Board Charger (100ms)";
 CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
-CM_ BO_ 493 "Lithium Battery Controller? (#ms)";
+CM_ BO_ 493 "Lithium Battery Controller (#ms)";
 CM_ SG_ 493 Unknown_1ED_0 "Constantly FF in log";
 CM_ SG_ 493 Unknown_1ED_1 "Cycles between E0,E1,E2,E3, Maybe a multiplex?";
 CM_ SG_ 493 x1ED_Value0 "68 in log";
 CM_ SG_ 493 x1ED_Value1 "ED in log";
 CM_ SG_ 493 x1ED_Value2 "E7 in log";
 CM_ SG_ 493 x1ED_Value3 "62 in log";
-CM_ BO_ 450 "Unknown sender module";
+CM_ BO_ 450 "Lithium Battery Controller (#ms)";
 CM_ SG_ 450 Unknown_1C2_0 "Loops between 50-51-52-53-54-55-56-57-58-59-5A-5B-5C-5D-5E-5F and starts over";
-CM_ BO_ 1471 "Unkown sender module";
+CM_ BO_ 1471 "Lithium Battery Controller (#ms)";
 CM_ SG_ 1471 Unknown_5BF_4 "Contains values";
 CM_ SG_ 1471 Unknown_5BF_7 "Contains values (CRC?)";
-CM_ BO_ 896 "Unkown sender module";
+CM_ BO_ 896 "Lithium Battery Controller (#ms)";
 VAL_ 1468 LB_Remain_Cap_Segment_Swit_Flag 0 "Remaining capacity" 1 "Full capacity" ;
 VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity drop" 2 "LBC Malfunction" 3 "High temperature" 4 "Low temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
 VAL_ 1468 LB_Remain_Charge_Time_Condition 0 "Quickcharge" 5 "Normal Charge 6kW Full" 8 "Normal Charge 200V Full" 11 "Normal Charge 100V Full" 18 "Normal Charge 6kW 80%" 21 "Normal Charge 200V 80%" 24 "Normal Charge 100V 80%" ;
