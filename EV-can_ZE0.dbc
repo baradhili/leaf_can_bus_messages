@@ -61,6 +61,8 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ LB_Hist_Data_Degradation_IR : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ LB_Hist_Data_Cell_Voltage : 42|6@1+ (1,0) [40|1900] "mV *40" Vector__XXX
  SG_ InverterVoltage : 2|11@0+ (0.5,0) [0|0] "" Vector__XXX
+ SG_ Unknown_393_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_390_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1468 x5BC: 8 HVBAT
  SG_ LB_Remain_Capacity : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
@@ -241,12 +243,6 @@ BO_ 1153 x481: 2 Vector__XXX
  SG_ Unknown_481_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_481_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 912 x390: 8 OBCpd
- SG_ Unknown_390_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 915 x393: 8 OBCpd
- SG_ Unknown_393_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
-
 BO_ 896 x380: 8 OBCpd
  SG_ Quick_Charger_IR_Sensor_Flag : 15|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ Charger_Output_Power : 16|9@0+ (0.1,0) [0|50] "kW" Vector__XXX
@@ -288,6 +284,8 @@ CM_ SG_ 3221225472 LB_HistData_Temp_Wakeup_Phase "";
 CM_ SG_ 3221225472 LB_Hist_Data_Integrated_Current "";
 CM_ SG_ 3221225472 LB_Hist_Data_Degradation_IR "";
 CM_ SG_ 3221225472 LB_Hist_Data_Cell_Voltage "";
+CM_ SG_ 3221225472 Unknown_393_8 "Sawtooth between 03,14,36";
+CM_ SG_ 3221225472 Unknown_390_7 "Sawtooth, from 200-250";
 CM_ BO_ 1468 "Lithium Battery Controller (500ms)";
 CM_ SG_ 1468 LB_Remain_Capacity "LB_CAPR : Actual Engineering units for this value is 80Wh, ranging from 0->24000Wh
 
@@ -468,10 +466,6 @@ CM_ BO_ 1118 "??? Unknown sender module(Also empty)";
 CM_ BO_ 1153 "??? Unknown sender module";
 CM_ SG_ 1153 Unknown_481_1 "Dala: Static 0x40";
 CM_ SG_ 1153 Unknown_481_2 "Dala: Static 0x00";
-CM_ BO_ 912 "On Board Charger? (Is this AZE0 only?)";
-CM_ SG_ 912 Unknown_390_7 "Sawtooth, from 200-250";
-CM_ BO_ 915 "On Board Charger? (Is this AZE0 only?)";
-CM_ SG_ 915 Unknown_393_8 "Sawtooth between 03,14,36";
 CM_ BO_ 896 "On Board Charger (100ms)";
 CM_ SG_ 896 Quick_Charger_IR_Sensor_Flag "FQCHGIRSENS - QC IR Sensor";
 CM_ SG_ 896 Charger_Output_Power "MAXCHGPOUT - Maximum power supplied by charger in kW";
