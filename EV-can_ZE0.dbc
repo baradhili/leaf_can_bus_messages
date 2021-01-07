@@ -249,6 +249,7 @@ BO_ 896 x380: 8 OBCpd
  SG_ Normal_Charger_Relay_Status_Flag : 38|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ Quick_Charger_Relay_Status_Flag : 37|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ AC_Voltage : 42|9@0+ (0.5,70) [70|325] "V" Vector__XXX
+ SG_ PRUN_380 : 60|2@1+ (1,0) [0|3] "PRUN" Vector__XXX
 
 BO_ 1539 x603: 8 VCM
 
@@ -472,6 +473,7 @@ CM_ SG_ 896 Charger_Output_Power "MAXCHGPOUT - Maximum power supplied by charger
 CM_ SG_ 896 Normal_Charger_Relay_Status_Flag "FNCRELAYSTATUS - Flag, Normal Charge Relay Status";
 CM_ SG_ 896 Quick_Charger_Relay_Status_Flag "FQCRELAYSTATUS - Flag, QuickCharge Relay Status";
 CM_ SG_ 896 AC_Voltage "The grid voltage sensed by the OBC";
+CM_ SG_ 896 PRUN_380 "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1676 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
