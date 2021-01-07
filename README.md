@@ -13,3 +13,8 @@ With this tool you can open the .DBC files and explore the frames and the positi
 ![alt text](https://github.com/dalathegreat/leaf_can_bus_messages/blob/master/DatabaseEditor.PNG)
 
 DBC files are also extremely useful for reverse engineering, if you playback a CAN log these files can be used directly for translating the data.
+
+## Some notes about CRC/CSUM/MPRUN
+
+Nissan places a few error checking methods into the communication. This video explains the functions of these:
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/oENNNfy5GSM/0.jpg)](https://www.youtube.com/watch?v=oENNNfy5GSM)
