@@ -268,6 +268,9 @@ BO_ 912 x390: 8 OBCpd
 
 BO_ 915 x393: 8 OBCpd
  SG_ PRUN_393 : 60|2@1+ (1,0) [0|3] "PRUN" Vector__XXX
+ SG_ Unknown_393_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_393_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CSUM_393 : 56|4@1+ (1,0) [0|0] "CSUM" Vector__XXX
 
 BO_ 1539 x603: 8 VCM
 
@@ -447,7 +450,7 @@ CM_ SG_ 498 Keep_SOC_Request "KEEP_SOC_REQ When the temperature in the battery p
 CM_ SG_ 498 PCS_Connector_Detection "PSCONDET";
 CM_ SG_ 498 MPRUN "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 498 Unknown_498 "unknown - may indicate charging";
-CM_ SG_ 498 CSUM_498 "checksum. all other nibbles including the CAN ID";
+CM_ SG_ 498 CSUM_498 "Checksum. All message nibbles summed together, plus 2. End result in hex is anded with 0xF.";
 CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN";
 CM_ SG_ 644 LeftWheelSpeedSensor "2's comp";
 CM_ SG_ 644 RightWheelSpeedSensor "2's comp";
@@ -571,6 +574,9 @@ CM_ SG_ 912 OBC_Maximum_Charge_Power_Out "MAXCHGPOUT - Maximum power supplied by
 CM_ SG_ 912 PRUN_390 "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ BO_ 915 "On Board Charger (100ms)";
 CM_ SG_ 915 PRUN_393 "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 915 Unknown_393_1 "Dala: 20 while idle, 53 while slowcharging";
+CM_ SG_ 915 Unknown_393_4 "Dala: Always 20 in logs";
+CM_ SG_ 915 CSUM_393 "Deviates from other CSUM: (All nibbles summed together)-1=CSUM";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
 VAL_ 1468 LB_Remain_Cap_Segment_Swit_Flag 0 "Remaining capacity" 1 "Full capacity" ;
