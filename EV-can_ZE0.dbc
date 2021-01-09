@@ -486,8 +486,12 @@ CM_ SG_ 896 PRUN_380 "Detection of frozen data. Message-PRUN-Diag. The transmitt
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1676 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
-CM_ BO_ 1390 "??? (100ms)";
-CM_ SG_ 1390 Unknown_56E_0 "Dala: 0x46 when car is turned ON, then goes to 0x86 when you turn the vehicle OFF";
+CM_ BO_ 1390 "TCU? (100ms) RemoteCommand message
+
+This message varies in length depending on which remote command that was requested. Possible commands include, Enable climate control, disable climate control, start charging, auto disable climate control, unlock doors and lock doors. See OVMS implementation for more detail";
+CM_ SG_ 1390 Unknown_56E_0 "Dala: 0x46 when car is turned ON, then goes to 0x86 when you turn the vehicle OFF
+
+This message varies in length depending on which remote command that was requested. Possible commands include, Enable climate control, disable climate control, start charging, auto disable climate control, unlock doors and lock doors. See OVMS implementation for more detail";
 CM_ BO_ 1471 "On Board Charger (100ms)";
 CM_ SG_ 1471 J1772CurrentLimiter "Byte2 is the J1772 maximum available current, 0 if we're not plugged in";
 CM_ SG_ 1471 Charger_Status "See value table for all possible values";
