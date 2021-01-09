@@ -72,6 +72,7 @@ BO_ 1468 x5BC: 8 HVBAT
  SG_ Mux_5BC M : 32|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ChargeBars m8 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
  SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ LB_MaxGIDS : 44|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 475 x1DB: 8 HVBAT
  SG_ LB_Current : 7|11@0- (0.5,0) [-400|200] "A" Vector__XXX
@@ -347,6 +348,7 @@ CM_ SG_ 1468 CapacityBars "Range 0-15 Below test data by writing to bus and seei
 2 = 2 capacitybars
 1 = 1 capacitybars
 0 = 0 capacitybars,";
+CM_ SG_ 1468 LB_MaxGIDS "Only 30kWh AZE0 has this. When this value is 1, the GIDS number is at its maximum.(LB_Remain_Capacity_GIDS)";
 CM_ BO_ 475 "Lithium Battery Controller (10ms)";
 CM_ SG_ 475 LB_Current "BatteryCurrentSignal , 2s comp, 1lSB = 0.5A";
 CM_ SG_ 475 LB_Relay_Cut_Request "00 = No-Request 01 = Main Relay OFF Request 10 = Main Relay OFF Request 11 = Main Relay OFF Request";
