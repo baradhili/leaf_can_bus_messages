@@ -260,6 +260,15 @@ BO_ 1657 x679: 1 OBCpd
 BO_ 1390 x56E: 1 Vector__XXX
  SG_ Unknown_56E_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 1471 x5BF: 8 OBCpd
+ SG_ J1772CurrentLimiter : 16|8@1+ (0.5,0) [0|32] "A" Vector__XXX
+ SG_ Charger_Status : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5BF_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5BF_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5BF_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PRUN_5BF : 60|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CSUM_5BF : 56|4@1+ (1,0) [0|255] "CSUM" Vector__XXX
+
 
 
 CM_ BU_ VCM "Vehicle Control Module";
@@ -479,6 +488,13 @@ CM_ BO_ 1676 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
 CM_ BO_ 1390 "??? (100ms)";
 CM_ SG_ 1390 Unknown_56E_0 "Dala: 0x46 when car is turned ON, then goes to 0x86 when you turn the vehicle OFF";
+CM_ BO_ 1471 "On Board Charger (100ms)";
+CM_ SG_ 1471 J1772CurrentLimiter "Byte2 is the J1772 maximum available current, 0 if we're not plugged in";
+CM_ SG_ 1471 Charger_Status "See value table for all possible values";
+CM_ SG_ 1471 Unknown_5BF_5 "Has data while quickcharging";
+CM_ SG_ 1471 Unknown_5BF_3 "Has data while quickcharging";
+CM_ SG_ 1471 Unknown_5BF_6 "Has data while quickcharging";
+CM_ SG_ 1471 CSUM_5BF "Sum of all nibbles in message, -1";
 VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity Drop" 2 "LBC Malfunction" 3 "High Temperature" 4 "Low Temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
 VAL_ 1468 LB_Capacity_Bal_Complete_Flag 0 "Not Finished" 1 "Finished" ;
 VAL_ 475 LB_Relay_Cut_Request 0 "No-Request" 1 "Main Relay OFF Request" 2 "Main Relay OFF Request" 3 "Main Relay OFF Request" ;
@@ -504,4 +520,5 @@ VAL_ 1291 VCM_WakeUpSleepCmd 0 " GoToSleep" 1 "reserved" 2 "reserved" 3 "WakeUp"
 VAL_ 896 Quick_Charger_IR_Sensor_Flag 0 "Without" 1 "With" ;
 VAL_ 896 Normal_Charger_Relay_Status_Flag 0 "Off" 1 "On" ;
 VAL_ 896 Quick_Charger_Relay_Status_Flag 0 "Off" 1 "On" ;
+VAL_ 1471 Charger_Status 40 "CHARGER_STATUS_IDLE" 48 "CHARGER_STATUS_PLUGGED_IN_TIMER_WAIT" 64 "CHARGER_STATUS_FINISHED" 96 "CHARGER_STATUS_CHARGING" 176 "CHARGER_STATUS_QUICK_CHARGING" ;
 
