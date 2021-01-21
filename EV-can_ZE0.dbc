@@ -90,7 +90,7 @@ BO_ 475 x1DB: 8 HVBAT
  SG_ LB_Discharge_Power_Status : 25|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
 
 BO_ 1371 x55B: 8 HVBAT
- SG_ LB_SOC : 7|10@0+ (1,0) [0|0] "%+1" Vector__XXX
+ SG_ LB_SOC : 7|10@0+ (1,0) [0|1000] "%+1" Vector__XXX
  SG_ LB_ALU_ANSWER : 16|8@1+ (1,0) [85|170] "" Vector__XXX
  SG_ LB_IR_Sensor_Wave_Voltage : 39|10@0+ (1,0) [0|4990] "mV 5000/1024" Vector__XXX
  SG_ LB_PRUN_55B : 48|2@1+ (1,0) [0|0] "" Vector__XXX
@@ -264,7 +264,7 @@ BO_ 1471 x5BF: 8 OBCpd
  SG_ J1772CurrentLimiter : 16|8@1+ (0.5,0) [0|32] "A" Vector__XXX
  SG_ Charger_Status : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5BF_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_5BF_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ QC_Voltage : 24|8@1+ (1,257) [0|0] "" Vector__XXX
  SG_ Unknown_5BF_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ PRUN_5BF : 60|2@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CSUM_5BF : 56|4@1+ (1,0) [0|255] "CSUM" Vector__XXX
@@ -496,7 +496,7 @@ CM_ BO_ 1471 "On Board Charger (100ms)";
 CM_ SG_ 1471 J1772CurrentLimiter "Byte2 is the J1772 maximum available current, 0 if we're not plugged in";
 CM_ SG_ 1471 Charger_Status "See value table for all possible values";
 CM_ SG_ 1471 Unknown_5BF_5 "Has data while quickcharging";
-CM_ SG_ 1471 Unknown_5BF_3 "Has data while quickcharging";
+CM_ SG_ 1471 QC_Voltage "Seems like QC-voltage? Offset unknown, set to +257 for now ";
 CM_ SG_ 1471 Unknown_5BF_6 "Has data while quickcharging";
 CM_ SG_ 1471 CSUM_5BF "Sum of all nibbles in message, -1";
 VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity Drop" 2 "LBC Malfunction" 3 "High Temperature" 4 "Low Temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
