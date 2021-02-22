@@ -303,9 +303,9 @@ BO_ 1471 x5BF: 8 HVBAT
  SG_ Unknown_5BF_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5BF_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 288 x120: 4 Vector__XXX
+BO_ 288 x120: 4 INVmc
  SG_ Unknown_120_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_120_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_120 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 264 x108: 3 Vector__XXX
  SG_ Unknown_108_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -681,9 +681,9 @@ CM_ BO_ 1515 "Lithium Battery Controller (###ms)";
 CM_ SG_ 1515 Unknown_5EB_2 "Dala: length 4? in log 0F";
 CM_ BO_ 1471 "Lithium Battery Controller (###ms)";
 CM_ SG_ 1471 Unknown_5BF_7 "CRC?";
-CM_ BO_ 288 "???";
-CM_ SG_ 288 Unknown_120_2 "Counter? 0x01->0x0F and loops";
-CM_ SG_ 288 Unknown_120_3 "CRC?";
+CM_ BO_ 288 "Inverter (10ms)";
+CM_ SG_ 288 Unknown_120_2 "Counter? 0x01->0x0F and loops. Used for still alive checking?";
+CM_ SG_ 288 CRC_120 "CRC";
 CM_ BO_ 264 "???";
 CM_ SG_ 264 Unknown_108_1 "Counter 0x00->0x0F and loops";
 CM_ SG_ 264 Unknown_108_2 "CRC?";
