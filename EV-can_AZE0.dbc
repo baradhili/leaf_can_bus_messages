@@ -453,7 +453,7 @@ CM_ SG_ 498 PCS_Connector_Detection "PSCONDET";
 CM_ SG_ 498 MPRUN "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 498 Unknown_498 "unknown - may indicate charging";
 CM_ SG_ 498 CSUM_498 "Checksum. All message nibbles summed together, plus 2. End result in hex is anded with 0xF.";
-CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN";
+CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN (20ms)";
 CM_ SG_ 644 LeftWheelSpeedSensor "2's comp";
 CM_ SG_ 644 RightWheelSpeedSensor "2's comp";
 CM_ SG_ 644 AverageRearSpeedSensor "??? speed sensor.  Maybe average of both rear? Or VehicleSpeedFromABS?";
