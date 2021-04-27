@@ -277,6 +277,9 @@ BO_ 1539 x603: 8 VCM
 
 BO_ 1657 x679: 1 OBCpd
 
+BO_ 1390 x56E: 1 TCU
+ SG_ Unknown_56E_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ BU_ VCM "Vehicle Control Module";
@@ -581,6 +584,12 @@ CM_ SG_ 915 Unknown_393_4 "Dala: Always 20 in logs";
 CM_ SG_ 915 CSUM_393 "Deviates from other CSUM: (All nibbles summed together)-1=CSUM";
 CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
 CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
+CM_ BO_ 1390 "TCU (100ms) RemoteCommand message
+
+Only present on vehicles with TCU (Telematrics Control Unit).This message varies in length depending on which remote command that was requested. Possible commands include, Enable climate control, disable climate control, start charging, auto disable climate control, unlock doors and lock doors. See OVMS implementation for more detail";
+CM_ SG_ 1390 Unknown_56E_0 "Dala: 0x46 when car is turned ON, then goes to 0x86 when you turn the vehicle OFF
+
+This message varies in length depending on which remote command that was requested. Possible commands include, Enable climate control, disable climate control, start charging, auto disable climate control, unlock doors and lock doors. See OVMS implementation for more detail";
 VAL_ 1468 LB_Remain_Cap_Segment_Swit_Flag 0 "Remaining capacity" 1 "Full capacity" ;
 VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity drop" 2 "LBC Malfunction" 3 "High temperature" 4 "Low temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
 VAL_ 1468 LB_Remain_Charge_Time_Condition 0 "Quickcharge" 5 "Normal Charge 6kW Full" 8 "Normal Charge 200V Full" 11 "Normal Charge 100V Full" 18 "Normal Charge 6kW 80%" 21 "Normal Charge 200V 80%" 24 "Normal Charge 100V 80%" ;
