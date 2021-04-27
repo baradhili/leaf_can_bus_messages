@@ -273,6 +273,11 @@ BO_ 1471 x5BF: 8 OBCpd
 
 CM_ BU_ VCM "Vehicle Control Module";
 CM_ BU_ INVmc "Inverter Motor Controller";
+CM_ BU_ EShift "Electronic Shift Module";
+CM_ BU_ HVAC "Heating Ventilation and Air Conditioning";
+CM_ BU_ TCU "Telematics Control Unit";
+CM_ BU_ OBCpd "On Board Charger power distribution";
+CM_ BU_ HVBAT "High Voltage Battery (Lithium Battery Controller)";
 CM_ SG_ 3221225472 CRC_1D41 "CRC";
 CM_ SG_ 3221225472 Unknown_50B_2 "00,02,06 (for 2013+: also 0x04)";
 CM_ SG_ 3221225472 Unknown_50B_3 "00..03 uniform";
