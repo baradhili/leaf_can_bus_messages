@@ -39,6 +39,7 @@ BU_: Vehicle QuickChargeStation
 BO_ 256 x100: 8 Vehicle
  SG_ MaximumBatteryVoltage : 39|16@0+ (1,0) [0|600] "V" Vector__XXX
  SG_ ConstantOfChargingRateIndication : 48|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ MinimumChargeCurrent : 0|8@1+ (1,0) [0|255] "A" Vector__XXX
 
 BO_ 257 x101: 8 Vehicle
  SG_ MaxChargingTime10sBit : 8|8@1+ (10,0) [0|2540] "seconds" Vector__XXX
@@ -81,6 +82,11 @@ BO_ 265 x109: 8 QuickChargeStation
  SG_ RemainingChargingTime10sBit : 48|8@1+ (10,0) [0|2540] "seconds" Vector__XXX
  SG_ RemainingChargingTime1minBit : 56|8@1+ (1,0) [0|255] "minutes" Vector__XXX
 
+BO_ 512 x200: 7 Vehicle
+ SG_ MaximumDischargeCurrent : 0|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ MinimumDischargeVoltage : 39|16@0+ (1,0) [0|600] "V" Vector__XXX
+ SG_ MinimumBatteryDischargeLevel : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+
 
 
 CM_ BO_ 256 "100ms";
@@ -89,8 +95,8 @@ CM_ SG_ 256 ConstantOfChargingRateIndication "Fixed value for charging rate indi
 CM_ BO_ 257 "100ms";
 CM_ SG_ 257 MaxChargingTime10sBit "Maximum charging time permited by EV, set by10s";
 CM_ SG_ 257 MaxChargingTime1minBit "Maximum charging time permited by EV, set by minute";
-CM_ SG_ 257 EstimatedChargingTime "Estimated remaining time before the end of charging calculated by EV";
-CM_ SG_ 257 RatedBatteryCapacity "Rated capacity of battery";
+CM_ SG_ 257 EstimatedChargingTime "Estimated remaining time before the end of charging calculated by EV (Added in CHAdeMO1.0.1)";
+CM_ SG_ 257 RatedBatteryCapacity "Rated capacity of battery (Added in CHAdeMO1.0.1)";
 CM_ BO_ 258 "100ms";
 CM_ SG_ 258 ControlProtocolNumberEV "Software version of control protocol to which EV corresponds";
 CM_ SG_ 258 TargetBatteryVoltage "Target charging voltage at the vehicle inlet terminals";
@@ -123,6 +129,8 @@ CM_ SG_ 265 FaultStationMalfunction "Status flag indicating whether or not there
 CM_ SG_ 265 StatusStation "Status flag indicating the energy transfer from the station";
 CM_ SG_ 265 RemainingChargingTime10sBit "Remaining time before the end of charging (counted by 10 s)";
 CM_ SG_ 265 RemainingChargingTime1minBit "Remaining time before the end of charging (counted by minutes)";
+CM_ BO_ 512 "100ms (For V2X)";
+CM_ SG_ 512 MinimumBatteryDischargeLevel "Either sent as % or kWh";
 VAL_ 258 FaultBatteryVoltageDeviation 0 "Normal" 1 "Fault" ;
 VAL_ 258 FaultHighBatteryTemperature 0 "Normal" 1 "Fault" ;
 VAL_ 258 FaultBatteryCurrentDeviation 0 "Normal" 1 "Fault" ;
