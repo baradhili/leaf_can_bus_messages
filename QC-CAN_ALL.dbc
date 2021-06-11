@@ -82,10 +82,20 @@ BO_ 265 x109: 8 QuickChargeStation
  SG_ RemainingChargingTime10sBit : 48|8@1+ (10,0) [0|2540] "seconds" Vector__XXX
  SG_ RemainingChargingTime1minBit : 56|8@1+ (1,0) [0|255] "minutes" Vector__XXX
 
-BO_ 512 x200: 7 Vehicle
+BO_ 512 x200: 8 Vehicle
  SG_ MaximumDischargeCurrent : 0|8@1+ (1,0) [0|255] "A" Vector__XXX
  SG_ MinimumDischargeVoltage : 39|16@0+ (1,0) [0|600] "V" Vector__XXX
  SG_ MinimumBatteryDischargeLevel : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaxRemainingCapacityForCharging : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 513 x201: 8 Vehicle
+ SG_ V2HchargeDischargeSequenceNum : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ApproxDischargeCompletionTime : 15|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AvailableVehicleEnergy : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1792 x700: 8 Vehicle
+ SG_ AutomakerCode : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ OptionalContent : 8|56@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
@@ -131,6 +141,11 @@ CM_ SG_ 265 RemainingChargingTime10sBit "Remaining time before the end of chargi
 CM_ SG_ 265 RemainingChargingTime1minBit "Remaining time before the end of charging (counted by minutes)";
 CM_ BO_ 512 "100ms (For V2X)";
 CM_ SG_ 512 MinimumBatteryDischargeLevel "Either sent as % or kWh";
+CM_ SG_ 512 MaxRemainingCapacityForCharging "(Optional)";
+CM_ BO_ 513 "100ms (For V2X)";
+CM_ SG_ 513 ApproxDischargeCompletionTime "(Optional)";
+CM_ SG_ 513 AvailableVehicleEnergy "(Optional)";
+CM_ SG_ 1792 OptionalContent "Content conform to each manufacturer's optional specification";
 VAL_ 258 FaultBatteryVoltageDeviation 0 "Normal" 1 "Fault" ;
 VAL_ 258 FaultHighBatteryTemperature 0 "Normal" 1 "Fault" ;
 VAL_ 258 FaultBatteryCurrentDeviation 0 "Normal" 1 "Fault" ;
