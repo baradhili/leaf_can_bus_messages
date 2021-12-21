@@ -266,6 +266,8 @@ BO_ 912 x390: 8 OBCpd
  SG_ OBC_Flag_QC_IR_Sensor : 47|1@1+ (1,0) [0|1] "status" Vector__XXX
  SG_ OBC_Maximum_Charge_Power_Out : 40|9@0+ (0.1,0) [0|50] "kW" Vector__XXX
  SG_ PRUN_390 : 60|2@1+ (1,0) [0|3] "PRUN" Vector__XXX
+ SG_ OBC_Charge_Status : 41|6@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ CSUM_390 : 56|4@1+ (1,0) [0|16] "CSUM" Vector__XXX
 
 BO_ 915 x393: 8 OBCpd
  SG_ PRUN_393 : 60|2@1+ (1,0) [0|3] "PRUN" Vector__XXX
@@ -585,6 +587,8 @@ CM_ SG_ 912 OBC_Flag_QC_Relay_On_Announcemen "FQCRELAYST - QC Relay announcement
 CM_ SG_ 912 OBC_Flag_QC_IR_Sensor "FQCIRSENS - QC IR Sensor";
 CM_ SG_ 912 OBC_Maximum_Charge_Power_Out "MAXCHGPOUT - Maximum power supplied by charger in kW";
 CM_ SG_ 912 PRUN_390 "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 912 OBC_Charge_Status "From OVMS code";
+CM_ SG_ 912 CSUM_390 "Sum of all nibbles (-4)";
 CM_ BO_ 915 "On Board Charger (100ms)";
 CM_ SG_ 915 PRUN_393 "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 915 Unknown_393_1 "Dala: 20 while idle, 53 while slowcharging";
@@ -639,4 +643,5 @@ VAL_ 1291 Batt_Heater_Mail_Send_OK 0 "Mail send NG" 1 "Mail send OK" ;
 VAL_ 912 OBC_Status_AC_Voltage 0 "No Signal" 1 "100V" 2 "200V" 3 "Abnormal Wave" ;
 VAL_ 912 OBC_Flag_QC_Relay_On_Announcemen 1 "Announce OFF" 2 "Announce ON" ;
 VAL_ 912 OBC_Flag_QC_IR_Sensor 0 "Without" 1 "With" ;
+VAL_ 912 OBC_Charge_Status 1 "Idle OR QC" 2 "Finished" 4 "Charging OR interrupted" 8 "Idle" 9 "Idle" 12 "Plugged in waiting on timer" ;
 
