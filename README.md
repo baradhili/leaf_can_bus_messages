@@ -42,6 +42,8 @@ Actively asking the different control units for info is another thing. The datab
 |     Meter     |     0x745     |     0x765     |
 |     HVAC      |     0x744     |     0x764     |
 
+List on ZE1 (2018+) CAN polling: https://drive.google.com/file/d/1jH9cgm5v23qnqVnmZN3p4TvdaokWKPjM/view
+
 Here's an example of a request, checking which gear is selected from the VCM:
 
 Description: Gear position (1=Park, 2=Reverse, 3=Neutral, 4=Drive, 7=Eco). The fifth reply byte value is
