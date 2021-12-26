@@ -6,6 +6,14 @@ Proper CAN database files are also found in this repository along with the origi
 
 Please fork the repo and make changes in your repo before creating a pullrequest, or message me if you have some CAN findings to share.
 
+## LEAF generations explained
+Gen1 2010-2012, ZE0 (24kWh, electrical handbrake, EM61 motor, 24kWh LMO "Canary" chemistry 392V max charge)
+Gen2 2013-2014, AZE0-0 (24kWh, foot operated handbrake, EM57 motor, LMO "Wolf" chemistry 396V max charge)
+Gen2.5 2013-2014, AZE0-1 (24kWh, foot operated handbrake, EM57 motor,  LMO "Lizard" chemistry 396V max charge)
+Gen3 2016-2017, AZE0-2 (30kWh, foot operated handbrake, EM57 motor, NMC 396V)
+Gen4 2018- , ZE1 (facelifted exterior, EM57 motor 110kW, 40kWh NMC 404V)
+Gen5 2019- , ZE1 e+ (facelifted exterior, EM57 motor 160kW, 62kWh NMC 404V)
+
 ## How to browse the database?
 
 Download 'Kvaser Database Editor 3' https://www.kvaser.com/download/
