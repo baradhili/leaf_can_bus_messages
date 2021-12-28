@@ -204,12 +204,12 @@ BO_ 1472 x5C0: 8 HVBAT
  SG_ LB_HistData_HighLow_Volt_Tim_MIN m3 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
  SG_ LB_HistData_HighLow_Volt_Tim_MAX m1 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
  SG_ LB_HistData_HighLow_Volt_Tim_AVG m2 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
- SG_ LB_HistData_Temp_WakeupPhase_MIN m3 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
- SG_ LB_HistData_Temp_WakeupPhase_MAX m1 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
- SG_ LB_HistData_Temp_WakeupPhase_AVG m2 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
- SG_ LB_HistData_Temperature_MIN m3 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
- SG_ LB_HistData_Temperature_MAX m1 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
- SG_ LB_HistData_Temperature_AVG m2 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_MIN m3 : 9|7@1+ (0.5,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_MAX m1 : 9|7@1+ (0.5,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_AVG m2 : 9|7@1+ (0.5,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_MIN m3 : 17|7@1+ (0.5,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_MAX m1 : 17|7@1+ (0.5,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_AVG m2 : 17|7@1+ (0.5,-40) [-40|86] "degC" Vector__XXX
  SG_ LB_HistData_IntegratedCurrentMIN m3 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
  SG_ LB_HistData_IntegratedCurrentMAX m1 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
  SG_ LB_HistData_IntegratedCurrentAVG m2 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
@@ -500,7 +500,8 @@ CM_ SG_ 1472 LB_HistData_HighLow_Volt_Tim_AVG "LB_Historical_Data_High_or_Low_Vo
 CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_MIN "LB_Historical_Data_Temperature_Wakeup_Phase";
 CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_MAX "LB_Historical_Data_Temperature_Wakeup_Phase";
 CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_AVG "LB_Historical_Data_Temperature_Wakeup_Phase";
-CM_ SG_ 1472 LB_HistData_Temperature_MAX "Affects cluster gauge for temperature?";
+CM_ SG_ 1472 LB_HistData_Temperature_MIN "";
+CM_ SG_ 1472 LB_HistData_Temperature_MAX "";
 CM_ SG_ 1472 LB_HistData_IntegratedCurrentMIN "2S
 
 LB_Historical_Data_Integrated_Current";

@@ -43,10 +43,13 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0047 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BCM_RearRightDoorOpene111d : 1|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ NewSignal_0089 : 9|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_55A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RawTemperature2 : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ GIDStoClusterMaybe : 8|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2 x002: 5 STRG
- SG_ SteeringAngle : 7|16@0+ (1,0) [0|0] "ddeg" Vector__XXX
- SG_ SteeringAngleChangeRate : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ SteeringAngle : 7|16@0+ (1,0) [0|65535] "ddeg" Vector__XXX
+ SG_ SteeringAngleChangeRate : 23|8@0+ (1,0) [0|255] "" Vector__XXX
  SG_ Unknown_2_3 : 31|8@0+ (1,0) [0|0] "" Vector__XXX
  SG_ SteeringSensorHearbeat : 39|8@0+ (1,0) [0|0] "" Vector__XXX
 
@@ -161,15 +164,15 @@ BO_ 640 x280: 8 MA
  SG_ Unknown_280_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 644 x284: 8 ABS
- SG_ FrontRightWheelSpeed : 7|16@0+ (1,0) [0|0] "" Vector__XXX
- SG_ FrontLeftWheelSpeed : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Wheel_Speed_FR : 7|16@0+ (0.005,0) [0|327] "km/h" Vector__XXX
+ SG_ Wheel_Speed_FL : 23|16@0+ (0.005,0) [0|327] "km/h" Vector__XXX
  SG_ VehicleSpeedFromABS : 39|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ DistanceTraveled1 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ DistanceTraveled2 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 645 x285: 8 ABS
- SG_ RearRightWheelSpeed : 7|16@0+ (1,0) [0|0] "" Vector__XXX
- SG_ RearLeftWheelSpeed : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Wheel_Speed_RR : 7|16@0+ (0.005,0) [0|327] "km/h" Vector__XXX
+ SG_ Wheel_Speed_RL : 23|16@0+ (0.005,0) [0|327] "km/h" Vector__XXX
  SG_ NotUsed_285_4_5 : 39|16@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_285_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_285_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -221,7 +224,7 @@ BO_ 852 x354: 8 ABS
  SG_ VehicleSpeedABS : 7|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
  SG_ Unknown_354_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_354_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ StatusFlagABS : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ESP_Disabled : 38|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_354_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_354_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_354_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -334,17 +337,14 @@ BO_ 1361 x551: 8 Vector__XXX
  SG_ Unknown_551_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1370 x55A: 8 Vector__XXX
- SG_ Unknown_55A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ UnidentifiedTemperature : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_55A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Unknown_55A_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ RawTemperature1 : 39|16@0+ (1,0) [0|0] "" Vector__XXX
- SG_ RawTemperature2 : 55|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ InverterComBoardTemp : 8|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ IGBTTemperature : 16|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ IGBTDriverBoardTemperature : 24|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ MotorTemperature : 39|8@0+ (1,0) [0|255] "dC*2" Vector__XXX
 
 BO_ 1449 x5A9: 8 Vector__XXX
  SG_ Unknown_5A9_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ GIDStoClusterMaybe : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ RangeInstrument : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ RangeInstrument : 15|12@0+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5A9_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5A9_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5A9_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -514,6 +514,7 @@ CM_ BU_ IPDMer "Intelligent Power Distribution Module Engine Room";
 CM_ BU_ BRAKE "Electrically-driven intelligent brake unit";
 CM_ BU_ ABS "ABS actuator and electric control unit";
 CM_ BU_ VCM "Vehicle Control Module";
+CM_ SG_ 3221225472 GIDStoClusterMaybe "Seems to *somewhat* follow GIDs";
 CM_ BO_ 2 "Steering angle sensor signal. Goes to AV unit, Brake, and ABS modules";
 CM_ SG_ 2 SteeringAngle "Steering Angle LSB:MSB
 Left is negative
@@ -569,8 +570,8 @@ CM_ SG_ 640 VehicleSpeedCluster ".0062 scalar seems to match mph";
 CM_ BO_ 644 "ABS Module
 
 Common with other Nissans such as 370Z";
-CM_ SG_ 644 FrontRightWheelSpeed ".0118 scalar";
-CM_ SG_ 644 FrontLeftWheelSpeed ".0118 scalar";
+CM_ SG_ 644 Wheel_Speed_FR "Front right wheel speed";
+CM_ SG_ 644 Wheel_Speed_FL "Front left wheel speed";
 CM_ SG_ 644 VehicleSpeedFromABS ".0245";
 CM_ BO_ 645 "ABS Module
 
@@ -594,7 +595,7 @@ CM_ BO_ 849 "???";
 CM_ BO_ 852 "ABS Module
 
 Same as 370Z";
-CM_ SG_ 852 StatusFlagABS "0x40 when traction control is off";
+CM_ SG_ 852 ESP_Disabled "True when traction control disabled";
 CM_ BO_ 853 "Instrument cluster to VCM (Length?)
 
 On my 2012 this is a 7 byte message (2011 8 byte?) 2013 ? lenght? This database is for AZE0";
@@ -627,7 +628,7 @@ CM_ SG_ 1057 DashShifterPosition "Controls PRNDE display on dash (investigate B 
 0x38 = ECO ";
 CM_ BO_ 1289 "???";
 CM_ SG_ 1289 TimeInSeconds "0-59";
-CM_ BO_ 1290 "VCM relay from A/C Auto Amp and AC Pressor Sensor (which is measured directly from VCM) Message is identical on EV CAN and CAR CAN
+CM_ BO_ 1290 "VCM relay from A/C Auto Amp and AC Pressor Sensor (which is measured directly from VCM) Message is identical on EV CAN and CAR CAN (100ms)
 
 AC compressor pressure goes directly into VCM, this value is only for Consult reference";
 CM_ SG_ 1290 Unknown_50A_0 "04,84,85";
@@ -648,7 +649,7 @@ CM_ SG_ 1296 ClimateControlPowerConsumption "0.25kW per lsb";
 CM_ SG_ 1296 OutsideAmbientTemperature "Identical to EV CAN msg 0x54C byte 6
 
 This one has half-degree C resolution and seems to stay within a degree or two of the \"eyebrow\" temp display.";
-CM_ BO_ 1354 "VCM relay from A/C Auto Amp to A/V unit for climate display";
+CM_ BO_ 1354 "VCM relay from A/C Auto Amp to A/V unit for climate display (100ms)";
 CM_ SG_ 1354 CCStatusPlusUnknown "12,3c- CC Off; a0,da- CC On";
 CM_ SG_ 1354 Unknown_54A_1 "00 (80 in 2013+)";
 CM_ SG_ 1354 Unknown_54A_2 "70";
@@ -661,7 +662,7 @@ CM_ SG_ 1354 AmbientTempAC "Appears to track ambient (+41)
 0x83=90F;0x79=79F (90F & 79F read from dash);  also some low reads at poweron
 
 4f,8c-90";
-CM_ BO_ 1355 "VCM relay from A/C Auto Amp to A/V unit for climate display";
+CM_ BO_ 1355 "VCM relay from A/C Auto Amp to A/V unit for climate display (100ms)";
 CM_ SG_ 1355 ClimateControlStatusChange "Used to alert A/V unit that CC being toggled on or off by the user so the A/V can display the fan and CC settings on the display 00 no change, 01 change";
 CM_ SG_ 1355 ClimateOnOrOffStatus1 "08 off, 78 on";
 CM_ SG_ 1355 ClimateOnOrOffStatus2 "80 off, 88 on";
@@ -670,13 +671,14 @@ CM_ SG_ 1355 RequestedFanSpeed "1<->7 ";
 CM_ SG_ 1355 FanSpeedStatusChange "Used to alert A/V unit that fan speed is being changed by the user so the A/V can display the fan and CC settings on the display 00 no change, 01 change";
 CM_ BO_ 1361 "??? On 370Z this message contains engine coolant temp and cruise control";
 CM_ SG_ 1361 Unknown_551_4 "80 with CC on , 00 off";
-CM_ BO_ 1370 "Inverter?";
-CM_ SG_ 1370 UnidentifiedTemperature "InverterComBoardTemp? CabinTemperature? Very unknown.";
-CM_ SG_ 1370 Unknown_55A_2 "IGBTTemperature?";
-CM_ SG_ 1370 Unknown_55A_3 "IGBTDriverBoardTemperature?";
-CM_ SG_ 1370 RawTemperature1 "MotorTemperature?";
-CM_ BO_ 1449 "VCM to instrument cluster?";
-CM_ SG_ 1449 GIDStoClusterMaybe "Seems to *somewhat* follow GIDs";
+CM_ BO_ 1370 "Inverter (100ms)";
+CM_ SG_ 1370 InverterComBoardTemp "";
+CM_ SG_ 1370 IGBTTemperature "";
+CM_ SG_ 1370 IGBTDriverBoardTemperature "Temperature only active during drive (IGBT driver board?)";
+CM_ SG_ 1370 MotorTemperature "";
+CM_ BO_ 1449 "Vehicle Control Module (100ms)
+
+This message appeared after recall/update in March 2012. Probably VCM to TCU for carwings (engineering data)";
 CM_ SG_ 1449 RangeInstrument "OVMS sets nl_range from this with the following formula
 
 nl_range = d[1] << 4 | d[2] >> 4;
@@ -708,7 +710,7 @@ Range 0-15 (Below data from test at 0%SOC, writing values to bus)
 1 = 1 chargebars
 0 = 0 chargebars";
 CM_ SG_ 1459 MuxedCapacityAndSOH "Possibly capacity bargraph when D0=FE; SOH otherwise. TODO: Add mux to this message after testing";
-CM_ BO_ 1472 "Relayed LBC message from EV-CAN";
+CM_ BO_ 1472 "Relayed LBC message from EV-CAN (500ms)";
 CM_ SG_ 1472 LB_Historical_Data_Swich_Flag "Mux for historical data signals";
 CM_ SG_ 1472 LB_Heating_Start_Send_Request "0->1 Heat start Mail send request";
 CM_ SG_ 1472 LB_Heating_Stop_Send_Request "0->1 Heat stop Mail send request";
