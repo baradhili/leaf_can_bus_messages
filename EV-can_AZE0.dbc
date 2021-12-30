@@ -136,9 +136,11 @@ BO_ 1359 x54F: 8 HVAC
 
 BO_ 1356 x54C: 8 HVAC
  SG_ ACEvaporatorTemperature : 0|8@1+ (1,0) [0|0] "0.25C/bit?" Vector__XXX
- SG_ ClimateControlStatus2 : 8|8@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ CC_BackScreenDefrost : 9|1@1+ (1,0) [0|1] "-" Vector__XXX
  SG_ FanVoltage : 40|8@1+ (1,0) [0|0] "0.05 V/bit" Vector__XXX
  SG_ OutsideAmbientTemperature : 48|8@1+ (0.5,-40.5) [-40|60] "degC" Vector__XXX
+ SG_ CC_ClimateControlStatus : 10|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ CC_ACStatus : 11|1@1+ (1,0) [0|1] "-" Vector__XXX
 
 BO_ 282 x11A: 8 VCM
  SG_ JoystickGearPosition : 4|4@1+ (1,0) [0|0] "-" Vector__XXX
@@ -436,9 +438,11 @@ CM_ SG_ 1359 ACAutoAmpStatus "location?";
 CM_ SG_ 1359 HeaterPowerConsumption "Goes up slowly with heater on; no change with ac on";
 CM_ BO_ 1356 "AC Auto Amp (100ms)";
 CM_ SG_ 1356 ACEvaporatorTemperature "drops with ac on (after short lag).  No change with heater on";
-CM_ SG_ 1356 ClimateControlStatus2 "66 CC on, ff CC off";
+CM_ SG_ 1356 CC_BackScreenDefrost "Data only changes if climate control is activated or deactivated";
 CM_ SG_ 1356 FanVoltage "Commanded fan speed is proportional to Voltage";
 CM_ SG_ 1356 OutsideAmbientTemperature "Ambient temperature. This one has half-degree C resolution and seems to stay within a degree or two of the \"eyebrow\" temp display.";
+CM_ SG_ 1356 CC_ClimateControlStatus "Data only changes if climate control is activated or deactivated";
+CM_ SG_ 1356 CC_ACStatus "Data only changes if climate control is activated or deactivated";
 CM_ BO_ 282 "Vehicle Control Module (10ms)
 
 Shift controller module for 2011-2012 ZE0";
@@ -545,7 +549,7 @@ CM_ SG_ 1354 CCStatusPlusUnknown "12,3c- CC Off; a0,da- CC On";
 CM_ SG_ 1354 Unknown_54A_1 "00 (80 in 2013+)";
 CM_ SG_ 1354 Unknown_54A_2 "70";
 CM_ SG_ 1354 Unknown_54A_3 "06,0a,0b,0f";
-CM_ SG_ 1354 ClimateControlSetpoint "00,39,52,53,54 (MY2011,2012)";
+CM_ SG_ 1354 ClimateControlSetpoint "This data is only correct while climate control is active. If climate control isswitched OFF or activated by app, byte 4 reads as 0x00.";
 CM_ SG_ 1354 Unknown_54A_5 "00";
 CM_ SG_ 1354 Unknown_54A_6 "00";
 CM_ SG_ 1354 AmbientTempAC "Appears to track ambient (+41)
@@ -623,7 +627,9 @@ VAL_ 1371 LB_Capacity_Empty 0 "Not Empty" 1 "Battery Empty" ;
 VAL_ 1371 LB_RefusetoSleep 0 "Reserved" 1 "RefuseToSleep" 2 "ReadyToSleep" 3 "Reserved" ;
 VAL_ 476 LB_Charge_Power_Status 0 "Reserved" 1 "Normal limit PIN" 2 "High rate limit PIN" 3 "Immediate limit PIN" ;
 VAL_ 476 LB_BPCMAX_UPRATE 0 "BPC MAX Uprate Level 1" 1 "BPC MAX Uprate Level 2" 2 "BPC MAX Uprate Level 3" 3 "BPC MAX Uprate Level 4" 4 "BPC MAX Uprate Level 5" 5 "BPC MAX Uprate Level 6" 6 "BPC MAX Uprate Level 7" 7 "BPC MAX Uprate Level 8" ;
-VAL_ 1356 ClimateControlStatus2 102 "CC ON" 255 "CC OFF" ;
+VAL_ 1356 CC_BackScreenDefrost 0 "Off" 1 "On" ;
+VAL_ 1356 CC_ClimateControlStatus 0 "Off" 1 "On" ;
+VAL_ 1356 CC_ACStatus 0 "Off" 1 "On" ;
 VAL_ 282 JoystickGearPosition 2 "Reverse" 3 "Neutral" 4 "Drive/B" 0 "Parked" ;
 VAL_ 282 CarOnOffStatus 4 "CarOff" 8 "CarOn" ;
 VAL_ 468 StatusOfHighVoltagePowerSupply 0 "High Voltage not supplied" 1 "High Voltage supplied" ;
