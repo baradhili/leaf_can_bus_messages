@@ -379,6 +379,10 @@ BO_ 1459 x5B3: 5 Vector__XXX
  SG_ Unknown_5B3_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Unknown_5B3_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 1541 x605: 1 Vector__XXX
+
+BO_ 1543 x607: 1 Vector__XXX
+
 
 
 CM_ BU_ VCM "Vehicle Control Module";
@@ -682,44 +686,44 @@ CM_ SG_ 915 PRUN_393 "Detection of frozen data. Message-PRUN-Diag. The transmitt
 CM_ SG_ 915 Unknown_393_1 "Dala: 20 while idle, 53 while slowcharging";
 CM_ SG_ 915 Unknown_393_4 "Dala: Always 20 in logs";
 CM_ SG_ 915 CSUM_393 "Deviates from other CSUM: (All nibbles summed together)-1=CSUM";
-CM_ BO_ 1539 "Bootup Message, appears once during power on after a few sec";
-CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected";
-CM_ BO_ 493 "Lithium Battery Controller (10ms)";
+CM_ BO_ 1539 "Bootup Message, appears once during power on";
+CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected. Also sent during normal startup";
+CM_ BO_ 493 "Lithium Battery Controller (10ms) (62kWh only)";
 CM_ SG_ 493 Unknown_1ED_1 "Dala: Seems to be FF all the time in logs";
 CM_ SG_ 493 Unknown_1ED_2 "Mux?";
 CM_ SG_ 493 Unknown_1ED_3 "Mux value / CRC?";
 CM_ BO_ 450 "Lithium Battery Controller (10ms)";
 CM_ SG_ 450 Unknown_1C2_1 "Dala: Loops between 0x50->0x5F, then repeats";
-CM_ BO_ 896 "Lithium Battery Controller (###ms)";
+CM_ BO_ 896 "Lithium Battery Controller (###ms) (Only present while quickcharging?)";
 CM_ SG_ 896 Unknown_380_8 "Dala: Most likely CRC";
-CM_ BO_ 1515 "Lithium Battery Controller (###ms)";
+CM_ BO_ 1515 "Lithium Battery Controller (500ms)";
 CM_ SG_ 1515 Unknown_5EB_2 "Dala: length 4? in log 0F";
-CM_ BO_ 1471 "Lithium Battery Controller (###ms)";
+CM_ BO_ 1471 "Lithium Battery Controller (###ms) (Only present while quickcharging?)";
 CM_ SG_ 1471 Unknown_5BF_7 "CRC?";
 CM_ BO_ 288 "Inverter (10ms)";
 CM_ SG_ 288 Unknown_120_2 "Counter? 0x01->0x0F and loops. Used for still alive checking?";
 CM_ SG_ 288 CRC_120 "CRC";
-CM_ BO_ 264 "???";
+CM_ BO_ 264 "??? (10ms)";
 CM_ SG_ 264 Unknown_108_1 "Counter 0x00->0x0F and loops";
 CM_ SG_ 264 Unknown_108_2 "CRC?";
-CM_ BO_ 952 "???";
-CM_ BO_ 853 "???";
-CM_ SG_ 853 Unknown_355_4 "Static while idle and charging";
-CM_ SG_ 853 Unknown_355_6 "Static while idle and charging";
-CM_ BO_ 1477 "???";
+CM_ BO_ 952 "??? (100ms)";
+CM_ BO_ 853 "??? (40ms)";
+CM_ SG_ 853 Unknown_355_4 "Static while idle and charging (0x10)";
+CM_ SG_ 853 Unknown_355_6 "Static while idle and charging (0x40)";
+CM_ BO_ 1477 "??? (100ms)";
 CM_ SG_ 1477 Unknown_5C5_0 "Static in logs";
 CM_ SG_ 1477 Unknown_5C5_2 "Static in logs";
 CM_ SG_ 1477 Unknown_5C5_3 "Static in logs";
-CM_ BO_ 1485 "???";
-CM_ BO_ 1573 "???";
+CM_ BO_ 1485 "??? (5000ms)";
+CM_ BO_ 1573 "??? (100ms)";
 CM_ BO_ 1210 "??? (Only present while quickcharging)";
 CM_ BO_ 1211 "??? (Only present while quickcharging)";
 CM_ BO_ 968 "??? (Only present while quickcharging)";
 CM_ BO_ 969 "??? (Only present while quickcharging)";
-CM_ BO_ 459 "???";
+CM_ BO_ 459 "??? (10ms)";
 CM_ SG_ 459 PRUN_1CB "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 459 CRC_1CB "CRC";
-CM_ BO_ 1209 "???";
+CM_ BO_ 1209 "??? (500ms)";
 CM_ BO_ 956 "??? (Only present while quickcharging)";
 CM_ BO_ 1390 "TCU (100ms) RemoteCommand message
 
@@ -730,6 +734,8 @@ This message varies in length depending on which remote command that was request
 CM_ BO_ 1459 "Instrument cluster, e-nv200 only";
 CM_ SG_ 1459 Unknown_5B3_0 "8E in logs";
 CM_ SG_ 1459 Unknown_5B3_4 "80 in logs";
+CM_ BO_ 1541 "Bootup Message, appears once during power on (sent by ???)";
+CM_ BO_ 1543 "Bootup Message, appears once during power on (sent by ???)";
 VAL_ 1468 LB_Remain_Cap_Segment_Swit_Flag 0 "Remaining capacity" 1 "Full capacity" ;
 VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity drop" 2 "LBC Malfunction" 3 "High temperature" 4 "Low temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
 VAL_ 1468 LB_Remain_Charge_Time_Condition 0 "Quickcharge" 5 "Normal Charge 6kW Full" 8 "Normal Charge 200V Full" 11 "Normal Charge 100V Full" 18 "Normal Charge 6kW 80%" 21 "Normal Charge 200V 80%" 24 "Normal Charge 100V 80%" ;

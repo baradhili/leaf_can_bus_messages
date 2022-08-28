@@ -424,7 +424,7 @@ CM_ SG_ 474 MG_OutputRevolution "RNMG - Signed value, negative for reverse.
 Values 0x7fff and 0x7ffe are seen during turning on of car";
 CM_ SG_ 474 MG_CLOCK "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
 CM_ SG_ 474 CRC_1DA "CRC";
-CM_ BO_ 1465 "Vehicle Control Module (500ms)";
+CM_ BO_ 1465 "Vehicle Control Module (500ms) (Only env200 and USDM LEAF?)";
 CM_ SG_ 1465 ActiveFuelBars "From VCM->Cluster";
 CM_ SG_ 1465 ChargeMinutesRemaining "Minutes from 3kW charging estimate on dash.
 
