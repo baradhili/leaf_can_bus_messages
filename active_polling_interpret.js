@@ -71,16 +71,15 @@ function main() {
 		if (canLineInterpretted.id == "7BB" || canLineInterpretted.id == "79B") {
   		if (canLineInterpretted.id == "79B") {
   			/*
-  				Only reset the associated lines when we get a new 79B message and the last message we received was 7BB. Otherwise keep appending the messages to the associated list so that we get this repeating pattern
-  				0x79B - query
-  				0x79B - query
+  				0x79B - query with 0x0221XXXXXXXXXXXX
+  				0x79B - query with 0x30XXXXXXXXXXXXXX
   				0x7BB - response
   				0x7BB - response
   				0x7BB - response
   				..
   				..
   				0x79B 0221XXXXXXXXXXXX <= when this appears, reset the associated can lines. - new query
-  				Not the best since different 0x79B  queries with responses can be received asynchronously. This requires more work to get all queries and responses associated properly. Not sure how to do that as responses are not tagged uniquely to it's query group
+  				Not the best since different 0x79B queries with responses can be received asynchronously. This requires more work to get all queries and responses associated properly. Not sure how to do that as responses are not tagged uniquely to it's query group
   			*/
   			if (canLineInterpretted.isFirstQueryMessage()) {
   				associated7BBResponseCanLines = []
