@@ -1,0 +1,93 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Infotainment
+
+
+BO_ 1665 Message_681: 8 Infotainment
+ SG_ Status : 0|8@1+ (1,0) [0|0] ""  Infotainment
+ SG_ Sequence : 8|8@1+ (1,0) [0|0] ""  Infotainment
+ SG_ Status2 : 16|8@1+ (1,0) [0|0] ""  Infotainment
+ SG_ ButtonActive : 24|8@1+ (1,0) [0|0] ""  Infotainment
+ SG_ ButtonPressData : 32|8@1+ (1,0) [0|255] "-"  Infotainment
+ SG_ Unknown_Padding_681_1 : 40|8@1+ (1,0) [0|0] ""  Infotainment
+ SG_ Unknown_Padding_681_2 : 48|8@1+ (1,0) [0|0] ""  Infotainment
+ SG_ Unknown_Padding_681_3 : 56|8@1+ (1,0) [0|0] ""  Infotainment
+
+BO_ 1537 Message_601: 8 Infotainment
+ SG_ StatusCopy : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SequenceCopy : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0011 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0012 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_Padding_601_1 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_Padding_601_2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_Padding_601_3 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_Padding_601_4 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+
+
+CM_ BO_ 1665 "(500ms) Bus seems to contain key presses from panel around infotainment screen.
+
+Idle pattern is a repeated message alternating between 681 & 601 every 250ms with data F0 20 0A 01 FF FF FF FF
+
+All buttons generate 2* messages (to 681 and 601). The messages are repeated 4 times";
+CM_ SG_ 1665 Sequence "Idle messages (no activity = 20) do not increment sequence, only incremented when you press buttons.";
+CM_ SG_ 1665 ButtonActive "";
+CM_ SG_ 1665 ButtonPressData "Contains which button is pressed, see value column
+
+All buttons generate 2 nessages (to 681 and 601). The messages are repeated 4 times.
+In the last message(of 4) byte 5 highest bit is 0
+
+Exceptions, Vol+ and Map only repeate 3times, Power only 1 message";
+CM_ SG_ 1665 Unknown_Padding_681_1 "Always FF";
+CM_ SG_ 1665 Unknown_Padding_681_2 "Always FF";
+CM_ SG_ 1665 Unknown_Padding_681_3 "Always FF";
+CM_ BO_ 1537 "(500ms)";
+CM_ SG_ 1537 StatusCopy "F0 during idle, E0 when button pressed";
+CM_ SG_ 1537 SequenceCopy "Same as 681 message, increments
+";
+CM_ SG_ 1537 NewSignal_0011 "0A when Idle, FF when button press ongoing";
+CM_ SG_ 1537 NewSignal_0012 "01 when Idle, FF when button press ongoing";
+CM_ SG_ 1537 Unknown_Padding_601_1 "Always FF";
+CM_ SG_ 1537 Unknown_Padding_601_2 "Always FF";
+CM_ SG_ 1537 Unknown_Padding_601_3 "Always FF";
+CM_ SG_ 1537 Unknown_Padding_601_4 "Always FF";
+VAL_ 1665 Status 15 "Idle" 4 "Other Button" 3 "Power" ;
+VAL_ 1665 Sequence 10 "Seq1" 20 "Seq2" 30 "Seq3" 40 "Seq4" 50 "Seq5" 60 "Seq6" 70 "Seq7" ;
+VAL_ 1665 Status2 10 "Idle" 32 "Power" 64 "Other Button" ;
+VAL_ 1665 ButtonActive 1 "Idle" 13 "ButtonPressOngoing" ;
+VAL_ 1665 ButtonPressData 163 "FM/AM" 200 "CD" 172 "AUX" 201 "Vol Plus" 202 "Vol Minus" 140 "Map" 196 "Menu" 177 "Status" 146 "Seek Up" 145 "Seek Down" 204 "Zero Emission" ;
+VAL_ 1537 SequenceCopy 10 "Seq1" 20 "Seq2" 30 "Seq3" 40 "Seq4" 50 "Seq5" 60 "Seq6" 70 "Seq7" ;
+

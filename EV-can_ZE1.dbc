@@ -1,0 +1,904 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCM INVmc HVAC TCU OBCpd HVBAT
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ Unknown_55B_5 m3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ StopChargeMaybe : 52|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_59E_3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_1D4_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_1D4_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HCM_WakeUpSleepCommand : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50B_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5_1 m1 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5_0 m0 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5_2 m2 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50C_5_3 m3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALU_Question : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mux_50C M : 24|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ TCSOC : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_HistData_HighLow_Voltage_Time : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_Tempera_Wakeup_Phase : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_Historical_Data_Temperature : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Integrated_Current : 24|8@1- (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_Degrade_IntRes_Coeff : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_Historical_Data_Cell_Voltage : 42|6@1+ (1,0) [0|4380] "mV" Vector__XXX
+ SG_ HCM_CLOCK_50C : 24|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ALU_QUESTION_FOR_LBC : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC : 40|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+ SG_ DiagSomething0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiagSomething1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiagSomething2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ DiagSomething3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ActiveFuelBars : 3|5@1+ (1,0) [0|12] "-" Vector__XXX
+ SG_ ChargeMinutesRemaining : 2|11@0+ (1,0) [0|2047] "minutes" Vector__XXX
+ SG_ StartupDataUnknown1 m1 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ StartupDataUnknown2 m2 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ StartupDataUnknown3 m3 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_11A_4_1 m1 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_11A_4_2 m2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_11A_4_3 m3 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_MIN m3 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_MAX m1 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_HighLow_Volt_Tim_AVG m2 : 0|4@1+ (1,0) [0|10] "times" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_4 m4 : 9|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0016 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1468 x5BC: 8 HVBAT
+ SG_ LB_Remain_Capacity_GIDS : 7|10@0+ (1,0) [0|500] "gids" Vector__XXX
+ SG_ LB_Remaining_Capacity_Segments : 16|8@1+ (1,0) [0|240] "" Vector__XXX
+ SG_ LB_Temperature_Segment_For_Dash : 24|8@1+ (0.4166666,0) [0|100] "%" Vector__XXX
+ SG_ LB_Capacity_Deterioration_Rate : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_Remain_Cap_Segment_Swit_Flag : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_Output_Power_Limit_Reason : 45|3@1+ (1,0) [0|7] "modemask" Vector__XXX
+ SG_ LB_Remain_Charge_Time_Condition : 41|5@0+ (1,0) [0|30] "modemask" Vector__XXX
+ SG_ LB_Remain_Charge_Time : 52|13@0+ (1,0) [0|8190] "minutes" Vector__XXX
+ SG_ Mux_5BC M : 32|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ChargeBars m8 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
+ SG_ CapacityBars m9 : 20|4@1+ (1,0) [0|15] "-" Vector__XXX
+
+BO_ 475 x1DB: 8 HVBAT
+ SG_ LB_Current : 7|11@0- (0.5,0) [-400|200] "A" Vector__XXX
+ SG_ LB_Relay_Cut_Request : 11|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Failsafe_Status : 8|3@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Total_Voltage : 23|10@0+ (0.5,0) [0|450] "V" Vector__XXX
+ SG_ LB_MainRelayOn_flag : 29|1@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Full_CHARGE_flag : 28|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_INTER_LOCK : 27|1@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Discharge_Power_Status : 25|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Voltage_Latch_Flag : 24|1@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_Usable_SOC : 32|7@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_PRUN_1DB : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_1DB : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+ SG_ LB_Current_2 : 47|12@0+ (0.5,0) [-600|400] "" Vector__XXX
+
+BO_ 1371 x55B: 8 HVBAT
+ SG_ LB_SOC : 7|10@0+ (1,0) [0|1000] "%+1" Vector__XXX
+ SG_ LB_ALU_ANSWER : 16|8@1+ (1,0) [85|170] "" Vector__XXX
+ SG_ LB_IR_Sensor_Wave_Voltage : 39|10@0+ (1,0) [0|4990] "mV (5000/1024)" Vector__XXX
+ SG_ LB_IR_Sensor_Malfunction : 40|1@1+ (1,0) [0|1] "modemask" Vector__XXX
+ SG_ LB_Capacity_Empty : 55|1@1+ (1,0) [0|1] "modemask" Vector__XXX
+ SG_ LB_RefusetoSleep : 53|2@1+ (1,0) [0|3] "modemask" Vector__XXX
+ SG_ LB_PRUN_55B : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CRC_55B : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+
+BO_ 1370 x55A: 8 INVmc
+ SG_ MotorTemperature : 40|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ InverterComBoardTemp : 8|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ IGBTTemperature : 16|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+ SG_ IGBTDriverBoardTemperature : 24|8@1+ (1,0) [0|255] "dC*2" Vector__XXX
+
+BO_ 476 x1DC: 8 HVBAT
+ SG_ LB_Discharge_Power_Limit : 7|10@0+ (0.25,0) [0|254] "kW" Vector__XXX
+ SG_ LB_Charge_Power_Limit : 13|10@0+ (0.25,0) [0|254] "kW" Vector__XXX
+ SG_ LB_MAX_POWER_FOR_CHARGER : 19|10@0+ (0.1,-10) [-10|90] "kW" Vector__XXX
+ SG_ LB_Charge_Power_Status : 24|2@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_BPCMAX_UPRATE : 37|3@1+ (1,0) [0|0] "MODEMASK" Vector__XXX
+ SG_ LB_CODE_CONDITION : 34|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_CODE1 : 33|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_CODE2 : 41|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_PRUN_1DC : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ CRC_1DC : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+
+BO_ 474 x1DA: 8 INVmc
+ SG_ MG_InputVoltage : 0|8@1+ (2,0) [0|508] "V" Vector__XXX
+ SG_ MG_EffectiveTorque : 18|11@0- (0.5,0) [-274|274] "Nm" Vector__XXX
+ SG_ MG_OutputRevolution : 39|15@0- (1,0) [-16382|16382] "rpm" Vector__XXX
+ SG_ MG_CLOCK : 48|2@1+ (1,0) [0|3] "PRUN" Vector__XXX
+ SG_ CRC_1DA : 56|8@1+ (1,0) [0|0] "CRC" Vector__XXX
+ SG_ MG_ErrorCodes : 50|6@1+ (1,0) [0|0] "status" Vector__XXX
+
+BO_ 1359 x54F: 8 HVAC
+ SG_ InteriorIntakeTemp : 0|8@1+ (0.5,-14) [0|0] "degC" Vector__XXX
+ SG_ ACPowerConsumption : 8|8@1+ (1,0) [0|0] "50W/bit?" Vector__XXX
+ SG_ ACAutoAmpStatus : 46|2@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ HeaterPowerConsumption : 40|6@1+ (1,0) [0|0] "300W/bit?" Vector__XXX
+
+BO_ 1356 x54C: 8 HVAC
+ SG_ ACEvaporatorTemperature : 0|8@1+ (1,0) [0|0] "0.25C/bit?" Vector__XXX
+ SG_ CC_ClimateControlStatus : 10|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ FanVoltage : 40|8@1+ (1,0) [0|0] "0.05 V/bit" Vector__XXX
+ SG_ OutsideAmbientTemperature : 48|8@1+ (0.5,-40.5) [-40|60] "degC" Vector__XXX
+ SG_ CC_BackScreenDefrost : 9|1@1+ (1,0) [0|1] "-" Vector__XXX
+ SG_ CC_ACStatus : 11|1@1+ (1,0) [0|1] "-" Vector__XXX
+
+BO_ 282 x11A: 8 VCM
+ SG_ JoystickGearPosition : 4|4@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ CarOnOffStatus : 13|3@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ MPRUN_11A_1 : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_11A : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SteeringWheelButton : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HeartbeatVCM : 24|8@1+ (1,0) [85|170] "" Vector__XXX
+ SG_ MPRUN_11A_2 : 38|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ECOselected : 12|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 468 x1D4: 8 VCM
+ SG_ MotorAmpTorqueRequest : 23|12@0- (0.25,0) [0|1024] "Nm" Vector__XXX
+ SG_ HCM_CLOCK : 38|2@1+ (1,0) [0|3] "-" Vector__XXX
+ SG_ StatusOfHighVoltagePowerSupply : 34|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ Relay_Plus_Output_Status : 46|1@1+ (1,0) [0|0] "-" Vector__XXX
+ SG_ CRC_1D4 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ChargeStatus : 48|8@1+ (1,0) [0|255] "MODEMASK" Vector__XXX
+ SG_ UnknownBits_1D4 : 41|2@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 498 x1F2: 8 VCM
+ SG_ CommandedChargePower : 1|10@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TargetCharge_SOC : 7|1@1+ (1,0) [0|0] "modemask" Vector__XXX
+ SG_ Charge_StatusTransitionReqest : 21|2@1+ (1,0) [0|3] "modemask" Vector__XXX
+ SG_ Keep_SOC_Request : 20|1@1+ (1,0) [0|0] "modemask" Vector__XXX
+ SG_ PCS_Connector_Detection : 17|1@1+ (1,0) [0|0] "modemask" Vector__XXX
+ SG_ MPRUN : 48|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_498 : 63|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CSUM_498 : 56|4@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 644 x284: 8 VCM
+ SG_ LeftWheelSpeedSensor : 7|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ RightWheelSpeedSensor : 23|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ AverageRearSpeedSensor : 39|16@0+ (1,0) [0|65535] "pulses" Vector__XXX
+ SG_ DistanceTraveled1 : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ DistanceTraveled2 : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1355 x54B: 8 HVAC
+ SG_ ClimateControlStatus1 : 0|8@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ClimateVentModeTarget : 16|8@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ ClimateVentModeIntake : 24|8@1+ (1,0) [0|0] "status" Vector__XXX
+ SG_ FanSpeed : 35|5@1+ (1,0) [1|7] "speed" Vector__XXX
+ SG_ CCButtonPress : 56|8@1+ (1,0) [0|0] "0/1" Vector__XXX
+
+BO_ 1472 x5C0: 8 HVBAT
+ SG_ LB_Historical_Data_Swich_Flag M : 0|3@1+ (1,0) [0|6] "mux" Vector__XXX
+ SG_ LB_Heating_Start_Send_Request : 5|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_Heating_Stop_Send_Request : 4|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ Batt_Heater_Mail_Send_Request : 8|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_HEATEXIST : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ LB_NextWakeupTimeForBatterHeater : 48|5@1+ (1,0) [0|1800] "minutes" Vector__XXX
+ SG_ LB_Diagnosis_Trouble_Code : 56|8@1+ (1,0) [0|255] "DTC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_MIN m3 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_MAX m1 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temp_WakeupPhase_AVG m2 : 9|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_MIN m3 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_MAX m1 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_Temperature_AVG m2 : 17|7@1+ (1,-40) [-40|86] "degC" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentMIN m3 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentMAX m1 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_IntegratedCurrentAVG m2 : 24|8@1+ (0.6,0) [-76.2|76.2] "Ah" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffMIN m3 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffMAX m1 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Degr_IntRes_CoeffAVG m2 : 33|7@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_MIN m3 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_MAX m1 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
+ SG_ LB_HistData_Cell_Voltage_AVG m2 : 42|6@1+ (40,1900) [0|4380] "mV" Vector__XXX
+
+BO_ 1290 x50A: 8 VCM
+ SG_ Unknown_50A_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ACCompressorPressure : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ACStatusBits_RestUnknown : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_50A_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1291 x50B: 7 VCM
+ SG_ DiagMuxOn_VCM : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ HCM_WakeUpSleepCmd : 30|2@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Batt_Heater_Mail_Send_OK : 53|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1354 x54A: 8 HVAC
+ SG_ CCStatusPlusUnknown : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ClimateControlSetpoint : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_54A_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AmbientTempAC : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1118 x45E: 1 Vector__XXX
+
+BO_ 1438 x59E: 8 HVBAT
+ SG_ LB_Full_Capacity_for_QC : 20|9@0+ (100,0) [0|50000] "Wh" Vector__XXX
+ SG_ LB_Remain_Capacity_for_QC : 27|9@0+ (100,0) [0|50000] "Wh" Vector__XXX
+ SG_ SoC_related_correction : 63|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ LB_Full_Capacity_for_QC_62 : 21|10@0+ (100,0) [0|62149] "Wh" Vector__XXX
+
+BO_ 1153 x481: 2 Vector__XXX
+ SG_ Unknown_481_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_481_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 912 x390: 8 OBCpd
+ SG_ OBC_Status_AC_Voltage : 27|2@1+ (1,0) [0|3] "status" Vector__XXX
+ SG_ OBC_Flag_QC_Relay_On_Announcemen : 38|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ OBC_Flag_QC_IR_Sensor : 47|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ OBC_Maximum_Charge_Power_Out : 40|9@0+ (0.1,0) [0|50] "kW" Vector__XXX
+ SG_ PRUN_390 : 60|2@1+ (1,0) [0|3] "PRUN" Vector__XXX
+
+BO_ 915 x393: 8 OBCpd
+ SG_ PRUN_393 : 60|2@1+ (1,0) [0|3] "PRUN" Vector__XXX
+ SG_ Unknown_393_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_393_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CSUM_393 : 56|4@1+ (1,0) [0|0] "CSUM" Vector__XXX
+
+BO_ 1539 x603: 8 VCM
+
+BO_ 1657 x679: 1 OBCpd
+
+BO_ 493 x1ED: 3 HVBAT
+ SG_ MAX_POWER_FOR_CHARGER : 7|11@0+ (0.1,10) [0|204] "kW" Vector__XXX
+ SG_ prun_0x1ed : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ crc_0x1ed : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 450 x1C2: 1 HVBAT
+ SG_ Unknown_1C2_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 896 x380: 8 HVBAT
+ SG_ Unknown_380_1 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_380_2 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_380_3 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_380_4 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_380_5 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_380_6 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_380_7 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_380_8 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1515 x5EB: 8 HVBAT
+ SG_ DataIndex : 7|3@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_2 : 4|5@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MUX_5EB : 15|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_4 : 11|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_5 : 23|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_6 : 31|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_7 : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_8 : 47|10@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5EB_9 : 53|14@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1471 x5BF: 8 HVBAT
+ SG_ Unknown_5BF_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5BF_7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 288 x120: 4 INVmc
+ SG_ Unknown_120_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_120 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 264 x108: 3 Vector__XXX
+ SG_ Unknown_108_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_108_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 952 x3B8: 5 Vector__XXX
+ SG_ Unknown_3b8_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_3b8_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_3b8_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_3b8_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_3b8_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 853 x355: 8 Vector__XXX
+ SG_ Unknown_355_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_355_6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1477 x5C5: 8 Vector__XXX
+ SG_ Unknown_5C5_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C5_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5C5_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1485 x5CD: 5 Vector__XXX
+ SG_ Unknown_5CD_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5CD_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5CD_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5CD_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5CD_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1573 x625: 6 Vector__XXX
+ SG_ Unknown_625_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_625_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1210 x4BA: 8 OBCpd
+ SG_ DynamicControlStatus : 0|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ HighCurrentControlStatus : 1|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ HighVoltageControlStatus : 2|1@1+ (1,0) [0|1] "status" Vector__XXX
+
+BO_ 1211 x4BB: 8 OBCpd
+ SG_ V2HchargeDischargeSequenceNum : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ApproxDischargeCompletionTime : 15|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AvailableVehicleEnergy : 31|16@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 968 x3C8: 8 OBCpd
+ SG_ EVContactorWeldingDetection : 0|8@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ AvailableOutputVoltage : 15|16@0+ (0.01,0) [0|600] "V" Vector__XXX
+ SG_ AvailableOutputCurrent : 24|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ ThresholdVoltage : 39|16@0+ (0.01,0) [0|600] "V" Vector__XXX
+
+BO_ 969 x3C9: 8 OBCpd
+ SG_ ControlProtocolNumberQC : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ OutputVoltage : 15|16@0+ (0.01,0) [0|600] "V" Vector__XXX
+ SG_ OutputCurrent : 24|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ StatusChargerStopControl : 45|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultChargingSystemMalfunction : 44|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultBatteryIncompatibility : 43|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusVehicleConnectorLock : 42|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultStationMalfunction : 41|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusStation : 40|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ RemainingChargingTime10sBit : 48|8@1+ (10,0) [0|2540] "seconds" Vector__XXX
+ SG_ RemainingChargingTime1minBit : 56|8@1+ (1,0) [0|255] "minutes" Vector__XXX
+
+BO_ 459 x1CB: 8 Vector__XXX
+ SG_ Unknown_1CB_5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ PRUN_1CB : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CRC_1CB : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1209 x4B9: 1 Vector__XXX
+ SG_ Unknown_4B9_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 956 x3BC: 8 OBCpd
+ SG_ ControlProtocolNumberEV : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ TargetBatteryVoltage : 15|16@0+ (0.01,0) [0|600] "V" Vector__XXX
+ SG_ ChargingCurrentRequest : 24|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ FaultBatteryVoltageDeviation : 36|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultHighBatteryTemperature : 35|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultBatteryCurrentDeviation : 34|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultBatteryUndervoltage : 33|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ FaultBatteryOvervoltage : 32|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusNormalStopRequest : 44|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusVehicle : 43|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusChargingSystem : 42|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusVehicleShifterPosition : 41|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ StatusVehicleCharging : 40|1@1+ (1,0) [0|1] "status" Vector__XXX
+ SG_ ChargingRate : 48|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 1390 x56E: 1 TCU
+ SG_ Unknown_56E_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1459 x5B3: 5 Vector__XXX
+ SG_ Unknown_5B3_0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Unknown_5B3_4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1541 x605: 1 Vector__XXX
+
+BO_ 1543 x607: 1 Vector__XXX
+
+BO_ 953 x3B9: 8 OBCpd
+ SG_ MaximumBatteryVoltage : 40|16@1+ (0.01,0) [0|600] "V" Vector__XXX
+ SG_ ConstantOfChargingRateIndication : 48|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ MinimumChargeCurrent : 0|8@1+ (1,0) [0|255] "A" Vector__XXX
+
+BO_ 958 x3BE: 8 OBCpd
+ SG_ MaximumDischargeCurrent : 0|8@1+ (1,0) [0|255] "A" Vector__XXX
+ SG_ MinimumDischargeVoltage : 39|16@0+ (0.01,0) [0|600] "V" Vector__XXX
+ SG_ MinimumBatteryDischargeLevel : 48|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ MaxRemainingCapacityForCharging : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1216 x4C0: 8 OBCpd
+
+BO_ 1212 x4BC: 8 OBCpd
+ SG_ AutomakerCode : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ OptionalContent : 8|56@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 955 x3BB: 8 OBCpd
+ SG_ MaxChargingTime10sBit : 8|8@1+ (10,0) [0|2540] "seconds" Vector__XXX
+ SG_ MaxChargingTime1minBit : 16|8@1+ (1,0) [0|255] "minutes" Vector__XXX
+ SG_ EstimatedChargingTime : 24|8@1+ (1,0) [0|254] "minutes" Vector__XXX
+ SG_ RatedBatteryCapacity : 47|16@0+ (0.11,0) [0|100] "kWh" Vector__XXX
+
+
+
+CM_ BU_ VCM "Vehicle Control Module";
+CM_ BU_ INVmc "Inverter Motor Controller";
+CM_ BU_ HVAC "Heating Ventilation and Air Conditioning";
+CM_ BU_ TCU "Telematics Control Unit";
+CM_ BU_ OBCpd "On Board Charger power distribution";
+CM_ BU_ HVBAT "High Voltage Battery (Lithium Battery Controller)";
+CM_ SG_ 3221225472 Unknown_59E_3 "Dala: DEC 152, 144, 136 seen here in short log";
+CM_ SG_ 3221225472 HCM_WakeUpSleepCommand "";
+CM_ SG_ 3221225472 Unknown_50B_4 "00";
+CM_ SG_ 3221225472 Unknown_50B_5 "";
+CM_ SG_ 3221225472 Unknown_50B_6 "";
+CM_ SG_ 3221225472 Unknown_50C_5_1 "Dala, def muxed";
+CM_ SG_ 3221225472 Unknown_50C_5_0 "Dala, def muxed
+
+Mux 1 and 2 look like the inverse of 0 and 3";
+CM_ SG_ 3221225472 Unknown_50C_5_2 "Dala, def muxed";
+CM_ SG_ 3221225472 Unknown_50C_5_3 "Dala, def muxed";
+CM_ SG_ 3221225472 ALU_Question "5d,b2 Dala: Used for backwardscompability?";
+CM_ SG_ 3221225472 Mux_50C "0,1,2,3";
+CM_ SG_ 3221225472 TCSOC "Position in frame?";
+CM_ SG_ 3221225472 LB_HistData_HighLow_Voltage_Time "";
+CM_ SG_ 3221225472 LB_HistData_Tempera_Wakeup_Phase "";
+CM_ SG_ 3221225472 LB_Historical_Data_Temperature "";
+CM_ SG_ 3221225472 LB_HistData_Integrated_Current "2S";
+CM_ SG_ 3221225472 HCM_CLOCK_50C "PRUN Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 3221225472 ALU_QUESTION_FOR_LBC "B2h = first question 5Dh = second question";
+CM_ SG_ 3221225472 CRC "CRC";
+CM_ SG_ 3221225472 DiagSomething0 "Active during drive, FF charge";
+CM_ SG_ 3221225472 DiagSomething1 "Active during drive, FF charge";
+CM_ SG_ 3221225472 DiagSomething3 "Seems to be related to SOC but not LTI";
+CM_ SG_ 3221225472 ActiveFuelBars "From VCM->Cluster";
+CM_ SG_ 3221225472 ChargeMinutesRemaining "Minutes from 3kW charging estimate on dash.
+
+Example:
+0x09 FE
+0000 1001 1111 1110
+001 1111 1110 = 510min";
+CM_ SG_ 3221225472 StartupDataUnknown1 "Activity only during startup, then holds a constant value for each channel";
+CM_ SG_ 3221225472 StartupDataUnknown2 "Activity only during startup, then holds a constant value for each channel";
+CM_ SG_ 3221225472 StartupDataUnknown3 "Activity only during startup, then holds a constant value for each channel";
+CM_ SG_ 3221225472 LB_HistData_HighLow_Volt_Tim_MIN "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ SG_ 3221225472 LB_HistData_HighLow_Volt_Tim_MAX "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ SG_ 3221225472 LB_HistData_HighLow_Volt_Tim_AVG "LB_Historical_Data_High_or_Low_Voltage_Times";
+CM_ BO_ 1468 "Lithium Battery Controller (100ms)";
+CM_ SG_ 1468 LB_Remain_Capacity_GIDS "0-281 for 24kWh, 0-363 for 30kWh, 0-498 for 40kWh, 0-775 for 62kWh
+1 LSB = 80WH
+
+LB_CAPR (aka 'gids') is an 80Wh resolution capacity indication used by the GOM and combined with LB_FULLCAP on gen1 Leafs to generate the capacity dashes behind the GOM.";
+CM_ SG_ 1468 LB_Remaining_Capacity_Segments "Contains chargebars and capacitybars, alternating depending on mux. Simplified lower down in the message";
+CM_ SG_ 1468 LB_Temperature_Segment_For_Dash "For instrumentation cluster. Unit is %, times 5/12 according to documentation, kinda strange .Should be average of the 3 sensors inside the battery pack.";
+CM_ SG_ 1468 LB_Capacity_Deterioration_Rate "SOH (State-of-Health) Effects the charge gauge, lower numbers mean more chargebars";
+CM_ SG_ 1468 LB_Remain_Cap_Segment_Swit_Flag "";
+CM_ SG_ 1468 LB_Output_Power_Limit_Reason "Indicates why power is limited";
+CM_ SG_ 1468 LB_Remain_Charge_Time_Condition "Mux for LB_Remain_charge_time
+
+00000b = Quick charge 01001b = Normal Charge 200V SOC100% 01010b = Normal Charge 200V SOC80% 10001b = Normal Charge 100V SOC100% 10010b = Normal Charge 100V SOC80% 11111b = Invalid value";
+CM_ SG_ 1468 LB_Remain_Charge_Time "1FFFh is used as \"Unavailable value\"";
+CM_ SG_ 1468 Mux_5BC "Multiplexor";
+CM_ SG_ 1468 ChargeBars "Range 0-15 (Below data from test at 0%SOC, writing values to bus)
+15 = 12 chargebars
+14 = 12 chargebars
+13 = 11 chargebars
+12 = 10 chargebars
+11 = 9 chargebars
+10 = 8 chargebars !
+9 = 8 chargebars !
+8 = 7 chargebars
+7 = 6 chargebars
+6 = 5 chargebars
+5 = 4 chargebars !
+4 = 4 chargebars !
+3 = 3 chargebars
+2 = 2 chargebars
+1 = 1 chargebars
+0 = 0 chargebars";
+CM_ SG_ 1468 CapacityBars "Range 0-15 Below test data by writing to bus and seeing what happens
+15 = 12 capacitybars
+14 = 12 capacitybars
+13 = 11 capacitybars
+12 = 10 capacitybars
+11 = 9 capacitybars
+10 = 8 capacitybars !
+9 = 8 capacitybars !
+8 = 7 capacitybars
+7 = 6 capacitybars
+6 = 5 capacitybars
+5 = 4 capacitybars !
+4 = 4 capacitybars !
+3 = 3 capacitybars
+2 = 2 capacitybars
+1 = 1 capacitybars
+0 = 0 capacitybars,";
+CM_ BO_ 475 "Lithium Battery Controller (10ms)";
+CM_ SG_ 475 LB_Current "BatteryCurrentSignal , 2s comp, 1lSB = 0.5A";
+CM_ SG_ 475 LB_Relay_Cut_Request "00 = No-Request 01 = Main Relay OFF Request 10 = Main Relay OFF Request 11 = Main Relay OFF Request";
+CM_ SG_ 475 LB_Failsafe_Status "Request Stop charging. This is the command to request stop charging
+frame.data[1] = (frame.data[1] & 0xE0) | 2;
+
+Bit 0 indicates an EV system error (just the EV system warning light on the dash), bit 1 stops the car from charging and bit 2 is the turtle light and immobilizes the car.
+
+000b = normal start Request 001b = Normal Stop Request 010b = Charging Mode Stop Request 011b = Charging Mode Stop Request & Normal Stop Request 100b = Caution Lamp Request 101b = Caution Lamp Request & Normal Stop Request 110b = Caution Lamp Request & Charging Mode Stop Request 111b = Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request";
+CM_ SG_ 475 LB_Total_Voltage "0.5V/bit
+";
+CM_ SG_ 475 LB_MainRelayOn_flag "0h = No-Permission 1h = Main Relay On Permission";
+CM_ SG_ 475 LB_Full_CHARGE_flag "";
+CM_ SG_ 475 LB_INTER_LOCK "0h = Not Inter Lock connected 1h = Inter Lock connected";
+CM_ SG_ 475 LB_Discharge_Power_Status "00b = Reserved 01b = Normal limit POUT 10b = High rate limit POUT 11b = Immediate limit POUT";
+CM_ SG_ 475 LB_Voltage_Latch_Flag "0->1:Cell Voltage Latch
+1->0:Cell Voltage Latch";
+CM_ SG_ 475 LB_Usable_SOC "Contains SOC for dash. LB_USABLE_SOC is a 1% resolution 'proper' SOC calculated by the LBC and used by ABB chargers and the SOC display in the dash menu as well as the 3-light charging indicator on top of the dash [Needs to be copied to this location when doing 40/62kWh swaps into AZE0]";
+CM_ SG_ 475 LB_PRUN_1DB "MPR1DB Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 475 CRC_1DB "CRC";
+CM_ SG_ 475 LB_Current_2 "Only 62 kWh leaf";
+CM_ BO_ 1371 "Lithium Battery Controller (100ms)";
+CM_ SG_ 1371 LB_SOC "State of charge. LB_SOC is a 0.1% resolution SOC that is used on startup by Leaf Spy Pro and then ignored in favor of 0x7BB groups, and seemingly used nowhere in the car";
+CM_ SG_ 1371 LB_ALU_ANSWER "HCM:B2h LBC:AAh HCM:5Dh LBC:55h
+
+This message is repeated 5x, to offer backwardscompability to 2011/2013 models? The message on these cars are run at 500ms.";
+CM_ SG_ 1371 LB_IR_Sensor_Wave_Voltage "Internal resistance wave voltage";
+CM_ SG_ 1371 LB_IR_Sensor_Malfunction "Note! LB_IRSEN is the IR sensor fault flag - This flag can be set in salvage packs because the car itself has had an isolation fault, due to impact damage, and LB_IRSEN doesn't clear for a good long time after it's been set. Not possible to clear with Leafspy!
+
+If you encounter this error, drop the battery pack and open it up. Inspect for water intrusion.";
+CM_ SG_ 1371 LB_PRUN_55B "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 1371 CRC_55B "CRC";
+CM_ BO_ 1370 "Inverter (100ms)";
+CM_ SG_ 1370 MotorTemperature "Stays at 0 on 2015 Leaf?";
+CM_ SG_ 1370 InverterComBoardTemp "Inverter communications board temp";
+CM_ SG_ 1370 IGBTTemperature "";
+CM_ SG_ 1370 IGBTDriverBoardTemperature "Temperature only active during drive (IGBT driver board?)";
+CM_ BO_ 476 "Lithium Battery Controller (10ms)";
+CM_ SG_ 476 LB_Discharge_Power_Limit "Max available power that can be pulled from battery";
+CM_ SG_ 476 LB_Charge_Power_Limit "Max power that battery can be charged with";
+CM_ SG_ 476 LB_MAX_POWER_FOR_CHARGER "LB_BPCMAX";
+CM_ SG_ 476 LB_Charge_Power_Status "00b = Reserved 01b = Normal limit PIN 10b = High rate limit PIN 11b = Immediate limit PIN";
+CM_ SG_ 476 LB_BPCMAX_UPRATE "BPC MAX Uprate Level 1-8. Dala: (CAN-bridge testing) This value specifies how quickly the VCM follows the requested power in \"LB_MAX_POWER_FOR_CHARGER\".ZE0 Example, if Level 1 is selected and battery requests 45kW of quickcharging power, it will take 8minutes for power to ramp up from 0kW->45kW. If Level 8 is selected, it will take not ramp at all, and just intantaneously follow the requested power. If low level is forced, some quickcharging stations will fail to charge the vehicle, with an error message stating that too low current was demanded. Special notes for AZE0, the newer AZE0 VCM will ramp more aggressively at level 1 compared to ZE0, and no issues with fastcharging even though slow ramp rate is selected.";
+CM_ SG_ 476 LB_CODE_CONDITION "";
+CM_ SG_ 476 LB_CODE1 "";
+CM_ SG_ 476 LB_CODE2 "";
+CM_ SG_ 476 LB_PRUN_1DC "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 476 CRC_1DC "CRC";
+CM_ BO_ 474 "Inverter (10ms)";
+CM_ SG_ 474 MG_InputVoltage "VHMG - Inverter output voltage?
+
+01..b9 Follows BVS(BatteryVoltageSignal) until near end of drive (turtle?) or end of charging ";
+CM_ SG_ 474 MG_EffectiveTorque "STMG -  Response from Inverter how much torque was applied (Demand is in 0x1D4) Note that value is 2S!";
+CM_ SG_ 474 MG_OutputRevolution "RNMG - Signed value, negative for reverse.
+
+Values 0x7fff and 0x7ffe are seen during turning on of car";
+CM_ SG_ 474 MG_CLOCK "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 474 CRC_1DA "CRC";
+CM_ SG_ 474 MG_ErrorCodes "Contains info about error codes blocking inverter operation.
+Possible causes not identified yet, but good starting point:
+- HV missing (180V within 10s)
+- too high temperature
+- CAN messages not detected within 2s after poweron";
+CM_ BO_ 1359 "AC Auto Amp (100ms)";
+CM_ SG_ 1359 InteriorIntakeTemp "Climate control's measurement of temperature inside the car. Subtracting 14 is a bit of a guess worked out by observing how auto climate control reacts when this reaches the target setting.";
+CM_ SG_ 1359 ACPowerConsumption "Rises to a steady value with ac on.  Off immediately with ac off.  No change with heater on";
+CM_ SG_ 1359 ACAutoAmpStatus "location?";
+CM_ SG_ 1359 HeaterPowerConsumption "Goes up slowly with heater on; no change with ac on";
+CM_ BO_ 1356 "AC Auto Amp (100ms)";
+CM_ SG_ 1356 ACEvaporatorTemperature "drops with ac on (after short lag).  No change with heater on";
+CM_ SG_ 1356 CC_ClimateControlStatus "Data only changes if climate control is activated or deactivated";
+CM_ SG_ 1356 FanVoltage "Commanded fan speed is proportional to Voltage";
+CM_ SG_ 1356 OutsideAmbientTemperature "Ambient temperature. This one has half-degree C resolution and seems to stay within a degree or two of the \"eyebrow\" temp display.";
+CM_ SG_ 1356 CC_BackScreenDefrost "Data only changes if climate control is activated or deactivated";
+CM_ SG_ 1356 CC_ACStatus "Data only changes if climate control is activated or deactivated";
+CM_ BO_ 282 "Vehicle Control Module (10ms)
+
+Shift controller module for 2011-2012 ZE0";
+CM_ SG_ 282 JoystickGearPosition "(MSBits selected gear: 4 for D/B, 3 for N, 2 for R,0 for Parked)";
+CM_ SG_ 282 MPRUN_11A_1 "0, 1, 2, 3";
+CM_ SG_ 282 CRC_11A "Activity only during startup, then holds a constant value for each channel";
+CM_ SG_ 282 SteeringWheelButton "00,04,80 observed here";
+CM_ SG_ 282 HeartbeatVCM "55,AA (alternating between these two values, heartbeat?)
+01010101
+10101010";
+CM_ SG_ 282 ECOselected "If set, ECO mode is active and regen is increased";
+CM_ BO_ 468 "Vehicle Control Module (10ms)";
+CM_ SG_ 468 MotorAmpTorqueRequest "Requested Torque sent to inverter";
+CM_ SG_ 468 HCM_CLOCK "PRUN Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 468 StatusOfHighVoltagePowerSupply "BTONFN";
+CM_ SG_ 468 Relay_Plus_Output_Status "RLYP";
+CM_ SG_ 468 ChargeStatus "During charging, the first 3 MSBs are high, and if user aborts charge, the highest MSB will go low. Useful for detecting that charge was interrupted by user unplugging the charge cable.";
+CM_ BO_ 498 "Vehicle Control Module (10ms)";
+CM_ SG_ 498 CommandedChargePower "? 64 drive, 84-64 charge (tapers at end)";
+CM_ SG_ 498 TargetCharge_SOC "TCSOC";
+CM_ SG_ 498 Charge_StatusTransitionReqest "CHG_STA_RQ";
+CM_ SG_ 498 Keep_SOC_Request "KEEP_SOC_REQ When the temperature in the battery pack is low outside the timer charge set time, VCM transmists a keep SOC request signal to LBC via CAN. In this case, the battery is not charged, and only battery heater is activated.";
+CM_ SG_ 498 PCS_Connector_Detection "PSCONDET";
+CM_ SG_ 498 MPRUN "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 498 Unknown_498 "unknown - may indicate charging";
+CM_ SG_ 498 CSUM_498 "Checksum. All message nibbles summed together, plus 2. End result in hex is anded with 0xF.";
+CM_ BO_ 644 "ABS module relayed via VCM to EV-CAN";
+CM_ SG_ 644 LeftWheelSpeedSensor "2's comp";
+CM_ SG_ 644 RightWheelSpeedSensor "2's comp";
+CM_ SG_ 644 AverageRearSpeedSensor "??? speed sensor.  Maybe average of both rear? Or VehicleSpeedFromABS?";
+CM_ SG_ 644 DistanceTraveled1 "00..ff (wraps ~360 times in a 25 mile drive)";
+CM_ SG_ 644 DistanceTraveled2 "00..ff (wraps ~360 times in a 25 mile drive)";
+CM_ BO_ 1355 "AC Auto Amp (100ms)";
+CM_ SG_ 1355 ClimateControlStatus1 "00 CC on, 01 CC off (2013: 0x10 or 0x11)";
+CM_ SG_ 1355 ClimateVentModeTarget "(face/feet/defrost)";
+CM_ SG_ 1355 ClimateVentModeIntake "(recirculating/fresh air/defrost)";
+CM_ SG_ 1355 FanSpeed "1<->7 ";
+CM_ SG_ 1355 CCButtonPress "Alternates after every CC button press, probably to alert A/V to display CC info";
+CM_ BO_ 1472 "Lithium Battery Controller (500ms)";
+CM_ SG_ 1472 LB_Historical_Data_Swich_Flag "Mux for historical data signals";
+CM_ SG_ 1472 LB_Heating_Start_Send_Request "0->1 Heat start Mail send request";
+CM_ SG_ 1472 LB_Heating_Stop_Send_Request "0->1 Heat stop Mail send request";
+CM_ SG_ 1472 Batt_Heater_Mail_Send_Request "";
+CM_ SG_ 1472 LB_HEATEXIST "Specifies if battery pack is equipped with heating elements";
+CM_ SG_ 1472 LB_Diagnosis_Trouble_Code "Up to 2 error codes are indicated concurrently. If concurrent indication, they are sent alternately on each 500ms update cycle.
+
+Start-up restriction by LB_DTC:
+Wait on error stop mode and not to start-up when LB_DTC=153~200 is received during system start-up or operation.";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_MIN "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_MAX "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temp_WakeupPhase_AVG "LB_Historical_Data_Temperature_Wakeup_Phase";
+CM_ SG_ 1472 LB_HistData_Temperature_MAX "Affects cluster gauge for temperature?";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentMIN "2S
+
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentMAX "2S
+
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_IntegratedCurrentAVG "2S
+
+LB_Historical_Data_Integrated_Current";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffMIN "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient Dala: Trending MIN/MAX/AVG is strange. MAX/MIN sits at 100, AVG sits at 99";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffMAX "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient";
+CM_ SG_ 1472 LB_HistData_Degr_IntRes_CoeffAVG "LB_Historical_Data_Degradation_Internal_Resistance_Coefficient";
+CM_ SG_ 1472 LB_HistData_Cell_Voltage_MIN "";
+CM_ BO_ 1290 "VCM relay from A/C Auto Amp and AC Pressor Sensor (which is measured directly from VCM) (100ms)
+
+Message is identical on EV CAN and CAR CAN";
+CM_ SG_ 1290 Unknown_50A_0 "04,84,85";
+CM_ SG_ 1290 Unknown_50A_1 "02,13,33,40,42,53,72,73";
+CM_ SG_ 1290 Unknown_50A_2 "00,a0";
+CM_ SG_ 1290 ACCompressorPressure "Some sort of pressure/temperature?? 2c-44;
+
+rises with AC on; slow decay when off";
+CM_ SG_ 1290 ACStatusBits_RestUnknown "00,80  BIT1 = Rear defrost on/off";
+CM_ SG_ 1290 Unknown_50A_5 "a0";
+CM_ SG_ 1290 Unknown_50A_6 "04 , Only present in 2013+ (otherwise frame stops at 6bytes)";
+CM_ SG_ 1290 Unknown_50A_7 "00 , Only present in 2013+ (otherwise frame stops at 6bytes)";
+CM_ BO_ 1291 "Vehicle Control Module (100ms)";
+CM_ SG_ 1291 DiagMuxOn_VCM "CANMASK";
+CM_ SG_ 1291 HCM_WakeUpSleepCmd "FirstFrameValueIfAlgorithmNotReady = 3";
+CM_ SG_ 1291 Batt_Heater_Mail_Send_OK "";
+CM_ BO_ 1354 "AC Auto Amp (100ms)";
+CM_ SG_ 1354 CCStatusPlusUnknown "12,3c- CC Off; a0,da- CC On";
+CM_ SG_ 1354 Unknown_54A_1 "00 (80 in 2013+)";
+CM_ SG_ 1354 Unknown_54A_2 "70";
+CM_ SG_ 1354 Unknown_54A_3 "06,0a,0b,0f";
+CM_ SG_ 1354 ClimateControlSetpoint "00,39,52,53,54 (MY2011,2012)";
+CM_ SG_ 1354 Unknown_54A_5 "00";
+CM_ SG_ 1354 Unknown_54A_6 "00";
+CM_ SG_ 1354 AmbientTempAC "Appears to track ambient (+41)
+4f,8c-90";
+CM_ BO_ 1118 "??? Unknown sender module(Also empty)";
+CM_ BO_ 1438 "Lithium Battery Controller (500ms)";
+CM_ SG_ 1438 LB_Full_Capacity_for_QC "";
+CM_ SG_ 1438 LB_Remain_Capacity_for_QC "";
+CM_ SG_ 1438 SoC_related_correction "";
+CM_ SG_ 1438 LB_Full_Capacity_for_QC_62 "Only 62 kW";
+CM_ BO_ 1153 "??? Unknown sender module (500ms)";
+CM_ SG_ 1153 Unknown_481_1 "Dala: Static 0x40, 0x4b while charging";
+CM_ SG_ 1153 Unknown_481_2 "Dala: Static 0x00";
+CM_ BO_ 912 "On Board Charger (100ms)
+
+// Gen 2 Charger (FROM OVMS CODE)
+      //
+      // When the data is valid, can_databuffer[6] is the J1772 maximum
+      // available current if we're plugged in, and 0 when we're not.
+      // can_databuffer[3] seems to govern when it's valid, and is probably a
+      // bit field, but I don't have a full decoding
+      //
+      // specifically the last few frames before shutdown to wait for the charge
+      // timer contain zero in can_databuffer[6] so we ignore them and use the
+      // valid data in the earlier frames
+      //
+      // During plug in with charge timer activated, byte 3 & 6:
+      //
+      // 0x390 messages start
+      // 0x00 0x21
+      // 0x60 0x21
+      // 0x60 0x00
+      // 0xa0 0x00
+      // 0xb0 0x00
+      // 0xb2 0x15 -- byte 6 now contains valid j1772 pilot amps
+      // 0xb3 0x15
+      // 0xb1 0x00
+      // 0x71 0x00
+      // 0x69 0x00
+      // 0x61 0x00
+      // 0x390 messages stop
+      //
+      // byte 3 is 0xb3 during ch";
+CM_ SG_ 912 OBC_Status_AC_Voltage "ACVOLST - Type of AC voltage";
+CM_ SG_ 912 OBC_Flag_QC_Relay_On_Announcemen "FQCRELAYST - QC Relay announcement";
+CM_ SG_ 912 OBC_Flag_QC_IR_Sensor "FQCIRSENS - QC IR Sensor";
+CM_ SG_ 912 OBC_Maximum_Charge_Power_Out "MAXCHGPOUT - Maximum power supplied by charger in kW";
+CM_ SG_ 912 PRUN_390 "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ BO_ 915 "On Board Charger (100ms)";
+CM_ SG_ 915 PRUN_393 "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 915 Unknown_393_1 "Dala: 20 while idle, 53 while slowcharging";
+CM_ SG_ 915 Unknown_393_4 "Dala: Always 20 in logs";
+CM_ SG_ 915 CSUM_393 "Deviates from other CSUM: (All nibbles summed together)-1=CSUM";
+CM_ BO_ 1539 "Bootup Message, appears once during power on";
+CM_ BO_ 1657 "Bootup message, sent from OBC when J1772 plug is detected. Also sent during normal startup";
+CM_ BO_ 493 "Lithium Battery Controller (10ms) (62kWh only)";
+CM_ SG_ 493 MAX_POWER_FOR_CHARGER "";
+CM_ SG_ 493 prun_0x1ed "";
+CM_ SG_ 493 crc_0x1ed "Mux value / CRC?";
+CM_ BO_ 450 "Lithium Battery Controller (10ms)";
+CM_ SG_ 450 Unknown_1C2_1 "Dala: Loops between 0x50->0x5F, then repeats";
+CM_ BO_ 896 "Lithium Battery Controller (###ms) (Only present while quickcharging?)";
+CM_ SG_ 896 Unknown_380_8 "Dala: Most likely CRC";
+CM_ BO_ 1515 "Lithium Battery Controller (500ms)";
+CM_ SG_ 1515 Unknown_5EB_2 "Dala: length 4? in log 0F";
+CM_ BO_ 1471 "Lithium Battery Controller (###ms) (Only present while quickcharging?)";
+CM_ SG_ 1471 Unknown_5BF_7 "CRC?";
+CM_ BO_ 288 "Inverter (10ms)";
+CM_ SG_ 288 Unknown_120_2 "Counter? 0x01->0x0F and loops. Used for still alive checking?";
+CM_ SG_ 288 CRC_120 "CRC";
+CM_ BO_ 264 "??? (10ms)";
+CM_ SG_ 264 Unknown_108_1 "Counter 0x00->0x0F and loops";
+CM_ SG_ 264 Unknown_108_2 "CRC?";
+CM_ BO_ 952 "??? (100ms)";
+CM_ BO_ 853 "??? (40ms)";
+CM_ SG_ 853 Unknown_355_4 "Static while idle and charging (0x10)";
+CM_ SG_ 853 Unknown_355_6 "Static while idle and charging (0x40)";
+CM_ BO_ 1477 "??? (100ms)";
+CM_ SG_ 1477 Unknown_5C5_0 "Static in logs";
+CM_ SG_ 1477 Unknown_5C5_2 "Static in logs";
+CM_ SG_ 1477 Unknown_5C5_3 "Static in logs";
+CM_ BO_ 1485 "??? (5000ms)";
+CM_ BO_ 1573 "??? (100ms)";
+CM_ BO_ 1210 "100ms (Mirrored from QC-CAN, ID 0x110)";
+CM_ SG_ 1210 DynamicControlStatus "When this bit is 1 dynamic control is allowed. Dynamic Control = Charging station can increase of decrease \"available output current\" during charging.";
+CM_ BO_ 1211 "100ms (Mirrored from QC-CAN, ID 0x201)";
+CM_ SG_ 1211 ApproxDischargeCompletionTime "(Optional)";
+CM_ SG_ 1211 AvailableVehicleEnergy "(Optional)";
+CM_ BO_ 968 "100ms (Mirrored from QC-CAN, ID 0x108)";
+CM_ SG_ 968 EVContactorWeldingDetection "Identifier indicating whether or not the station deals with EV contactor welding detection";
+CM_ SG_ 968 AvailableOutputVoltage "Maximum output voltage value at the vehicle connector terminals. Raised to 1200 V max in Chademo 2.0";
+CM_ SG_ 968 AvailableOutputCurrent "Maximum output current value of the station";
+CM_ SG_ 968 ThresholdVoltage "Threshold voltage to stop the charging process in order to protect vehicle battery";
+CM_ BO_ 969 "100ms (Mirrored from QC-CAN, ID 0x109)";
+CM_ SG_ 969 ControlProtocolNumberQC "Software version number of control protocol or charging sequences that the station deal with";
+CM_ SG_ 969 OutputVoltage "Supply voltage value of the output circuit in the station. Raised to 1200 V max in Chademo 2.0";
+CM_ SG_ 969 OutputCurrent "Supply current value of the output circuit in the station";
+CM_ SG_ 969 StatusChargerStopControl "Status flag indicating whether or not the status proceeds with shutdown process";
+CM_ SG_ 969 FaultChargingSystemMalfunction "Status flag indicating whether or not there is a problem with EV, such as improper connection";
+CM_ SG_ 969 FaultBatteryIncompatibility "Status flag indicating the compatibility of vehicle battery with the output voltage of station";
+CM_ SG_ 969 StatusVehicleConnectorLock "Status flag indicating the electromagnetic lock status of the vehicle";
+CM_ SG_ 969 FaultStationMalfunction "Status flag indicating whether or not there is a malfunction caused by the station";
+CM_ SG_ 969 StatusStation "Status flag indicating the energy transfer from the station";
+CM_ SG_ 969 RemainingChargingTime10sBit "Remaining time before the end of charging (counted by 10 s)";
+CM_ SG_ 969 RemainingChargingTime1minBit "Remaining time before the end of charging (counted by minutes)";
+CM_ BO_ 459 "??? (10ms)";
+CM_ SG_ 459 PRUN_1CB "Detection of frozen data. Message-PRUN-Diag. The transmitting node adds a message counter of 2bits or more to the end of the last data area (or just before the checksum). The value of the counter, which is initially 0, increments by one everytime new data is transmitted, and returned to zero when reaching the max value. The receiving node lets the first message pass without check, but for second next message and following, it check whether the counter number is different from the previous message.";
+CM_ SG_ 459 CRC_1CB "CRC";
+CM_ BO_ 1209 "??? (500ms)";
+CM_ BO_ 956 "100ms (Mirrored from QC-CAN, ID 0x102)";
+CM_ SG_ 956 ControlProtocolNumberEV "Software version of control protocol to which EV corresponds";
+CM_ SG_ 956 TargetBatteryVoltage "Target charging voltage at the vehicle inlet terminals. Raised to 1200 V max in Chademo 2.0";
+CM_ SG_ 956 ChargingCurrentRequest "Current value requested by EV during charging";
+CM_ SG_ 956 FaultBatteryVoltageDeviation "Status flag indicating whether or not the vehicle battery voltage deviates from the output voltage measured by the station";
+CM_ SG_ 956 FaultHighBatteryTemperature "Status flag indicating whether or not the temperature of vehicle battery exceeds the maximum limit";
+CM_ SG_ 956 FaultBatteryCurrentDeviation "Status flag indicating whether or not the output current deviates from EV requested current";
+CM_ SG_ 956 FaultBatteryUndervoltage "Status flag indicating whether or not the vehicle battery voltage is less than the lower limit specified by EV";
+CM_ SG_ 956 FaultBatteryOvervoltage "Status flag indicating whether or not the vehicle battery voltage exceeds the maximum limit specified by EV";
+CM_ SG_ 956 StatusNormalStopRequest "Status flag indicating the request of EV to stop charging control";
+CM_ SG_ 956 StatusVehicle "Status flag indicating the EV contactor status";
+CM_ SG_ 956 StatusChargingSystem "Status flag indicating malfunction caused by EV or the station, and detected by EV";
+CM_ SG_ 956 StatusVehicleShifterPosition "Status flag indicating the shift lever position ";
+CM_ SG_ 956 StatusVehicleCharging "Status flag indicating charge permission status of EV";
+CM_ SG_ 956 ChargingRate "Charging rate of vehicle battery";
+CM_ BO_ 1390 "TCU (100ms) RemoteCommand message
+
+Only present on vehicles with TCU (Telematrics Control Unit).This message varies in length depending on which remote command that was requested. Possible commands include, Enable climate control, disable climate control, start charging, auto disable climate control, unlock doors and lock doors. See OVMS implementation for more detail";
+CM_ SG_ 1390 Unknown_56E_0 "Dala: 0x46 when car is turned ON, then goes to 0x86 when you turn the vehicle OFF
+
+This message varies in length depending on which remote command that was requested. Possible commands include, Enable climate control, disable climate control, start charging, auto disable climate control, unlock doors and lock doors. See OVMS implementation for more detail";
+CM_ BO_ 1459 "Instrument cluster, e-nv200 only";
+CM_ SG_ 1459 Unknown_5B3_0 "8E in logs";
+CM_ SG_ 1459 Unknown_5B3_4 "80 in logs";
+CM_ BO_ 1541 "Bootup Message, appears once during power on (sent by ???)";
+CM_ BO_ 1543 "Bootup Message, appears once during power on (sent by ???)";
+CM_ BO_ 953 "100ms (Mirrored from QC-CAN, ID 0x100)";
+CM_ SG_ 953 MaximumBatteryVoltage "The maximum battery voltage value at the vehicle inlet terminals, at which the station stops charging to protect the vehicle battery. Raised to 1200 V in Chademo 2.0";
+CM_ SG_ 953 ConstantOfChargingRateIndication "Fixed value for charging rate indication which is the maximum charging rate (100%) of vehicle battery";
+CM_ BO_ 958 "100ms (Mirrored from QC-CAN, ID 0x200)";
+CM_ SG_ 958 MinimumBatteryDischargeLevel "Either sent as % or kWh";
+CM_ SG_ 958 MaxRemainingCapacityForCharging "(Optional)";
+CM_ BO_ 1212 "100ms (Mirrored from QC-CAN, ID 0x700)";
+CM_ SG_ 1212 OptionalContent "Content conform to each manufacturer's optional specification";
+CM_ BO_ 955 "100ms (Mirrored from QC-CAN, ID 0x101)";
+CM_ SG_ 955 MaxChargingTime10sBit "Maximum charging time permited by EV, set by10s";
+CM_ SG_ 955 MaxChargingTime1minBit "Maximum charging time permited by EV, set by minute";
+CM_ SG_ 955 EstimatedChargingTime "Estimated remaining time before the end of charging calculated by EV (Added in CHAdeMO1.0.1)";
+CM_ SG_ 955 RatedBatteryCapacity "Rated capacity of battery (Added in CHAdeMO1.0.1)";
+VAL_ 1468 LB_Remain_Cap_Segment_Swit_Flag 0 "Remaining capacity" 1 "Full capacity" ;
+VAL_ 1468 LB_Output_Power_Limit_Reason 0 "Normal" 1 "Capacity drop" 2 "LBC Malfunction" 3 "High temperature" 4 "Low temperature" 5 "reserved" 6 "reserved" 7 "reserved" ;
+VAL_ 1468 LB_Remain_Charge_Time_Condition 0 "Quickcharge" 5 "Normal Charge 6kW Full" 8 "Normal Charge 200V Full" 11 "Normal Charge 100V Full" 18 "Normal Charge 6kW 80%" 21 "Normal Charge 200V 80%" 24 "Normal Charge 100V 80%" ;
+VAL_ 475 LB_Relay_Cut_Request 0 "No-Request" 1 "Main Relay OFF Request" 2 "Main Relay OFF Request" 3 "Main Relay OFF Request" ;
+VAL_ 475 LB_Failsafe_Status 0 "Normal Start Request" 1 "Normal Stop Request" 2 "Charging Mode Stop Request" 3 "Charging Mode Stop Request & Normal Stop Request" 4 "Caution Lamp Request" 5 "Caution Lamp Request & Normal Stop Request" 6 "Caution Lamp Request & Charging Mode Stop Request" 7 "Caution Lamp Request & Charging Mode Stop Request & Normal Stop Request" ;
+VAL_ 475 LB_MainRelayOn_flag 0 "No-Permission" 1 "Main Relay On Permission" ;
+VAL_ 475 LB_INTER_LOCK 0 "Not Inter Lock connected" 1 "Inter Lock connected" ;
+VAL_ 475 LB_Discharge_Power_Status 0 "Reserved" 1 "Normal limit POUT" 2 "High rate limit POUT" 3 " Immediate limit POUT" ;
+VAL_ 1371 LB_IR_Sensor_Malfunction 0 "Normal" 1 "Malfunction" ;
+VAL_ 1371 LB_Capacity_Empty 0 "Not Empty" 1 "Battery Empty" ;
+VAL_ 1371 LB_RefusetoSleep 0 "Reserved" 1 "RefuseToSleep" 2 "ReadyToSleep" 3 "Reserved" ;
+VAL_ 476 LB_Charge_Power_Status 0 "Reserved" 1 "Normal limit PIN" 2 "High rate limit PIN" 3 "Immediate limit PIN" ;
+VAL_ 476 LB_BPCMAX_UPRATE 0 "BPC MAX Uprate Level 1" 1 "BPC MAX Uprate Level 2" 2 "BPC MAX Uprate Level 3" 3 "BPC MAX Uprate Level 4" 4 "BPC MAX Uprate Level 5" 5 "BPC MAX Uprate Level 6" 6 "BPC MAX Uprate Level 7" 7 "BPC MAX Uprate Level 8" ;
+VAL_ 1356 CC_ClimateControlStatus 0 "Off" 1 "On" ;
+VAL_ 1356 CC_BackScreenDefrost 0 "Off" 1 "On" ;
+VAL_ 1356 CC_ACStatus 0 "Off" 1 "On" ;
+VAL_ 282 JoystickGearPosition 2 "Reverse" 3 "Neutral" 4 "Drive/B" 0 "Parked" ;
+VAL_ 282 CarOnOffStatus 4 "CarOff" 8 "CarOn" ;
+VAL_ 468 StatusOfHighVoltagePowerSupply 0 "High Voltage not supplied" 1 "High Voltage supplied" ;
+VAL_ 468 Relay_Plus_Output_Status 0 "Main Relay Plus not output" 1 "Main Relay Plus ON" ;
+VAL_ 468 ChargeStatus 140 "Charging interrupted" 224 "Charging" ;
+VAL_ 498 CommandedChargePower 64 "Drive" ;
+VAL_ 498 TargetCharge_SOC 0 "100%" 1 "Deteroiration Restraint 80%" ;
+VAL_ 498 Charge_StatusTransitionReqest 0 "other" 1 "Normal Charge" 2 "Quick Charge" 3 "Stop Request" ;
+VAL_ 498 Keep_SOC_Request 0 "Normal charge mode (Initial Value)" 1 "Keep SOC charge mode" ;
+VAL_ 498 PCS_Connector_Detection 0 "other" 1 "Vehicle-to-Home mode" ;
+VAL_ 1355 ClimateControlStatus1 16 "CC On" 17 "CC Off" 0 "CC On" 1 "CC Off" ;
+VAL_ 1355 ClimateVentModeTarget 128 "CC OFF" 136 "Face only" 144 "Face/Feet" 152 "Feet only" 160 "Feet/Defrost" 168 "Defrost only" ;
+VAL_ 1355 ClimateVentModeIntake 9 "Recirculate" 18 "Fresh air" 146 "Defrost" ;
+VAL_ 1472 LB_Historical_Data_Swich_Flag 0 "Not Calculated" 1 "Maximum Data" 2 "Average Data" 3 "Minimum Data" 4 "?" 5 "?" 6 "?" ;
+VAL_ 1472 Batt_Heater_Mail_Send_Request 0 "No request" 1 "Mail send request" ;
+VAL_ 1472 LB_HEATEXIST 0 "Without Battery Heating" 1 "With Battery Heating" ;
+VAL_ 1291 DiagMuxOn_VCM 0 "Storage of CAN mute/absent failures not authorized" 1 "Storage of CAN mute/absent failures" ;
+VAL_ 1291 HCM_WakeUpSleepCmd 0 "GoToSleep" 1 "reserved" 2 "reserved" 3 "WakeUp" ;
+VAL_ 1291 Batt_Heater_Mail_Send_OK 0 "Mail send NG" 1 "Mail send OK" ;
+VAL_ 912 OBC_Status_AC_Voltage 0 "No Signal" 1 "100V" 2 "200V" 3 "Abnormal Wave" ;
+VAL_ 912 OBC_Flag_QC_Relay_On_Announcemen 1 "Announce OFF" 2 "Announce ON" ;
+VAL_ 912 OBC_Flag_QC_IR_Sensor 0 "Without" 1 "With" ;
+VAL_ 1210 DynamicControlStatus 0 "Disabled" 1 "Enabled" ;
+VAL_ 1210 HighCurrentControlStatus 0 "Disabled" 1 "Enabled" ;
+VAL_ 1210 HighVoltageControlStatus 0 "Disabled" 1 "Enabled" ;
+VAL_ 968 EVContactorWeldingDetection 0 "Not supported" 1 "Supporting vehicle welding detection" ;
+VAL_ 969 StatusChargerStopControl 0 "Operating" 1 "Shutdown or stop charging" ;
+VAL_ 969 FaultChargingSystemMalfunction 0 "Normal" 1 "Malfunction" ;
+VAL_ 969 FaultBatteryIncompatibility 0 "Compatible" 1 "Not compatible" ;
+VAL_ 969 StatusVehicleConnectorLock 0 "Unlocked" 1 "Locked" ;
+VAL_ 969 FaultStationMalfunction 0 "Normal" 1 "Fault" ;
+VAL_ 969 StatusStation 0 "Standby" 1 "Charging" ;
+VAL_ 956 FaultBatteryVoltageDeviation 0 "Normal" 1 "Fault" ;
+VAL_ 956 FaultHighBatteryTemperature 0 "Normal" 1 "Fault" ;
+VAL_ 956 FaultBatteryCurrentDeviation 0 "Normal" 1 "Fault" ;
+VAL_ 956 FaultBatteryUndervoltage 0 "Normal" 1 "Fault" ;
+VAL_ 956 FaultBatteryOvervoltage 0 "Normal" 1 "Fault" ;
+VAL_ 956 StatusNormalStopRequest 0 "No request" 1 "Request to stop" ;
+VAL_ 956 StatusVehicle 0 "EV contactor closed or during welding detection" 1 "EV contactor open or welding detection finished" ;
+VAL_ 956 StatusChargingSystem 0 "Normal" 1 "Fault" ;
+VAL_ 956 StatusVehicleShifterPosition 0 "Parked" 1 "Other position" ;
+VAL_ 956 StatusVehicleCharging 0 "Disabled" 1 "Enabled" ;
+
